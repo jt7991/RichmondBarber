@@ -1,11 +1,49 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import "../styles/global.css";
 ---
 
 <Layout>
-	<Welcome />
+  <main class="bg-white">
+    <header class="bg-gray-700 text-white text-center py-32 px-4 bg-[url('../assets/2ea07ff551c12ee2fecd2d2ce198a3d3.jpg')] bg-no-repeat bg-cover bg-center bg-blend-multiply">
+      <h1 class="text-5xl font-bold mb-4">RICHMOND BARBER</h1>
+      <p class="text-xl mb-8">YOUR NEIGHBORHOOD BARBERSHOP.</p>
+      <a href="https://www.acuityscheduling.com" class="border-white border-2 text-white font-bold py-3 px-6 rounded">Book Now</a>
+    </header>
+
+    <section class="py-16 px-4 text-center">
+      <h2 class="text-4xl font-bold mb-8">Our Services</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+        <div class="bg-gray-100 p-8 rounded-lg">
+          <h3 class="text-2xl font-bold mb-2">Haircut</h3>
+          <p class="text-lg">$40</p>
+        </div>
+        <div class="bg-gray-100 p-8 rounded-lg">
+          <h3 class="text-2xl font-bold mb-2">Beard Trim</h3>
+          <p class="text-lg">$20</p>
+        </div>
+        <div class="bg-gray-100 p-8 rounded-lg">
+          <h3 class="text-2xl font-bold mb-2">Hot Shave</h3>
+          <p class="text-lg">$30</p>
+        </div>
+        <div class="bg-gray-100 p-8 rounded-lg">
+          <h3 class="text-2xl font-bold mb-2">Kids Cut</h3>
+          <p class="text-lg">$25</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 px-4 text-center bg-gray-50">
+      <h2 class="text-4xl font-bold mb-8">Find Us</h2>
+      <div class="max-w-4xl mx-auto">
+        <div class="aspect-w-16 aspect-h-9">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d202330.83510657928!2d-77.60939301396396!3d37.52540687225345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b111095799c9ed%3A0xbfd83e6de2423cc5!2sRichmond%2C%20VA%2C%20USA!5e0!3m2!1sen!2sca!4v1692892959162!5m2!1sen!2sca" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="w-full h-full"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-gray-900 text-white text-center py-8 px-4">
+    <p>&copy; 2025 Richmond Barber. All rights reserved.</p>
+  </footer>
 </Layout>
