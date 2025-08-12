@@ -1,49 +1,130 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 import "../styles/global.css";
+import { Image } from "astro:assets";
+import logo from "../assets/richmond-barbershop-logo.png";
 ---
 
 <Layout>
-  <main class="bg-white">
-    <header class="bg-gray-700 text-white text-center py-32 px-4 bg-[url('../assets/2ea07ff551c12ee2fecd2d2ce198a3d3.jpg')] bg-no-repeat bg-cover bg-center bg-blend-multiply">
-      <h1 class="text-5xl font-bold mb-4">RICHMOND BARBER</h1>
-      <p class="text-xl mb-8">YOUR NEIGHBORHOOD BARBERSHOP.</p>
-      <a href="https://www.acuityscheduling.com" class="border-white border-2 text-white font-bold py-3 px-6 rounded">Book Now</a>
+  <main class="bg-stone-800">
+    <header
+      class="relative h-[calc(100vh-80px)] px-4 bg-[url('../assets/2ea07ff551c12ee2fecd2d2ce198a3d3.jpg')] bg-cover bg-center bg-no-repeat bg-fixed"
+    >
+      <div class="absolute inset-0 bg-black opacity-60"></div>
+      <div
+        class="relative z-10 flex flex-col items-center justify-center h-full text-white text-center p-4"
+      >
+        <Image src={logo} alt="Richmond barbershop logo" class="w-96" />
+        <p class="text-xl md:text-2xl mb-8">YOUR NEIGHBORHOOD BARBERSHOP.</p>
+        <a
+          href="https://www.acuityscheduling.com"
+          class="bg-amber-400 text-stone-900 font-bold py-4 px-8 rounded-full text-lg uppercase tracking-wider hover:bg-amber-500 transition-colors"
+          >Book Now</a
+        >
+      </div>
     </header>
 
-    <section class="py-16 px-4 text-center">
-      <h2 class="text-4xl font-bold mb-8">Our Services</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-        <div class="bg-gray-100 p-8 rounded-lg">
-          <h3 class="text-2xl font-bold mb-2">Haircut</h3>
-          <p class="text-lg">$40</p>
+    <section class="bg-stone-900 text-white py-20 px-4 text-center">
+      <h2 class="text-5xl font-bold mb-16">Our Services</h2>
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto"
+      >
+        <div
+          class="bg-stone-700 p-8 rounded-lg border-2 border-amber-400 transform hover:scale-105 transition-transform"
+        >
+          <h3 class="text-3xl font-bold mb-4 text-amber-400">Haircut</h3>
+          <p class="text-xl">$40</p>
         </div>
-        <div class="bg-gray-100 p-8 rounded-lg">
-          <h3 class="text-2xl font-bold mb-2">Beard Trim</h3>
-          <p class="text-lg">$20</p>
+        <div
+          class="bg-stone-700 p-8 rounded-lg border-2 border-amber-400 transform hover:scale-105 transition-transform"
+        >
+          <h3 class="text-3xl font-bold mb-4 text-amber-400">Beard Trim</h3>
+          <p class="text-xl">$20</p>
         </div>
-        <div class="bg-gray-100 p-8 rounded-lg">
-          <h3 class="text-2xl font-bold mb-2">Hot Shave</h3>
-          <p class="text-lg">$30</p>
+        <div
+          class="bg-stone-700 p-8 rounded-lg border-2 border-amber-400 transform hover:scale-105 transition-transform"
+        >
+          <h3 class="text-3xl font-bold mb-4 text-amber-400">Hot Shave</h3>
+          <p class="text-xl">$30</p>
         </div>
-        <div class="bg-gray-100 p-8 rounded-lg">
-          <h3 class="text-2xl font-bold mb-2">Kids Cut</h3>
-          <p class="text-lg">$25</p>
+        <div
+          class="bg-stone-700 p-8 rounded-lg border-2 border-amber-400 transform hover:scale-105 transition-transform"
+        >
+          <h3 class="text-3xl font-bold mb-4 text-amber-400">Kids Cut</h3>
+          <p class="text-xl">$25</p>
         </div>
       </div>
     </section>
 
-    <section class="py-16 px-4 text-center bg-gray-50">
-      <h2 class="text-4xl font-bold mb-8">Find Us</h2>
-      <div class="max-w-4xl mx-auto">
-        <div class="aspect-w-16 aspect-h-9">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d202330.83510657928!2d-77.60939301396396!3d37.52540687225345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b111095799c9ed%3A0xbfd83e6de2423cc5!2sRichmond%2C%20VA%2C%20USA!5e0!3m2!1sen!2sca!4v1692892959162!5m2!1sen!2sca" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="w-full h-full"></iframe>
+    <section class="bg-stone-800 py-20 px-4 text-center">
+      <h2 class="text-5xl font-bold mb-16 text-white">Gallery</h2>
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-7xl mx-auto"
+      >
+        <img
+          src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="A photo of a barbershop"
+          class="w-full h-80 object-cover rounded-lg transform hover:scale-105 transition-transform"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="A photo of a barbershop"
+          class="w-full h-80 object-cover rounded-lg transform hover:scale-105 transition-transform"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="A photo of a barbershop"
+          class="w-full h-80 object-cover rounded-lg transform hover:scale-105 transition-transform"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="A photo of a barbershop"
+          class="w-full h-80 object-cover rounded-lg transform hover:scale-105 transition-transform"
+        />
+      </div>
+    </section>
+
+    <section class="bg-stone-900 text-white py-20 px-4">
+      <div class="max-w-7xl mx-auto text-center">
+        <h2 class="text-5xl font-bold mb-16">Contact Us</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+          <div class="text-center flex flex-col gap-2">
+            <h3 class="text-4xl font-bold text-amber-400">Contact</h3>
+            <a
+              href="tel:+15551234567"
+              class="text-2xl text-white hover:text-amber-400 transition-colors mb-8"
+              >(555) 123-4567</a
+            >
+            <h3 class="text-4xl font-bold text-amber-400">Location</h3>
+            <p class="text-2xl">123 Braddock Road</p>
+            <p class="text-2xl">Richmond, VA 22555</p>
+            <div class="mt-8">
+              <a
+                href="https://www.google.com/maps/dir/?api=1&destination=123+Braddock+Rd+Richmond+VA"
+                target="_blank"
+                class="bg-amber-400 text-stone-900 font-bold py-4 px-8 rounded-full text-lg uppercase tracking-wider hover:bg-amber-500 transition-colors"
+                >Get Directions</a
+              >
+            </div>
+          </div>
+          <div>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d202330.83510657928!2d-77.60939301396396!3d37.52540687225345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b111095799c9ed%3A0xbfd83e6de2423cc5!2sRichmond%2C%20VA%2C%20USA!5e0!3m2!1sen!2sca!4v1692892959162!5m2!1sen!2sca"
+              width="100%"
+              height="450"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Richmond Barber Location"
+              class="rounded-lg"></iframe>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="bg-gray-900 text-white text-center py-8 px-4">
+  <footer class="bg-stone-900 text-white text-center py-8 px-4">
     <p>&copy; 2025 Richmond Barber. All rights reserved.</p>
   </footer>
 </Layout>
