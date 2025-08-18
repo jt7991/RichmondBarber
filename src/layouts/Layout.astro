@@ -1,23 +1,27 @@
 ---
-import Navigation from '../components/Navigation.astro';
-import { Font } from 'astro:assets';
+import Navigation from "../components/Navigation.astro";
+import { Font } from "astro:assets";
 ---
+
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-    <Font cssVariable='--font-roboto' preload />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Richmond Barber</title>
-	</head>
-<style>
-body {
-    font-family: var(--font-roboto);
-}
-</style>
-	<body class="font-sans">
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <Font cssVariable="--font-roboto" preload />
+    <meta name="viewport" content="width=device-width" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💈</text></svg>"
+    />
+    <meta name="generator" content={Astro.generator} />
+    <title>Richmond Barber</title>
+  </head>
+  <style>
+    body {
+      font-family: var(--font-roboto);
+    }
+  </style>
+  <body class="font-sans">
+    <slot />
+  </body>
 </html>
