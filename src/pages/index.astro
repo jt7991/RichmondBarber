@@ -1,9 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import "../styles/global.css";
-import { Image } from "astro:assets";
-import logo from "../assets/BARBERSHOP2.png";
 import Accordion from "../components/Accordion.astro";
+import Logo from "../components/Logo.astro";
 ---
 
 <Layout>
@@ -16,17 +15,13 @@ import Accordion from "../components/Accordion.astro";
       >
       </div>
       <div
-        class="relative z-10 flex flex-col items-center justify-center h-full text-white text-center p-4 animate-fade"
+        class="relative z-10 flex flex-col items-center justify-center h-full text-white text-center p-4"
       >
         <h1 class="hidden">RICHMOND BARBERSHOP</h1>
-        <Image
-          src={logo}
-          alt="Richmond barbershop logo"
-          class="min-w-80 w-2/3 md:w-1/2 lg:w-1/3 max-w-lg mb-8 animate-fade"
-        />
+        <Logo client:load />
         <a
           href="https://www.acuityscheduling.com"
-          class="bg-black border-white border-2 text-white font-bold py-3 px-9 sm:px-12 sm:py-4 rounded-lg text-md sm:text-xl uppercase tracking-widest hover:bg-white hover:text-black transition-all duration-300 shadow-xl transform hover:scale-105"
+          class="bg-black border-white border-2 text-white font-bold py-3 px-9 sm:px-12 sm:py-4 rounded-lg text-md sm:text-xl uppercase tracking-widest hover:bg-white hover:text-black active:bg-white active:text-black transition-all duration-300 shadow-xl transform hover:scale-105"
           >Book Now</a
         >
       </div>
