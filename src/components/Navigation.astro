@@ -16,7 +16,7 @@ import { Image } from "astro:assets";
 
 <nav
   id="mobile-nav"
-  class="md:hidden sticky top-0 z-50 py-4 bg-white dark:bg-black"
+  class="md:hidden sticky top-0 z-50 py-4 bg-white shadow-lg"
 >
   <div class="flex items-center justify-between w-full px-4 grid grid-cols-3">
     <button
@@ -46,7 +46,7 @@ import { Image } from "astro:assets";
   </div>
   <div
     id="menu"
-    class="px-4 gap-8 flex flex-col absolute top-full left-0 right-0 bg-white dark:bg-black z-40 items-center w-full transition-all duration-300 ease-in-out [&:not([data-active])]:h-0 overflow-hidden data-active:h-screen"
+    class="px-4 gap-8 flex flex-col absolute top-full left-0 right-0 bg-white dark:bg-black z-50 items-center w-full transition-all duration-300 ease-in-out [&:not([data-active])]:h-0 overflow-hidden data-active:h-screen -mt-1"
   >
     <a href="/" class="hover:text-blue-500 text-4xl border-b-black">Home</a>
     <a
