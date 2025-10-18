@@ -1,8 +1,12 @@
 ---
-import ThemeToggle from "./ThemeToggle.astro";
+import logo from "../assets/BARBERSHOP2.png";
+import { Image } from "astro:assets";
 ---
 
-<nav id="desktop-nav" class="hidden md:flex sticky top-0 z-50 bg-gray-100 dark:bg-gray-900 text-black dark:text-white flex justify-between items-center py-4 px-4">
+<nav
+  id="desktop-nav"
+  class="hidden md:flex sticky top-0 z-50 bg-gray-100 dark:bg-gray-900 text-black dark:text-white flex justify-between items-center py-4 px-4"
+>
   <div class="hidden md:flex space-x-4">
     <a href="/" class="px-4 hover:text-blue-500">Home</a>
     <a href="#services" class="px-4 hover:text-blue-500">Services</a>
@@ -10,20 +14,88 @@ import ThemeToggle from "./ThemeToggle.astro";
   </div>
 </nav>
 
-<nav id="mobile-nav" class="flex md:hidden sticky top-0 z-50 py-4 bg-white dark:bg-black flex-col ">
-   <div class="flex items-center justify-between w-full px-4">
-     <button class="md:hidden" onclick="toggleMenu()">☰</button>
-     <ThemeToggle />
-   </div>
-   <div id="menu" class="px-4 gap-2 flex hidden flex-col pb-4 absolute top-full left-0 right-0 bg-white dark:bg-black shadow-lg z-40">
-     <a href="/" class="hover:text-blue-500 w-full  border-b-black">Home</a>
-     <a href="#services" class="hover:text-blue-500 w-full dark:text-white  border-b-black">Services</a>
-     <a href="#contact" class="hover:text-blue-500 w-full dark:text-white  border-b-black">Contact</a>
-   </div>
+<nav
+  id="mobile-nav"
+  class="md:hidden sticky top-0 z-50 py-4 bg-white dark:bg-black"
+>
+  <div class="flex items-center justify-between w-full px-4 grid grid-cols-3">
+    <button
+      id="hamburger"
+      class="md:hidden flex flex-col justify-center items-center w-6 h-6 col-span-1"
+      onclick="toggleMenu()"
+    >
+      <span
+        class="bg-black dark:bg-white block w-5 h-0.5 mb-1 transition-all duration-300"
+      ></span>
+      <span
+        class="bg-black dark:bg-white block w-5 h-0.5 mb-1 transition-all duration-300"
+      ></span>
+      <span
+        class="bg-black dark:bg-white block w-5 h-0.5 transition-all duration-300"
+      ></span>
+    </button>
+    <Image
+      src={logo}
+      alt="Richmond barbershop logo"
+      class="col-span-1 w-26 h-10 place-self-center opacity-0 transition-all"
+      loading="eager"
+      id="logo-small"
+    />
+  </div>
+  <div
+    id="menu"
+    class="px-4 gap-8 flex flex-col absolute top-full left-0 right-0 bg-white dark:bg-black shadow-lg z-40 items-center w-full transition-all duration-300 ease-in-out [&:not([data-active])]:h-0 overflow-hidden data-active:h-screen"
+  >
+    <a href="/" class="hover:text-blue-500 text-4xl border-b-black">Home</a>
+    <a
+      href="#services"
+      onclick="toggleMenu()"
+      class="hover:text-blue-500 text-4xl dark:text-white border-b-black"
+      >Services</a
+    >
+    <a
+      href="#gallery"
+      onclick="toggleMenu()"
+      class="hover:text-blue-500 text-4xl dark:text-white border-b-black"
+      >Gallery</a
+    >
+    <a
+      href="#contact"
+      onclick="toggleMenu()"
+      class="hover:text-blue-500 text-4xl dark:text-white border-b-black"
+      >Contact</a
+    >
+  </div>
 </nav>
 <script is:inline>
-function toggleMenu() {
-  const menu = document.getElementById('menu');
-  menu?.classList.toggle('hidden');
-}
+  function toggleMenu() {
+    const menu = document.getElementById("menu");
+    const hamburger = document.getElementById("hamburger");
+    if (menu.hasAttribute("data-active")) {
+      menu.removeAttribute("data-active");
+    } else {
+      menu.setAttribute("data-active", "true");
+    }
+    hamburger?.classList.toggle("open");
+  }
+
+  window.addEventListener("scroll", () => {
+    const menu = document.getElementById("menu");
+    const hamburger = document.getElementById("hamburger");
+    if (menu.hasAttribute("data-active")) {
+      menu.removeAttribute("data-active");
+      hamburger?.classList.remove("open");
+    }
+  });
 </script>
+<style>
+  #hamburger.open span:nth-child(1) {
+    transform: rotate(45deg) translate(3px, 2px);
+  }
+  #hamburger.open span:nth-child(2) {
+    opacity: 0;
+  }
+  #hamburger.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+</style>
