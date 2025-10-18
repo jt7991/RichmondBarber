@@ -34,13 +34,15 @@ import { Image } from "astro:assets";
         class="bg-black dark:bg-white block w-5 h-0.5 transition-all duration-300"
       ></span>
     </button>
-    <Image
-      src={logo}
-      alt="Richmond barbershop logo"
-      class="col-span-1 w-26 h-10 place-self-center opacity-0 transition-all"
-      loading="eager"
-      id="logo-small"
-    />
+    <a href="/"
+      ><Image
+        src={logo}
+        alt="Richmond barbershop logo"
+        class="col-span-1 w-26 h-10 place-self-center opacity-0 transition-all"
+        loading="eager"
+        id="logo-small"
+      />
+    </a>
   </div>
   <div
     id="menu"
