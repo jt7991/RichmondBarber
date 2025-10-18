@@ -6,89 +6,89 @@ import Logo from "../components/Logo.astro";
 ---
 
 <Layout>
-  <main class="bg-zinc-900">
+  <main class="bg-white dark:bg-zinc-900">
     <header
       class="relative h-[calc(100vh-80px)] px-4 bg-[url('../assets/2ea07ff551c12ee2fecd2d2ce198a3d3.jpg')] bg-cover bg-center bg-no-repeat bg-fixed"
     >
       <div
-        class="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent"
+        class="absolute inset-0 bg-gradient-to-t from-white/80 dark:from-black via-white/50 dark:via-black/70 to-transparent"
       >
       </div>
       <div
-        class="relative z-10 flex flex-col items-center justify-center h-full text-white text-center p-4"
+        class="relative z-10 flex flex-col items-center justify-center h-full text-black dark:text-white text-center p-4"
       >
         <h1 class="hidden">RICHMOND BARBERSHOP</h1>
-        <Logo client:load />
+        <Logo />
         <a
           href="https://www.acuityscheduling.com"
-          class="bg-black border-white border-2 text-white font-bold py-3 px-9 sm:px-12 sm:py-4 rounded-lg text-md sm:text-xl uppercase tracking-widest hover:bg-white hover:text-black active:bg-white active:text-black transition-all duration-300 shadow-xl transform hover:scale-105"
+          class="bg-black dark:bg-black border-white dark:border-white border-2 text-white dark:text-white font-bold py-3 px-9 sm:px-12 sm:py-4 rounded-lg text-md sm:text-xl uppercase tracking-widest hover:bg-white dark:hover:bg-white hover:text-black dark:hover:text-black active:bg-white dark:active:bg-white active:text-black dark:active:text-black transition-all duration-300 shadow-xl transform hover:scale-105"
           >Book Now</a
         >
       </div>
     </header>
 
-    <section class="bg-zinc-900 text-white py-20 px-4 text-center">
-      <h2 class="text-5xl font-bold mb-16 text-white">Our Services</h2>
+    <section id="services" class="bg-gray-50 dark:bg-zinc-900 text-black dark:text-white py-20 px-4 text-center">
+      <h2 class="text-5xl font-bold mb-16 text-black dark:text-white" >Our Services</h2>
       <div
         class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 max-w-7xl mx-auto"
       >
         <div
-          class="bg-zinc-800 p-10 rounded-xl shadow-xl border border-zinc-700 transform hover:scale-105 transition-transform duration-300"
+          class="bg-gray-200 dark:bg-zinc-800 p-10 rounded-xl shadow-xl border border-gray-300 dark:border-zinc-700 transform hover:scale-105 transition-transform duration-300"
         >
-          <h3 class="text-4xl font-bold mb-4 text-white">Haircut</h3>
-          <p class="text-2xl text-zinc-300">$40</p>
+          <h3 class="text-4xl font-bold mb-4 text-black dark:text-white">Haircut</h3>
+          <p class="text-2xl text-gray-600 dark:text-zinc-300">$40</p>
           <p class="text-lg text-zinc-400 mt-4">
             Precision cuts tailored to your style.
           </p>
         </div>
         <div
-          class="bg-zinc-800 p-10 rounded-xl shadow-xl border border-zinc-700 transform hover:scale-105 transition-transform duration-300"
+          class="bg-gray-200 dark:bg-zinc-800 p-10 rounded-xl shadow-xl border border-gray-300 dark:border-zinc-700 transform hover:scale-105 transition-transform duration-300"
         >
-          <h3 class="text-4xl font-bold mb-4 text-white">Beard Trim</h3>
-          <p class="text-2xl text-zinc-300">$20</p>
-          <p class="text-lg text-zinc-400 mt-4">
+          <h3 class="text-4xl font-bold mb-4 text-black dark:text-white">Beard Trim</h3>
+          <p class="text-2xl text-gray-600 dark:text-zinc-300">$20</p>
+          <p class="text-lg text-gray-500 dark:text-zinc-400 mt-4">
             Expert shaping and grooming for a sharp look.
           </p>
         </div>
         <div
-          class="bg-zinc-800 p-10 rounded-xl shadow-xl border border-zinc-700 transform hover:scale-105 transition-transform duration-300"
+          class="bg-gray-200 dark:bg-zinc-800 p-10 rounded-xl shadow-xl border border-gray-300 dark:border-zinc-700 transform hover:scale-105 transition-transform duration-300"
         >
-          <h3 class="text-4xl font-bold mb-4 text-white">Hot Shave</h3>
-          <p class="text-2xl text-zinc-300">$30</p>
-          <p class="text-lg text-zinc-400 mt-4">
+          <h3 class="text-4xl font-bold mb-4 text-black dark:text-white">Hot Shave</h3>
+          <p class="text-2xl text-gray-600 dark:text-zinc-300">$30</p>
+          <p class="text-lg text-gray-500 dark:text-zinc-400 mt-4">
             Traditional hot towel shave for ultimate comfort.
           </p>
         </div>
         <div
-          class="bg-zinc-800 p-10 rounded-xl shadow-xl border border-zinc-700 transform hover:scale-105 transition-transform duration-300"
+          class="bg-gray-200 dark:bg-zinc-800 p-10 rounded-xl shadow-xl border border-gray-300 dark:border-zinc-700 transform hover:scale-105 transition-transform duration-300"
         >
-          <h3 class="text-4xl font-bold mb-4 text-white">Kids Cut</h3>
-          <p class="text-2xl text-zinc-300">$25</p>
-          <p class="text-lg text-zinc-400 mt-4">
+          <h3 class="text-4xl font-bold mb-4 text-black dark:text-white">Kids Cut</h3>
+          <p class="text-2xl text-gray-600 dark:text-zinc-300">$25</p>
+          <p class="text-lg text-gray-500 dark:text-zinc-400 mt-4">
             Stylish cuts for our younger clients.
           </p>
         </div>
         <div
-          class="bg-zinc-800 p-10 rounded-xl shadow-xl border border-zinc-700 transform hover:scale-105 transition-transform duration-300"
+          class="bg-gray-200 dark:bg-zinc-800 p-10 rounded-xl shadow-xl border border-gray-300 dark:border-zinc-700 transform hover:scale-105 transition-transform duration-300"
         >
-          <h3 class="text-4xl font-bold mb-4 text-white">Haircut & Beard</h3>
-          <p class="text-2xl text-zinc-300">$55</p>
-          <p class="text-lg text-zinc-400 mt-4">
+          <h3 class="text-4xl font-bold mb-4 text-black dark:text-white">Haircut & Beard</h3>
+          <p class="text-2xl text-gray-600 dark:text-zinc-300">$55</p>
+          <p class="text-lg text-gray-500 dark:text-zinc-400 mt-4">
             Complete grooming package for a fresh look.
           </p>
         </div>
         <div
-          class="bg-zinc-800 p-10 rounded-xl shadow-xl border border-zinc-700 transform hover:scale-105 transition-transform duration-300"
+          class="bg-gray-200 dark:bg-zinc-800 p-10 rounded-xl shadow-xl border border-gray-300 dark:border-zinc-700 transform hover:scale-105 transition-transform duration-300"
         >
-          <h3 class="text-4xl font-bold mb-4 text-white">Head Shave</h3>
-          <p class="text-2xl text-zinc-300">$35</p>
+          <h3 class="text-4xl font-bold mb-4 text-black dark:text-white">Head Shave</h3>
+          <p class="text-2xl text-gray-600 dark:text-zinc-300">$35</p>
           <p class="text-lg text-zinc-400 mt-4">Clean and smooth head shave.</p>
         </div>
       </div>
     </section>
 
-    <section class="py-20 px-4 text-center">
-      <h2 class="text-5xl font-bold mb-16 text-white">Gallery</h2>
+    <section class="py-20 px-4 text-center bg-white dark:bg-zinc-900">
+      <h2 class="text-5xl font-bold mb-16 text-black dark:text-white">Gallery</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-7xl mx-auto">
         <img
           src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?q=80&w=2348&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -113,8 +113,8 @@ import Logo from "../components/Logo.astro";
       </div>
     </section>
 
-    <section class="py-20 px-4 text-center flex flex-col items-center">
-      <h2 class="text-5xl font-bold mb-16 text-white">FAQ</h2>
+    <section class="py-20 px-4 text-center flex flex-col items-center bg-gray-50 dark:bg-zinc-900">
+      <h2 class="text-5xl font-bold mb-16 text-black dark:text-white">FAQ</h2>
       <div class="max-w-7xl w-full">
         <Accordion title="Who?">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -155,25 +155,25 @@ import Logo from "../components/Logo.astro";
       </div>
     </section>
 
-    <section class="text-white py-20 px-4">
+    <section class="text-black dark:text-white py-20 px-4 bg-white dark:bg-zinc-900" id="contact">
       <div class="max-w-7xl mx-auto text-center">
         <h2 class="text-5xl font-bold mb-16">Contact Us</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
           <div class="text-center flex flex-col gap-4">
-            <h3 class="text-4xl font-bold text-white">Contact</h3>
+            <h3 class="text-4xl font-bold text-black dark:text-white">Contact</h3>
             <a
               href="tel:+15551234567"
-              class="text-3xl text-white hover:text-white transition-colors duration-300 mb-4"
+              class="text-3xl text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-300 mb-4"
               >(555) 123-4567</a
             >
-            <h3 class="text-4xl font-bold text-white">Location</h3>
-            <p class="text-2xl">123 Braddock Road</p>
-            <p class="text-2xl">Richmond, VA 22555</p>
+            <h3 class="text-4xl font-bold text-black dark:text-white">Location</h3>
+            <p class="text-2xl text-black dark:text-white">123 Braddock Road</p>
+            <p class="text-2xl text-black dark:text-white">Richmond, VA 22555</p>
             <div class="mt-8">
               <a
                 href="https://www.google.com/maps/dir/?api=1&destination=123+Braddock+Rd+Richmond+VA"
                 target="_blank"
-                class="bg-black border-white border-2 text-white font-bold py-4 px-12 rounded-lg text-xl uppercase tracking-widest hover:bg-white hover:text-black transition-all duration-300 shadow-xl transform hover:scale-105"
+                class="bg-black dark:bg-black border-white dark:border-white border-2 text-white dark:text-white font-bold py-4 px-12 rounded-lg text-xl uppercase tracking-widest hover:bg-white dark:hover:bg-white hover:text-black dark:hover:text-black transition-all duration-300 shadow-xl transform hover:scale-105"
                 >Get Directions</a
               >
             </div>
@@ -196,7 +196,7 @@ import Logo from "../components/Logo.astro";
   </main>
 
   <footer
-    class="text-white text-center py-12 px-4 bg-zinc-950 border-t border-zinc-800"
+    class="text-black dark:text-white text-center py-12 px-4 bg-gray-100 dark:bg-zinc-950 border-t border-gray-300 dark:border-zinc-800"
   >
     <p class="text-lg">&copy; 2025 Richmond Barber. All rights reserved.</p>
   </footer>

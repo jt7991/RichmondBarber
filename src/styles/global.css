@@ -1,5 +1,8 @@
 @import "tailwindcss";
-
+html {
+  scroll-behavior: smooth;
+}
+@custom-variant dark (&:where(.dark, .dark *));
 @theme {
   --animate-fade-in-scale: fade-in-scale 0.3s ease-out;
   @keyframes fade-in-scale {

@@ -1,5 +1,29 @@
-<nav class="bg-gray-900 text-white flex justify-center py-4">
-  <a href="/" class="px-4 hover:text-blue-500">Home</a>
-  <a href="#services" class="px-4 hover:text-blue-500">Services</a>
-  <a href="#location" class="px-4 hover:text-blue-500">Contact</a>
+---
+import ThemeToggle from "./ThemeToggle.astro";
+---
+
+<nav id="desktop-nav" class="hidden md:flex sticky top-0 z-50 bg-gray-100 dark:bg-gray-900 text-black dark:text-white flex justify-between items-center py-4 px-4">
+  <div class="hidden md:flex space-x-4">
+    <a href="/" class="px-4 hover:text-blue-500">Home</a>
+    <a href="#services" class="px-4 hover:text-blue-500">Services</a>
+    <a href="#contact" class="px-4 hover:text-blue-500">Contact</a>
+  </div>
 </nav>
+
+<nav id="mobile-nav" class="flex md:hidden sticky top-0 z-50 py-4 bg-white dark:bg-black flex-col ">
+   <div class="flex items-center justify-between w-full px-4">
+     <button class="md:hidden" onclick="toggleMenu()">☰</button>
+     <ThemeToggle />
+   </div>
+   <div id="menu" class="px-4 gap-2 flex hidden flex-col pb-4 absolute top-full left-0 right-0 bg-white dark:bg-black shadow-lg z-40">
+     <a href="/" class="hover:text-blue-500 w-full  border-b-black">Home</a>
+     <a href="#services" class="hover:text-blue-500 w-full dark:text-white  border-b-black">Services</a>
+     <a href="#contact" class="hover:text-blue-500 w-full dark:text-white  border-b-black">Contact</a>
+   </div>
+</nav>
+<script is:inline>
+function toggleMenu() {
+  const menu = document.getElementById('menu');
+  menu?.classList.toggle('hidden');
+}
+</script>
