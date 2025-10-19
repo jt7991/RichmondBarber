@@ -3,22 +3,23 @@ const { service, index } = Astro.props;
 const serviceId = service.name.replace(/\s+/g, "-").toLowerCase();
 ---
 
-<div id={`${serviceId}-checker`}></div>
-<div
-  id={serviceId}
-  class={`bg-gray-200 p-4 rounded-xl shadow-xl border border-gray-300 dark:border-zinc-700 transition-all duration-500 ${index % 2 === 1 ? "translate-x-full" : "-translate-x-full"} opacity-0`}
->
-  <div class="flex flex-row justify-between">
-    <h3 class="text-xl font-bold mb-4 text-black dark:text-white">
-      {service.name}
-    </h3>
-    <p class="text-lg text-gray-600 dark:text-zinc-300">
-      {service.price}
+<div id={`${serviceId}-checker`}>
+  <div
+    id={serviceId}
+    class={`bg-gray-200 p-4 rounded-xl shadow-xl border border-gray-300 dark:border-zinc-700 transition-all duration-500 ${index % 2 === 1 ? "translate-x-full" : "-translate-x-full"} opacity-0`}
+  >
+    <div class="flex flex-row justify-between">
+      <h3 class="text-xl font-bold mb-4 text-black dark:text-white">
+        {service.name}
+      </h3>
+      <p class="text-lg text-gray-600 dark:text-zinc-300">
+        {service.price}
+      </p>
+    </div>
+    <p class="text-md text-left text-gray-500 dark:text-zinc-400">
+      {service.description}
     </p>
   </div>
-  <p class="text-md text-left text-gray-500 dark:text-zinc-400">
-    {service.description}
-  </p>
 </div>
 
 <script define:vars={{ serviceId }} is:inline>

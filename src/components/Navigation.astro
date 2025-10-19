@@ -83,6 +83,10 @@ import { Image } from "astro:assets";
     const hamburger = document.getElementById("hamburger");
     if (menu.hasAttribute("data-active")) {
       menu.removeAttribute("data-active");
+      // Update logo visibility when closing menu
+      if (window.updateLogoVisibility) {
+        window.updateLogoVisibility();
+      }
     } else {
       logoSmall.classList.add("opacity-100");
       logoSmall.classList.remove("opacity-0");
@@ -97,6 +101,10 @@ import { Image } from "astro:assets";
     if (menu.hasAttribute("data-active")) {
       menu.removeAttribute("data-active");
       hamburger?.classList.remove("open");
+      // Update logo visibility when closing menu via scroll
+      if (window.updateLogoVisibility) {
+        window.updateLogoVisibility();
+      }
     }
   });
 </script>
