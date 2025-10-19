@@ -6,7 +6,7 @@ const serviceId = service.name.replace(/\s+/g, "-").toLowerCase();
 <div id={`${serviceId}-checker`}></div>
 <div
   id={serviceId}
-  class={`bg-gray-200 p-4 rounded-xl shadow-xl border border-gray-300 dark:border-zinc-700 transition-transform duration-500 ${index % 2 === 0 ? "translate-x-full" : "-translate-x-full"}`}
+  class={`bg-gray-200 p-4 rounded-xl shadow-xl border border-gray-300 dark:border-zinc-700 transition-all duration-500 ${index % 2 === 1 ? "translate-x-full" : "-translate-x-full"} opacity-0`}
 >
   <div class="flex flex-row justify-between">
     <h3 class="text-xl font-bold mb-4 text-black dark:text-white">
@@ -30,8 +30,11 @@ const serviceId = service.name.replace(/\s+/g, "-").toLowerCase();
       (entries) => {
         for (const entry of entries) {
           if (entry.isIntersecting) {
-            serviceElem.classList.remove("translate-x-full");
-            serviceElem.classList.remove("-translate-x-full");
+            serviceElem.classList.add("!translate-x-0");
+            serviceElem.classList.add("!opacity-100");
+          } else {
+            serviceElem.classList.remove("!translate-x-0");
+            serviceElem.classList.remove("!opacity-100");
           }
         }
       },

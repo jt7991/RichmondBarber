@@ -4,29 +4,13 @@ import "../styles/global.css";
 import Accordion from "../components/Accordion.astro";
 import Logo from "../components/Logo.astro";
 import Service from "../components/Service.astro";
+import GalleryImage from "../components/GalleryImage.astro";
 
-const services = [
-  {
-    name: "Haircut",
-    price: "$40",
-    description: "Precision cuts tailored to your style.",
-  },
-  {
-    name: "Scissor Cut",
-    price: "$50",
-    description: "Precision cuts tailored to your style.",
-  },
-  {
-    name: "Beard Trim",
-    price: "$20",
-    description: "Expert shaping and grooming for a sharp look.",
-  },
-  {
-    name: "Hot Shave",
-    price: "$30",
-    description: "Traditional hot towel shave for ultimate comfort.",
-  },
-];
+
+
+
+
+
 ---
 
 <Layout>
@@ -59,53 +43,31 @@ const services = [
       <h2 class="text-5xl font-bold mb-16 text-black dark:text-white">
         Our Services
       </h2>
-      <div class="flex flex-col gap-4 max-w-7xl mx-auto overflow-x-hidden">
-        {
-          services.map((service, index) => (
-            <Service service={service} index={index} />
-          ))
-        }
-      </div>
+       <div class="flex flex-col gap-4 max-w-7xl mx-auto overflow-x-hidden">
+         <Service service={{name: "Haircut", price: "$40", description: "Precision cuts tailored to your style."}} index={0} />
+         <Service service={{name: "Scissor Cut", price: "$50", description: "Precision cuts tailored to your style."}} index={1} />
+         <Service service={{name: "Beard Trim", price: "$20", description: "Expert shaping and grooming for a sharp look."}} index={2} />
+         <Service service={{name: "Hot Shave", price: "$30", description: "Traditional hot towel shave for ultimate comfort."}} index={3} />
+       </div>
     </section>
 
     <section class="px-4 text-center bg-white dark:bg-zinc-900" id="gallery">
       <h2 class="text-5xl font-bold mb-16 text-black dark:text-white">
         Gallery
       </h2>
-      <div class="grid grid-cols-2 sm:grid-cols-3 gap-6 max-w-7xl mx-auto">
-        <img
-          src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?q=80&w=2348&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt="Barbershop interior with classic chairs"
-          class="w-full h-full aspect-square object-cover rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300"
-        />
-        <img
-          src="https://images.unsplash.com/photo-1587909209111-5097ee578ec3?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt="Barber giving a haircut"
-          class="w-full h-full aspect-square object-cover rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300"
-        />
-        <img
-          src="https://plus.unsplash.com/premium_photo-1661270415179-f7bcff006edb?q=80&w=2338&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt="Close-up of barber tools"
-          class="w-full h-full aspect-square object-cover rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300"
-        />
-        <img
-          src="https://plus.unsplash.com/premium_photo-1661542350224-8e3f095ce053?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt="Client getting a beard trim"
-          class="w-full h-full aspect-square object-cover rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300"
-        />
-        <img
-          src="https://plus.unsplash.com/premium_photo-1661270415179-f7bcff006edb?q=80&w=2338&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt="Close-up of barber tools"
-          class="w-full h-full aspect-square object-cover rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300"
-        />
-        <img
-          src="https://plus.unsplash.com/premium_photo-1661542350224-8e3f095ce053?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt="Client getting a beard trim"
-          class="w-full h-full aspect-square object-cover rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300"
-        />
-      </div>
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-6 max-w-7xl mx-auto">
+        <GalleryImage index={0} id="image1" src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?q=80&w=2348&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Barbershop interior with classic chairs" />
+          <GalleryImage index={1} id="image2" src="https://images.unsplash.com/photo-1587909209111-5097ee578ec3?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Barber giving a haircut" />
+          <GalleryImage index={2} id="image3" src="https://plus.unsplash.com/premium_photo-1661270415179-f7bcff006edb?q=80&w=2338&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Close-up of barber tools" />
+        <GalleryImage id="image4" index={3} src="https://plus.unsplash.com/premium_photo-1661542350224-8e3f095ce053?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Client getting a beard trim" />
+        <GalleryImage id="image5" index={4} src="https://plus.unsplash.com/premium_photo-1661542350224-8e3f095ce053?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Client getting a beard trim" />
+          <GalleryImage id="image6" index={5} src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?q=80&w=2348&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Barbershop interior with classic chairs" />
+          <GalleryImage id="image7" index={6} src="https://images.unsplash.com/photo-1587909209111-5097ee578ec3?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Barber giving a haircut" />
+          <GalleryImage id="image8" index={7} src="https://plus.unsplash.com/premium_photo-1661270415179-f7bcff006edb?q=80&w=2338&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Close-up of barber tools" />
+          <GalleryImage id="image9" index={8} src="https://plus.unsplash.com/premium_photo-1661542350224-8e3f095ce053?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Client getting a beard trim" />
+</div>
     </section>
-    <div class="flex justify-center pt-12">
+    <div class="flex justify-center pt-12 opacity-0 transition-all duration-500 " id='ig-embed'>
       <blockquote
         class="instagram-media"
         data-instgrm-permalink="https://www.instagram.com/rvabarbershop/?utm_source=ig_embed&utm_campaign=loading"
@@ -352,6 +314,28 @@ const services = [
       },
     );
     observer.observe(logo);
+  const ig = document.getElementById('ig-embed');
+
+  if (ig) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            ig.classList.add("!opacity-100");
+            ig.classList.add("!rotate-0");
+          } else {
+            ig.classList.remove("!opacity-100");
+            ig.classList.remove("!rotate-0");
+          }
+        }
+      },
+      {
+        rootMargin: "-300px",
+      },
+    );
+    observer.observe(ig);
+  }
+
   }
 </script>
 <style>
