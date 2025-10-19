@@ -8,7 +8,7 @@ import { Image } from "astro:assets";
   class="hidden md:flex sticky top-0 z-50 bg-gray-100 dark:bg-gray-900 text-black dark:text-white flex justify-between items-center py-4 px-4"
 >
   <div class="hidden md:flex space-x-4">
-    <a href="/" class="px-4 hover:text-blue-500">Home</a>
+    <a href="#hero" class="px-4 hover:text-blue-500">Home</a>
     <a href="#services" class="px-4 hover:text-blue-500">Services</a>
     <a href="#contact" class="px-4 hover:text-blue-500">Contact</a>
   </div>
@@ -48,7 +48,9 @@ import { Image } from "astro:assets";
     id="menu"
     class="px-4 gap-8 flex flex-col absolute top-full left-0 right-0 bg-white dark:bg-black z-50 items-center w-full transition-all duration-300 ease-in-out [&:not([data-active])]:h-0 overflow-hidden data-active:h-screen -mt-1"
   >
-    <a href="/" class="hover:text-blue-500 text-4xl border-b-black">Home</a>
+    <a href="#hero" class="hover:text-blue-500 text-4xl border-b-black pt-8"
+      >Home</a
+    >
     <a
       href="#services"
       onclick="toggleMenu()"
@@ -75,12 +77,15 @@ import { Image } from "astro:assets";
   </div>
 </nav>
 <script is:inline>
+  const logoSmall = document.getElementById("logo-small");
   function toggleMenu() {
     const menu = document.getElementById("menu");
     const hamburger = document.getElementById("hamburger");
     if (menu.hasAttribute("data-active")) {
       menu.removeAttribute("data-active");
     } else {
+      logoSmall.classList.add("opacity-100");
+      logoSmall.classList.remove("opacity-0");
       menu.setAttribute("data-active", "true");
     }
     hamburger?.classList.toggle("open");
