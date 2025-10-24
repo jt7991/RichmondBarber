@@ -14,7 +14,30 @@ import { SEO } from "astro-seo";
       rel="icon"
       href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💈</text></svg>"
     />
-    <meta name="generator" content={Astro.generator} />
+    <link rel="preload" href="/src/assets/2ea07ff551c12ee2fecd2d2ce198a3d3.jpg" as="image" />
+    <link rel="preload" href="/src/assets/richmond-barbershop-logo.png" as="image" />
+    <meta name="generator" content={Astro.generator}     />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Richmond Barbershop",
+        "description": "Experience top-notch barber services in Richmond. From classic cuts to modern styles, our skilled barbers provide exceptional grooming for men.",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "2820 W Cary St Suite C",
+          "addressLocality": "Richmond",
+          "addressRegion": "VA",
+          "postalCode": "23221",
+          "addressCountry": "US"
+        },
+        "telephone": "+15551234567",
+        "url": "https://richmondbarber.com",
+        "image": "/richmond-barbershop-logo.png",
+        "priceRange": "$$",
+        "openingHours": "Mo-Sa 09:00-18:00"
+      }
+    </script>
     <SEO
       title="Richmond Barber Shop - Professional Haircuts and Grooming"
       description="Experience top-notch barber services in Richmond. From classic cuts to modern styles, our skilled barbers provide exceptional grooming for men."
