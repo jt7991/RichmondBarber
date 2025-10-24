@@ -5,8 +5,8 @@ import Accordion from "../components/Accordion.astro";
 import Logo from "../components/Logo.astro";
 import Service from "../components/Service.astro";
 import GalleryImage from "../components/GalleryImage.astro";
-
 import ComingSoonOverlay from "../components/ComingSoonOverlay.astro";
+import heroImage from "../assets/hero.webp";
 
 ---
 
@@ -14,7 +14,8 @@ import ComingSoonOverlay from "../components/ComingSoonOverlay.astro";
   <main class="bg-white dark:bg-zinc-900">
     <section
       id="hero"
-      class="h-[calc(100vh-80px)] relative px-4 bg-[url('../assets/2ea07ff551c12ee2fecd2d2ce198a3d3.jpg')] bg-cover bg-center bg-no-repeat bg-scroll"
+      class="h-[calc(100vh-80px)] relative px-4 bg-cover bg-center bg-no-repeat bg-scroll"
+      style={`background-image: url(${heroImage.src})`}
       aria-label="Hero section featuring barbershop interior"
     >
       <div

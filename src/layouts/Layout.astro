@@ -1,21 +1,24 @@
 ---
 import Navigation from "../components/Navigation.astro";
-import { Font } from "astro:assets";
 import { SEO } from "astro-seo";
+import heroImage from "../assets/hero.webp";
+import logoImage from "../assets/richmond-barbershop-logo.png";
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <Font cssVariable="--font-roboto" preload />
     <meta name="viewport" content="width=device-width" />
     <link
       rel="icon"
       href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💈</text></svg>"
     />
-    <link rel="preload" href="/src/assets/2ea07ff551c12ee2fecd2d2ce198a3d3.jpg" as="image" />
-    <link rel="preload" href="/src/assets/richmond-barbershop-logo.png" as="image" />
+    <link rel="preload" href={heroImage.src} as="image" />
+    <link rel="preload" href={logoImage.src} as="image" />
+    <link rel="dns-prefetch" href="//images.unsplash.com" />
+    <link rel="dns-prefetch" href="//www.instagram.com" />
+    <link rel="dns-prefetch" href="//www.google.com" />
     <meta name="generator" content={Astro.generator}     />
     <script type="application/ld+json">
       {
@@ -63,7 +66,7 @@ import { SEO } from "astro-seo";
   </head>
   <style>
     body {
-      font-family: var(--font-roboto);
+      font-family: 'Oswald', sans-serif;
     }
   </style>
   <body class="font-sans">

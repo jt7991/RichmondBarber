@@ -13,13 +13,5 @@ export default defineConfig({
       minify: true,
     },
   },
-  experimental: {
-    fonts: [
-      {
-        provider: fontProviders.google(),
-        name: "Oswald",
-        cssVariable: "--font-roboto",
-      },
-    ],
-  },
+
 });
