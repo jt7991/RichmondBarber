@@ -1,6 +1,7 @@
 ---
 import Navigation from "../components/Navigation.astro";
 import { Font } from "astro:assets";
+import { SEO } from "astro-seo";
 ---
 
 <!doctype html>
@@ -14,7 +15,28 @@ import { Font } from "astro:assets";
       href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💈</text></svg>"
     />
     <meta name="generator" content={Astro.generator} />
-    <title>Richmond Barber</title>
+    <SEO
+      title="Richmond Barber Shop - Professional Haircuts and Grooming"
+      description="Experience top-notch barber services in Richmond. From classic cuts to modern styles, our skilled barbers provide exceptional grooming for men."
+      openGraph={{
+        basic: {
+          title: "Richmond Barber Shop",
+          type: "website",
+          image: "/richmond-barbershop-logo.png",
+          url: "https://richmondbarber.com"
+        },
+        image: {
+          alt: "Richmond Barber Shop logo"
+        }
+      }}
+      twitter={{
+        card: "summary_large_image",
+        title: "Richmond Barber Shop",
+        description: "Top barber services in Richmond.",
+        image: "/richmond-barbershop-logo.png",
+        imageAlt: "Richmond Barber Shop logo"
+      }}
+    />
   </head>
   <style>
     body {
