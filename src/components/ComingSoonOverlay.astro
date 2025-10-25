@@ -1,10 +1,15 @@
 ---
-// Coming Soon Overlay Component
+// Coming Soon Overlay Component - Client Side
 ---
 
-<div class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm">
+<div
+  id="coming-soon-overlay"
+  class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm"
+>
   <div class="text-center">
-    <h1 class="text-6xl md:text-8xl font-bold text-white tracking-wider animate-pulse">
+    <h1
+      class="text-6xl md:text-8xl font-bold text-white tracking-wider animate-pulse"
+    >
       Coming Soon
     </h1>
   </div>
@@ -15,3 +20,19 @@
     overflow: hidden;
   }
 </style>
+
+<script>
+  // Check for disableOverlay query parameter on client side
+  const urlParams = new URLSearchParams(window.location.search);
+  const disableOverlay = urlParams.get('disableOverlay') === 'true';
+
+  if (disableOverlay) {
+    const overlay = document.getElementById('coming-soon-overlay');
+    if (overlay) {
+      overlay.style.display = 'none';
+    }
+    // Also remove the body overflow hidden
+    document.body.style.overflow = 'auto';
+  }
+</script>
+
