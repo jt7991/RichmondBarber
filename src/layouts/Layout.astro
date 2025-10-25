@@ -10,6 +10,10 @@ import logoImage from "../assets/richmond-barbershop-logo.png";
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
+    <script
+      defer
+      src="https://analytics.jakey.fyi/script.js"
+      data-website-id="b49bd076-e074-4f7b-8a66-c9aefdb94c0c"></script>
     <link
       rel="icon"
       href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💈</text></svg>"
@@ -19,7 +23,7 @@ import logoImage from "../assets/richmond-barbershop-logo.png";
     <link rel="dns-prefetch" href="//images.unsplash.com" />
     <link rel="dns-prefetch" href="//www.instagram.com" />
     <link rel="dns-prefetch" href="//www.google.com" />
-    <meta name="generator" content={Astro.generator}     />
+    <meta name="generator" content={Astro.generator} />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -37,8 +41,7 @@ import logoImage from "../assets/richmond-barbershop-logo.png";
         "telephone": "+15551234567",
         "url": "https://richmondbarber.com",
         "image": "/richmond-barbershop-logo.png",
-        "priceRange": "$$",
-        "openingHours": "Mo-Sa 09:00-18:00"
+        "priceRange": "$$"
       }
     </script>
     <SEO
@@ -48,27 +51,28 @@ import logoImage from "../assets/richmond-barbershop-logo.png";
         basic: {
           title: "Richmond Barber Shop",
           type: "website",
-          image: "/richmond-barbershop-logo.png",
-          url: "https://richmondbarber.com"
+          image: logoImage.src,
+          url: "https://richmondbarber.com",
         },
         image: {
-          alt: "Richmond Barber Shop logo"
-        }
+          alt: "Richmond Barber Shop logo",
+        },
       }}
       twitter={{
         card: "summary_large_image",
         title: "Richmond Barber Shop",
         description: "Top barber services in Richmond.",
-        image: "/richmond-barbershop-logo.png",
-        imageAlt: "Richmond Barber Shop logo"
+        image: logoImage.src,
+        imageAlt: "Richmond Barber Shop logo",
       }}
     />
-  </head>
-  <style>
-    body {
-      font-family: 'Oswald', sans-serif;
-    }
-  </style>
+    <style>
+      body {
+        font-family: "Oswald", sans-serif;
+      }
+    </style></head
+  >
+
   <body class="font-sans">
     <Navigation />
     <slot />
