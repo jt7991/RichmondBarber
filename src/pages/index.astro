@@ -7,6 +7,13 @@ import Service from "../components/Service.astro";
 import GalleryImage from "../components/GalleryImage.astro";
 import ComingSoonOverlay from "../components/ComingSoonOverlay.astro";
 import heroImage from "../assets/hero.webp";
+import client_1 from "../assets/client_1.jpg";
+import client_2 from "../assets/client_2.jpg";
+import client_3 from "../assets/client_3.jpg";
+import client_4 from "../assets/client_4.jpg";
+import client_5 from "../assets/client_5.jpg";
+import client_6 from "../assets/client_6.jpg";
+import toby from "../assets/toby.jpg";
 
 ---
 
@@ -15,7 +22,6 @@ import heroImage from "../assets/hero.webp";
     <section
       id="hero"
       class="h-[calc(100vh-80px)] relative px-4 bg-cover bg-center bg-no-repeat bg-scroll"
-      style={`background-image: url(${heroImage.src})`}
       aria-label="Hero section featuring barbershop interior"
     >
       <div
@@ -56,15 +62,13 @@ import heroImage from "../assets/hero.webp";
         Gallery
       </h2>
         <div class="grid grid-cols-2 sm:grid-cols-3 gap-6 max-w-7xl mx-auto">
-        <GalleryImage index={0} id="image1" src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?q=80&w=2348&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Barbershop interior with classic chairs" />
-          <GalleryImage index={1} id="image2" src="https://images.unsplash.com/photo-1587909209111-5097ee578ec3?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Barber giving a haircut" />
-          <GalleryImage index={2} id="image3" src="https://plus.unsplash.com/premium_photo-1661270415179-f7bcff006edb?q=80&w=2338&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Close-up of barber tools" />
-        <GalleryImage id="image4" index={3} src="https://plus.unsplash.com/premium_photo-1661542350224-8e3f095ce053?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Client getting a beard trim" />
-        <GalleryImage id="image5" index={4} src="https://plus.unsplash.com/premium_photo-1661542350224-8e3f095ce053?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Client getting a beard trim" />
-          <GalleryImage id="image6" index={5} src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?q=80&w=2348&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Barbershop interior with classic chairs" />
-          <GalleryImage id="image7" index={6} src="https://images.unsplash.com/photo-1587909209111-5097ee578ec3?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Barber giving a haircut" />
-          <GalleryImage id="image8" index={7} src="https://plus.unsplash.com/premium_photo-1661270415179-f7bcff006edb?q=80&w=2338&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Close-up of barber tools" />
-          <GalleryImage id="image9" index={8} src="https://plus.unsplash.com/premium_photo-1661542350224-8e3f095ce053?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Client getting a beard trim" />
+        <GalleryImage index={0} id="image1" src={client_1} alt="Person getting a haircut" />
+        <GalleryImage index={1} id="image2" src={client_2} alt="Barber giving a haircut" />
+        <GalleryImage index={2} id="image3" src={client_3} alt="Person getting a haircut" />
+        <GalleryImage index={3} id="image4" src={client_4} alt="Person getting a haircut" />
+        <GalleryImage index={4} id="image5" src={client_5} alt="Person getting a haircut" />
+        <GalleryImage index={5} id="image6" src={client_6} alt="Person getting a haircut" />
+        <GalleryImage index={6} id="image7" src={toby} alt="Toby getting a haircut" />
 </div>
     </section>
     <div class="flex justify-center pt-12 opacity-0 transition-all duration-500 " id='ig-embed'>

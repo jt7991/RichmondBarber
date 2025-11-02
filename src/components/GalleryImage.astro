@@ -1,9 +1,11 @@
 ---
+import { Image } from "astro:assets";
+
 const { src, alt, id, index } = Astro.props;
 ---
 
 <div id={`${id}-checker`}>
-  <img
+  <Image
     src={src}
     alt={alt}
     loading="lazy"
