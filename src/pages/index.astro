@@ -42,33 +42,35 @@ import toby from "../assets/toby.jpg";
       </div>
     </section>
 
-    <section
-      id="services"
-      class="bg-gray-50 dark:bg-zinc-900 text-black dark:text-white px-4 text-center"
-    >
+     <section
+       id="services"
+       class="bg-gray-50 dark:bg-zinc-900 text-black dark:text-white px-4 text-center"
+       data-ai-section="services"
+       data-ai-type="barber-services"
+     >
       <h2 class="text-5xl font-bold mb-16 text-black dark:text-white">
         Our Services
       </h2>
        <div class="flex flex-col gap-4 max-w-7xl mx-auto overflow-x-hidden grid grid-cols-1 md:grid-cols-2">
-         <Service service={{name: "Haircut", price: "$40", description: "Precision cuts tailored to your style."}} index={0} />
-         <Service service={{name: "Scissor Cut", price: "$50", description: "Precision cuts tailored to your style."}} index={1} />
-         <Service service={{name: "Beard Trim", price: "$20", description: "Expert shaping and grooming for a sharp look."}} index={2} />
-         <Service service={{name: "Hot Shave", price: "$30", description: "Traditional hot towel shave for ultimate comfort."}} index={3} />
+          <Service service={{name: "Haircut", price: "$40", description: "Professional precision cuts tailored to your style at our Richmond VA barbershop. Expert men's haircuts in Carytown."}} index={0} />
+          <Service service={{name: "Scissor Cut", price: "$60", description: "Premium scissor cuts with attention to detail. Skilled barbers in Richmond VA providing quality haircuts for men."}} index={1} />
+          <Service service={{name: "Beard Trim", price: "$40", description: "Expert beard shaping and grooming for a sharp, professional look. Beard trimming services in Richmond VA."}} index={2} />
+          <Service service={{name: "Hot Shave", price: "$50", description: "Traditional hot towel shave for ultimate comfort and smoothness. Classic barber services in Carytown Richmond."}} index={3} />
        </div>
     </section>
 
-    <section class="px-4 text-center bg-white dark:bg-zinc-900" id="gallery">
+     <section class="px-4 text-center bg-white dark:bg-zinc-900" id="gallery" data-ai-section="gallery" data-ai-type="work-samples">
       <h2 class="text-5xl font-bold mb-16 text-black dark:text-white">
         Gallery
       </h2>
         <div class="grid grid-cols-2 sm:grid-cols-3 gap-6 max-w-7xl mx-auto">
-        <GalleryImage index={0} id="image1" src={client_1} alt="Person getting a haircut" />
-        <GalleryImage index={1} id="image2" src={client_2} alt="Barber giving a haircut" />
-        <GalleryImage index={2} id="image3" src={client_3} alt="Person getting a haircut" />
-        <GalleryImage index={3} id="image4" src={client_4} alt="Person getting a haircut" />
-        <GalleryImage index={4} id="image5" src={client_5} alt="Person getting a haircut" />
-        <GalleryImage index={5} id="image6" src={client_6} alt="Person getting a haircut" />
-        <GalleryImage index={6} id="image7" src={toby} alt="Toby getting a haircut" />
+        <GalleryImage index={0} id="image1" src={client_1} alt="Man receiving a professional haircut at Richmond Barbershop in Richmond VA" />
+        <GalleryImage index={1} id="image2" src={client_2} alt="Skilled barber performing a haircut at Richmond VA barbershop" />
+        <GalleryImage index={2} id="image3" src={client_3} alt="Client enjoying a stylish haircut at Richmond Barbershop" />
+        <GalleryImage index={3} id="image4" src={client_4} alt="Professional grooming session at Richmond VA barber shop" />
+        <GalleryImage index={4} id="image5" src={client_5} alt="Modern haircut service at Richmond Barbershop in Virginia" />
+        <GalleryImage index={5} id="image6" src={client_6} alt="Expert barber cutting hair at Richmond VA location" />
+        <GalleryImage index={6} id="image7" src={toby} alt="Toby getting a premium haircut at Richmond Barbershop" />
 </div>
     </section>
     <div class="flex justify-center pt-12 opacity-0 transition-all duration-500 " id='ig-embed'>
@@ -206,9 +208,12 @@ import toby from "../assets/toby.jpg";
       <script defer src="//www.instagram.com/embed.js"></script>
     </div>
 
-    <section
-      class="px-4 text-center flex flex-col items-center bg-gray-50 dark:bg-zinc-900"
-    >
+     <section
+       class="px-4 text-center flex flex-col items-center bg-gray-50 dark:bg-zinc-900"
+       id="faq"
+       data-ai-section="faq"
+       data-ai-type="frequently-asked-questions"
+     >
       <h2 class="text-5xl font-bold mb-16 text-black dark:text-white">FAQ</h2>
       <div class="max-w-7xl w-full">
         <Accordion
@@ -239,10 +244,12 @@ import toby from "../assets/toby.jpg";
       </div>
     </section>
 
-    <section
-      class="text-black dark:text-white px-4 bg-white dark:bg-zinc-900"
-      id="contact"
-    >
+     <section
+       class="text-black dark:text-white px-4 bg-white dark:bg-zinc-900"
+       id="contact"
+       data-ai-section="contact"
+       data-ai-type="business-contact"
+     >
       <div class="text-center">
         <h2 class="text-5xl font-bold mb-16">Contact Us</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">

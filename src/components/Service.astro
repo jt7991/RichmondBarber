@@ -7,18 +7,33 @@ const serviceId = service.name.replace(/\s+/g, "-").toLowerCase();
   <div
     id={serviceId}
     class={`bg-gray-200 p-4 rounded-xl shadow-xl border border-gray-300 dark:border-zinc-700 transition-all duration-500 ${index % 2 === 1 ? "translate-x-full" : "-translate-x-full"} opacity-0`}
+    itemscope
+    itemtype="https://schema.org/Service"
   >
     <div class="flex flex-row justify-between">
-      <h3 class="text-xl font-bold mb-4 text-black dark:text-white">
+      <h3
+        class="text-xl font-bold mb-4 text-black dark:text-white"
+        itemprop="name"
+      >
         {service.name}
       </h3>
-      <p class="text-lg text-gray-600 dark:text-zinc-300">
-        {service.price}
+      <p
+        class="text-lg text-gray-600 dark:text-zinc-300"
+        itemprop="offers"
+        itemscope
+        itemtype="https://schema.org/Offer"
+      >
+        <span itemprop="priceCurrency" class="sr-only">USD</span>
+        <span itemprop="price">{service.price.replace("$", "")}</span>
       </p>
     </div>
-    <p class="text-md text-left text-gray-500 dark:text-zinc-400">
+    <p
+      class="text-md text-left text-gray-500 dark:text-zinc-400"
+      itemprop="description"
+    >
       {service.description}
     </p>
+    <meta itemprop="provider" content="Richmond Barbershop" />
   </div>
 </div>
 

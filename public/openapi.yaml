@@ -1,0 +1,217 @@
+openapi: 3.0.3
+info:
+  title: Richmond Barbershop API
+  description: API for accessing Richmond Barbershop services and business information
+  version: 1.0.0
+  contact:
+    name: Richmond Barbershop
+    url: https://richmondbarbershop.com
+servers:
+  - url: https://richmondbarbershop.com
+    description: Production server
+paths:
+  /api/services.json:
+    get:
+      summary: Get all barber services
+      description: Returns a structured list of all services offered by Richmond Barbershop
+      operationId: getServices
+      responses:
+        '200':
+          description: Successful response with services data
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  '@context':
+                    type: string
+                    example: "https://schema.org"
+                  '@type':
+                    type: string
+                    example: "ItemList"
+                  name:
+                    type: string
+                    example: "Richmond Barbershop Services"
+                  description:
+                    type: string
+                    example: "Professional barber services offered at Richmond Barbershop"
+                  numberOfItems:
+                    type: integer
+                    example: 4
+                  itemListElement:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        '@type':
+                          type: string
+                          example: "Service"
+                        name:
+                          type: string
+                          example: "Haircut"
+                        description:
+                          type: string
+                          example: "Precision cuts tailored to your style."
+                        offers:
+                          type: object
+                          properties:
+                            '@type':
+                              type: string
+                              example: "Offer"
+                            price:
+                              type: string
+                              example: "40"
+                            priceCurrency:
+                              type: string
+                              example: "USD"
+                            availability:
+                              type: string
+                              example: "https://schema.org/InStock"
+                        provider:
+                          type: object
+                          properties:
+                            '@type':
+                              type: string
+                              example: "LocalBusiness"
+                            name:
+                              type: string
+                              example: "Richmond Barbershop"
+                            address:
+                              type: object
+                              properties:
+                                '@type':
+                                  type: string
+                                  example: "PostalAddress"
+                                streetAddress:
+                                  type: string
+                                  example: "2820 W Cary St Suite C"
+                                addressLocality:
+                                  type: string
+                                  example: "Richmond"
+                                addressRegion:
+                                  type: string
+                                  example: "VA"
+                                postalCode:
+                                  type: string
+                                  example: "23221"
+                                addressCountry:
+                                  type: string
+                                  example: "US"
+  /api/faq.json:
+    get:
+      summary: Get frequently asked questions
+      description: Returns structured FAQ data for Richmond Barbershop
+      operationId: getFAQ
+      responses:
+        '200':
+          description: Successful response with FAQ data
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  '@context':
+                    type: string
+                    example: "https://schema.org"
+                  '@type':
+                    type: string
+                    example: "FAQPage"
+                  name:
+                    type: string
+                    example: "Richmond Barbershop FAQ"
+                  description:
+                    type: string
+                    example: "Frequently asked questions about Richmond Barbershop services"
+                  mainEntity:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        '@type':
+                          type: string
+                          example: "Question"
+                        name:
+                          type: string
+                          example: "Do I need to make an appointment at Richmond Barbershop?"
+                        acceptedAnswer:
+                          type: object
+                          properties:
+                            '@type':
+                              type: string
+                              example: "Answer"
+                            text:
+                              type: string
+                              example: "Appointments are highly recommended..."
+                  publisher:
+                    type: object
+                    properties:
+                      '@type':
+                        type: string
+                        example: "LocalBusiness"
+                      name:
+                        type: string
+                        example: "Richmond Barbershop"
+  /api/services.md:
+    get:
+      summary: Get barber services in Markdown format
+      description: Returns barber services information in Markdown format for easy AI processing
+      operationId: getServicesMarkdown
+      responses:
+        '200':
+          description: Successful response with services in Markdown
+          content:
+            text/markdown:
+              schema:
+                type: string
+              example: |
+                # Richmond Barbershop Services
+
+                Professional barber services in Richmond, VA...
+
+                ## Services Offered
+
+                ### Haircut
+                - **Price**: $40
+                - **Description**: Professional precision cuts...
+  /api/faq.md:
+    get:
+      summary: Get FAQ in Markdown format
+      description: Returns frequently asked questions in Markdown format
+      operationId: getFAQMarkdown
+      responses:
+        '200':
+          description: Successful response with FAQ in Markdown
+          content:
+            text/markdown:
+              schema:
+                type: string
+              example: |
+                # Richmond Barbershop FAQ
+
+                Frequently asked questions...
+
+                ## Frequently Asked Questions
+
+                ### 1. Do I need to make an appointment?
+
+                Appointments are highly recommended...
+  /api/content.md:
+    get:
+      summary: Get complete site content in Markdown
+      description: Returns all site content (services, FAQ, business info) in comprehensive Markdown format
+      operationId: getContentMarkdown
+      responses:
+        '200':
+          description: Successful response with complete site content in Markdown
+          content:
+            text/markdown:
+              schema:
+                type: string
+              example: |
+                # Richmond Barbershop
+
+                Professional barber services in Richmond, Virginia...
+
+                ## About Us
+
+                Richmond Barbershop provides top-notch barber services...

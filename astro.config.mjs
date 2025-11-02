@@ -5,7 +5,7 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://richmondbarber.com",
+  site: "https://richmondbarbershop.com",
   integrations: [sitemap()],
   vite: {
     plugins: [tailwindcss()],
@@ -13,5 +13,4 @@ export default defineConfig({
       minify: true,
     },
   },
-
 });
