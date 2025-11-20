@@ -25,9 +25,6 @@ const { src, alt, id, index } = Astro.props;
           if (entry.isIntersecting) {
             imgElem.classList.add("!translate-x-0");
             imgElem.classList.add("!opacity-100");
-          } else {
-            imgElem.classList.remove("!translate-x-0");
-            imgElem.classList.remove("!opacity-100");
           }
         }
       },

@@ -3,7 +3,10 @@ const { service, index } = Astro.props;
 const serviceId = service.name.replace(/\s+/g, "-").toLowerCase();
 ---
 
-<div id={`${serviceId}-checker`}>
+<a
+  id={`${serviceId}-checker`}
+  href="https://book.squareup.com/appointments/e82z6hm5h0k6nr/location/L0C7SP53VGCK0/services"
+>
   <div
     id={serviceId}
     class={`bg-gray-200 p-4 rounded-xl shadow-xl border border-gray-300 dark:border-zinc-700 transition-all duration-500 ${index % 2 === 1 ? "translate-x-full" : "-translate-x-full"} opacity-0`}
@@ -35,7 +38,7 @@ const serviceId = service.name.replace(/\s+/g, "-").toLowerCase();
     </p>
     <meta itemprop="provider" content="Richmond Barbershop" />
   </div>
-</div>
+</a>
 
 <script define:vars={{ serviceId }} is:inline>
   const serviceElem = document.getElementById(serviceId);
@@ -48,9 +51,6 @@ const serviceId = service.name.replace(/\s+/g, "-").toLowerCase();
           if (entry.isIntersecting) {
             serviceElem.classList.add("!translate-x-0");
             serviceElem.classList.add("!opacity-100");
-          } else {
-            serviceElem.classList.remove("!translate-x-0");
-            serviceElem.classList.remove("!opacity-100");
           }
         }
       },

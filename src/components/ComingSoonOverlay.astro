@@ -24,15 +24,14 @@
 <script>
   // Check for disableOverlay query parameter on client side
   const urlParams = new URLSearchParams(window.location.search);
-  const disableOverlay = urlParams.get('disableOverlay') === 'true';
+  const disableOverlay = urlParams.get("disableOverlay") === "true";
 
-  if (disableOverlay) {
-    const overlay = document.getElementById('coming-soon-overlay');
+  if (true) {
+    const overlay = document.getElementById("coming-soon-overlay");
     if (overlay) {
-      overlay.style.display = 'none';
+      overlay.style.display = "none";
     }
     // Also remove the body overflow hidden
-    document.body.style.overflow = 'auto';
+    document.body.style.overflow = "auto";
   }
 </script>
-
