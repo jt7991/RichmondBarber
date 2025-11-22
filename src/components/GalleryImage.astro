@@ -8,7 +8,7 @@ const { src, alt, id, index } = Astro.props;
   <Image
     src={src}
     alt={alt}
-    loading="lazy"
+    loading="eager"
     class={`w-full h-full aspect-square object-cover rounded-lg shadow-lg transform transition-all duration-300 opacity-0  -translate-x-11/12 ${index % 2 ? "delay-200" : ""}`}
     id={id}
   />
