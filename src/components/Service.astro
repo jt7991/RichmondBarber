@@ -20,15 +20,6 @@ const serviceId = service.name.replace(/\s+/g, "-").toLowerCase();
       >
         {service.name}
       </h3>
-      <p
-        class="text-lg text-gray-600 dark:text-zinc-300"
-        itemprop="offers"
-        itemscope
-        itemtype="https://schema.org/Offer"
-      >
-        <span itemprop="priceCurrency" class="sr-only">USD</span>
-        <span itemprop="price">{service.price.replace("$", "")}</span>
-      </p>
     </div>
     <p
       class="text-md text-left text-gray-500 dark:text-zinc-400"

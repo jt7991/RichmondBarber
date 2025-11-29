@@ -1,7 +1,8 @@
 ---
 import Navigation from "../components/Navigation.astro";
 import { SEO } from "astro-seo";
-import logoImage from "../assets/sms_preview.jpg";
+import logoImage from "../assets/sms_preview.webp";
+import heroImage from "../assets/hero.webp";
 ---
 
 <!doctype html>
@@ -19,6 +20,13 @@ import logoImage from "../assets/sms_preview.jpg";
     <link rel="dns-prefetch" href="//images.unsplash.com" />
     <link rel="dns-prefetch" href="//www.instagram.com" />
     <link rel="dns-prefetch" href="//www.google.com" />
+    <link
+      rel="preload"
+      as="image"
+      href={heroImage.src}
+      crossorigin="anonymous"
+    />
+    <title>Richmond Barbershop</title>
     <meta name="generator" content={Astro.generator} />
     <script type="application/ld+json">
       {
@@ -43,7 +51,7 @@ import logoImage from "../assets/sms_preview.jpg";
           "availableLanguage": "English"
         },
         "sameAs": [
-          "https://www.instagram.com/richmondbarbershop",
+          "https://www.instagram.com/rvabarbershop",
           "https://www.facebook.com/richmondbarbershop"
         ],
         "areaServed": [
@@ -277,7 +285,7 @@ import logoImage from "../assets/sms_preview.jpg";
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Hot Shave",
+                "name": "Straight Razor Shave",
                 "description": "Traditional hot towel shave for ultimate comfort.",
                 "provider": {
                   "@type": "LocalBusiness",
@@ -297,25 +305,26 @@ import logoImage from "../assets/sms_preview.jpg";
     <link rel="canonical" href={Astro.url} />
     <meta
       property="og:description"
+      name="description"
       content="Experience top-notch barber services in Richmond VA. From classic cuts to modern styles, our skilled barbers provide exceptional grooming for men in Carytown and surrounding areas."
     />
     <SEO
-      title="Richmond Barber Shop - Professional Haircuts and Grooming"
+      title="Richmond Barbershop - Professional Haircuts and Grooming"
       description="Experience top-notch barber services in Richmond VA. From classic cuts to modern styles, our skilled barbers provide exceptional grooming for men in Carytown and surrounding areas."
       openGraph={{
         basic: {
-          title: "Richmond Barber Shop",
+          title: "Richmond Barbershop",
           type: "website",
           image: `https://richmondbarbershop.com${logoImage.src}`,
           url: "https://richmondbarbershop.com",
         },
         image: {
-          alt: "Richmond Barber Shop interior and services",
+          alt: "Richmond barbershop interior and services",
         },
       }}
       twitter={{
         card: "summary_large_image",
-        title: "Richmond Barber Shop",
+        title: "Richmond Barbershop",
         description: "Top barber services in Richmond VA.",
         image: `https://richmondbarbershop.com${logoImage.src}`,
         imageAlt: "Richmond Barbershop logo",

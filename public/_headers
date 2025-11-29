@@ -1,44 +1,39 @@
-/*
+# Long-term Caching for Immutable Assets (1 Year)
+# Use a common prefix for all static assets for better clarity and less repetition.
+# /assets/* and /_astro/* are where Astro puts most production assets.
+
+/assets/*
   Cache-Control: public, max-age=31536000, immutable
 
 /_astro/*
   Cache-Control: public, max-age=31536000, immutable
 
-/*.js
-  Cache-Control: public, max-age=31536000, immutable
+# Simplified Wildcard Matching for all common file types
+# The syntax should be two lines (the path pattern, then the header)
+# NOTE: The pattern for these file extensions must include a directory path if they are not in the root.
+# For simplicity and effectiveness, we rely on the /assets/* and /_astro/* rules above
+# since most Astro build outputs (JS, CSS, fonts, optimized images) go there.
 
-/*.css
-  Cache-Control: public, max-age=31536000, immutable
-
-/*.woff2
-  Cache-Control: public, max-age=31536000, immutable
-
-/*.webp
-  Cache-Control: public, max-age=31536000, immutable
-
-/*.png
-  Cache-Control: public, max-age=31536000, immutable
-
-/*.jpg
-  Cache-Control: public, max-age=31536000, immutable
-
-/*.svg
-  Cache-Control: public, max-age=31536000, immutable
-
+# If you have static assets directly in the root (like favicon.ico or robots.txt)
 /*.ico
   Cache-Control: public, max-age=31536000, immutable
-
 /*.xml
   Cache-Control: public, max-age=31536000, immutable
-
 /*.txt
   Cache-Control: public, max-age=31536000, immutable
-
 /*.json
   Cache-Control: public, max-age=31536000, immutable
+
+
+---
+
+# No Caching/Revalidation for Documents (HTML)
+# This ensures that users always get the latest version of the HTML document itself,
+# which references the unique, cached assets above.
 
 /*.html
   Cache-Control: public, max-age=0, must-revalidate
 
+# Specifically for the homepage
 /index.html
   Cache-Control: public, max-age=0, must-revalidate

@@ -1,32 +1,56 @@
 export async function GET() {
   const services = [
-    { name: "Haircut", price: "$40", description: "Professional precision cuts tailored to your style at our Richmond VA barbershop. Expert men's haircuts in Carytown." },
-    { name: "Scissor Cut", price: "$50", description: "Premium scissor cuts with attention to detail. Skilled barbers in Richmond VA providing quality haircuts for men." },
-    { name: "Beard Trim", price: "$20", description: "Expert beard shaping and grooming for a sharp, professional look. Beard trimming services in Richmond VA." },
-    { name: "Hot Shave", price: "$30", description: "Traditional hot towel shave for ultimate comfort and smoothness. Classic barber services in Carytown Richmond." }
+    {
+      name: "Haircut",
+      price: "$40",
+      description:
+        "Professional precision cuts tailored to your style at our Richmond VA barbershop. Expert men's haircuts in Carytown.",
+    },
+    {
+      name: "Scissor Cut",
+      price: "$50",
+      description:
+        "Premium scissor cuts with attention to detail. Skilled barbers in Richmond VA providing quality haircuts for men.",
+    },
+    {
+      name: "Beard Trim",
+      price: "$20",
+      description:
+        "Expert beard shaping and grooming for a sharp, professional look. Beard trimming services in Richmond VA.",
+    },
+    {
+      name: "Straight Razor Shave",
+      price: "$30",
+      description:
+        "Traditional hot towel shave for ultimate comfort and smoothness. Classic barber services in Carytown Richmond.",
+    },
   ];
 
   const faqs = [
     {
       question: "Do I need to make an appointment at Richmond Barbershop?",
-      answer: "Appointments are highly recommended and you can make an appointment ahead of time by scheduling here. Walk-ins are welcome when available!"
+      answer:
+        "Appointments are highly recommended and you can make an appointment ahead of time by scheduling here. Walk-ins are welcome when available!",
     },
     {
       question: "Do you have onsite parking?",
-      answer: "We do not have onsite parking, however there is street parking, as well as a 2 story parking garage directly across the street!"
+      answer:
+        "We do not have onsite parking, however there is street parking, as well as a 2 story parking garage directly across the street!",
     },
     {
       question: "What ages are welcome?",
-      answer: "We offer haircuts for ages 8+"
+      answer: "We offer haircuts for ages 8+",
     },
     {
       question: "What is your cancellation policy?",
-      answer: "Cancelations need to be made at least 8 hours before your appointment online or by phone. Otherwise you will be charged in full for your missed appointment."
+      answer:
+        "Cancelations need to be made at least 8 hours before your appointment online or by phone. Otherwise you will be charged in full for your missed appointment.",
     },
     {
       question: "What areas of Richmond, VA do you serve?",
-      answer: "We proudly serve the following nearby neighborhoods: Carytown, The Fan, Museum District, Scott's Addition, Church Hill, Rocketts Landing, Shockoe Bottom, Lakeside, Forest Hill, Henrico, The West End, Bon Air, Glen Allen, Mechanicsville, Midlothian, Chesterfield, and other surrounding areas!"
-    }
+      answer:
+        "We proudly serve the following nearby neighborhoods: Carytown, The Fan, Museum District, Scott's Addition, Church Hill, Rocketts Landing, Shockoe Bottom, Lakeside, Forest Hill, Henrico, The West End, Bon Air, Glen Allen, Mechanicsville, Midlothian, Chesterfield, and other surrounding areas!",
+    },
   ];
 
   const markdown = `# Richmond Barbershop
@@ -39,10 +63,14 @@ Richmond Barbershop provides top-notch barber services in Richmond VA. From clas
 
 ## Services Offered
 
-${services.map(service => `### ${service.name}
+${services
+  .map(
+    (service) => `### ${service.name}
 - **Price**: ${service.price}
 - **Description**: ${service.description}
-`).join('\n')}
+`,
+  )
+  .join("\n")}
 
 ## Business Information
 
@@ -78,11 +106,15 @@ We proudly serve the following Richmond VA neighborhoods:
 
 ## Frequently Asked Questions
 
-${faqs.map((faq, index) => `### ${index + 1}. ${faq.question}
+${faqs
+  .map(
+    (faq, index) => `### ${index + 1}. ${faq.question}
 
 ${faq.answer}
 
-`).join('')}
+`,
+  )
+  .join("")}
 
 ## Reviews & Ratings
 
@@ -113,10 +145,11 @@ Walk-ins welcome when available. Appointments highly recommended.
 
   return new Response(markdown, {
     headers: {
-      'Content-Type': 'text/markdown',
-      'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Methods': 'GET',
-      'Access-Control-Allow-Headers': 'Content-Type'
-    }
+      "Content-Type": "text/markdown",
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET",
+      "Access-Control-Allow-Headers": "Content-Type",
+    },
   });
 }
+

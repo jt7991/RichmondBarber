@@ -5,15 +5,15 @@ import Accordion from "../components/Accordion.astro";
 import Logo from "../components/Logo.astro";
 import Service from "../components/Service.astro";
 import GalleryImage from "../components/GalleryImage.astro";
-import ComingSoonOverlay from "../components/ComingSoonOverlay.astro";
-import heroImage from "../assets/hero.jpg";
-import client_1 from "../assets/client_1.jpg";
-import client_2 from "../assets/client_2.jpg";
-import client_3 from "../assets/client_3.jpg";
-import client_4 from "../assets/client_4.jpg";
-import client_5 from "../assets/client_5.jpg";
-import client_6 from "../assets/client_6.jpg";
-import toby from "../assets/toby.jpg";
+import heroImage from "../assets/hero.webp";
+import client_1 from "../assets/client_1.webp";
+import client_2 from "../assets/client_2.webp";
+import client_3 from "../assets/client_3.webp";
+import client_4 from "../assets/client_4.webp";
+import client_5 from "../assets/client_5.webp";
+import client_6 from "../assets/client_6.webp";
+import beard_guy from "../assets/beard_guy.webp"
+import toby from "../assets/toby.webp";
 ---
 
 <Layout>
@@ -42,15 +42,6 @@ import toby from "../assets/toby.jpg";
       </div>
     </section>
 
-    <!-- <section -->
-    <!--   class="px-4 text-center bg-gray-50" -->
-    <!--   id="mission-statement" -->
-    <!--   data-ai-section="mission-statement" -->
-    <!--   data-ai-type="mission-statement" -->
-    <!-- > -->
-    <!---->
-    <!--   Located in the heart of Carytown, Richmond Barbershop is a privately owned upscale barbershop that specializes in haircuts, beard trims, hot towel shaves, and other barber services. Our mission is to provide our community with top-notch service while staying true to the “old school” barbering traditions. -->
-    <!-- </section> -->
         
     <section
       class="px-4 text-center bg-white dark:bg-zinc-900 mt-0"
@@ -64,45 +55,52 @@ import toby from "../assets/toby.jpg";
       <div class="grid grid-cols-2 sm:grid-cols-3 gap-6 max-w-7xl mx-auto">
         <GalleryImage
           index={0}
+          id="image7"
+          src={toby}
+          alt="Toby getting a premium haircut at Richmond Barbershop"
+        />
+        <GalleryImage
+          index={1}
           id="image1"
           src={client_1}
           alt="Man receiving a professional haircut at Richmond Barbershop in Richmond VA"
         />
         <GalleryImage
-          index={1}
+          index={2}
           id="image2"
           src={client_2}
           alt="Skilled barber performing a haircut at Richmond VA barbershop"
         />
         <GalleryImage
-          index={2}
-          id="image3"
-          src={client_3}
-          alt="Client enjoying a stylish haircut at Richmond Barbershop"
-        />
-        <GalleryImage
           index={3}
-          id="image4"
-          src={client_4}
-          alt="Professional grooming session at Richmond VA barber shop"
-        />
-        <GalleryImage
-          index={4}
           id="image5"
           src={client_5}
           alt="Modern haircut service at Richmond Barbershop in Virginia"
         />
         <GalleryImage
+          index={4}
+          id="image3"
+          src={client_3}
+          alt="Client enjoying a stylish haircut at Richmond Barbershop"
+        />
+        <GalleryImage
           index={5}
+          id="image4"
+          src={client_4}
+          alt="Professional grooming session at Richmond VA barber shop"
+        />
+        <GalleryImage
+          index={6}
           id="image6"
           src={client_6}
           alt="Expert barber cutting hair at Richmond VA location"
         />
         <GalleryImage
-          index={6}
-          id="image7"
-          src={toby}
-          alt="Toby getting a premium haircut at Richmond Barbershop"
+          index={7}
+          id="image8"
+          src={beard_guy}
+          classNames="object-top"
+          alt="A man with a beard who just got a professional beard trim with a straight razor line up in Richmond, Virginia"
         />
       </div>
     </section>
@@ -116,7 +114,7 @@ import toby from "../assets/toby.jpg";
         Our Services
       </h2>
       <div
-        class="flex flex-col gap-4 max-w-7xl mx-auto overflow-x-hidden grid grid-cols-1 md:grid-cols-2"
+        class="flex flex-col gap-4 max-w-7xl mx-auto overflow-x-hidden"
       >
         <Service
           service={{
@@ -146,7 +144,7 @@ import toby from "../assets/toby.jpg";
         />
         <Service
           service={{
-            name: "Hot Shave",
+            name: "Straight Razor Shave",
             price: "$50",
             description:
               "Traditional hot shave with premium products for a smooth finish.",
@@ -155,8 +153,21 @@ import toby from "../assets/toby.jpg";
         />
       </div>
     </section>
+    <section
+      id="best-barbershop"
+      class="text-black dark:text-white px-4 text-center opacity-0 translate-y-8 transition-all duration-700 ease-out flex flex-col md:gap-4 gap-8"
+      data-ai-section="best-barbershop-in-richmond"
+      data-ai-type="best-barbershop-in-richmond"
+    >
+      <h2 class="text-4xl font-bold text-black dark:text-white">
+        Looking for the best barbershop in Richmond Virginia?
+      </h2>
+      <p class="text-lg max-w-xl mx-auto leading-relaxed">
+        Located in the heart of Carytown, Richmond Barbershop is a privately owned upscale barbershop that specializes in haircuts, beard trims, hot towel shaves, and other barber services. Our mission is to provide our community with top-notch service while staying true to the “old school” barbering traditions.
+      </p>
+    </section>
     <div
-      class="flex justify-center pt-12 opacity-0 transition-all duration-500"
+      class="flex justify-center pt-12 opacity-0 transition-all duration-500 bg-gray-50"
       id="ig-embed"
     >
       <blockquote
@@ -291,7 +302,7 @@ import toby from "../assets/toby.jpg";
           </p>
         </div>
       </blockquote>
-      <script defer src="//www.instagram.com/embed.js"></script>
+      <script defer src="https://www.instagram.com/embed.js"></script>
     </div>
 
     <section
@@ -344,9 +355,9 @@ import toby from "../assets/toby.jpg";
               Contact
             </h3>
             <a
-              href="tel:+15551234567"
+              href="tel:+18042030221"
               class="text-3xl text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-300 mb-4"
-              >(555) 123-4567</a
+              >(804) 203-0221</a
             >
             <h3 class="text-4xl font-bold text-black dark:text-white">
               Location
@@ -387,7 +398,7 @@ import toby from "../assets/toby.jpg";
   <footer
     class="text-black dark:text-white text-center py-12 px-4 bg-gray-100 dark:bg-zinc-950 border-t border-gray-300 dark:border-zinc-800"
   >
-    <p class="text-lg">&copy; 2025 Richmond Barber. All rights reserved.</p>
+    <p class="text-lg">&copy; 2025 Richmond Barbershop. All rights reserved.</p>
   </footer>
 </Layout>
 <script>
@@ -445,6 +456,25 @@ import toby from "../assets/toby.jpg";
         },
       );
       observer.observe(ig);
+    }
+
+    const bestBarbershop = document.getElementById("best-barbershop");
+
+    if (bestBarbershop) {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          for (const entry of entries) {
+            if (entry.isIntersecting) {
+              bestBarbershop.classList.add("!opacity-100");
+              bestBarbershop.classList.add("!translate-y-0");
+            }
+          }
+        },
+        {
+          rootMargin: "-200px",
+        },
+      );
+      observer.observe(bestBarbershop);
     }
   }
 </script>
