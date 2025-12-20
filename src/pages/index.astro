@@ -167,7 +167,7 @@ import toby from "../assets/toby.webp";
       </p>
     </section>
     <div
-      class="flex justify-center pt-12 opacity-0 transition-all duration-500 bg-gray-50"
+      class="flex justify-center pt-12"
       id="ig-embed"
     >
       <blockquote
@@ -438,31 +438,6 @@ import toby from "../assets/toby.webp";
 
     // Also update on scroll to handle menu close
     window.addEventListener("scroll", window.updateLogoVisibility);
-     const ig = document.getElementById("ig-embed");
-
-     if (ig) {
-       const observer = new IntersectionObserver(
-         (entries) => {
-           for (const entry of entries) {
-             if (entry.isIntersecting) {
-               ig.classList.add("!opacity-100");
-               ig.classList.add("!rotate-0");
-               // Load Instagram script dynamically
-               if (!document.querySelector('script[src*="instagram.com/embed.js"]')) {
-                 const script = document.createElement('script');
-                 script.src = 'https://www.instagram.com/embed.js';
-                 script.defer = true;
-                 document.head.appendChild(script);
-               }
-             }
-           }
-         },
-         {
-           rootMargin: "-300px",
-         },
-       );
-       observer.observe(ig);
-     }
 
     const bestBarbershop = document.getElementById("best-barbershop");
 
@@ -477,7 +452,7 @@ import toby from "../assets/toby.webp";
           }
         },
         {
-          rootMargin: "-200px",
+          rootMargin: "-100px",
         },
       );
       observer.observe(bestBarbershop);
