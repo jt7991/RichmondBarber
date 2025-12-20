@@ -15,8 +15,6 @@
 # since most Astro build outputs (JS, CSS, fonts, optimized images) go there.
 
 # If you have static assets directly in the root (like favicon.ico or robots.txt)
-/*.ico
-  Cache-Control: public, max-age=31536000, immutable
 /*.xml
   Cache-Control: public, max-age=31536000, immutable
 /*.txt
