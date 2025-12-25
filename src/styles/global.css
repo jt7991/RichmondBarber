@@ -19,12 +19,12 @@ html {
 }
 
 /* Parallax effect */
-.parallax {
-  background-attachment: fixed;
+.parallax-hero {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 
 /* Focus indicators */
 button:focus, a:focus {

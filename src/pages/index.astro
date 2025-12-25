@@ -17,10 +17,10 @@ import toby from "../assets/toby.webp";
 ---
 
 <Layout>
-  <main class="bg-white dark:bg-zinc-900">
+  <main class="bg-white dark:bg-zinc-900 h-full w-full">
     <section
       id="hero"
-      class="h-[calc(100vh-80px)] relative px-4 parallax border-16 border-white"
+      class="h-[calc(100vh-80px)] relative px-4 parallax-hero border-16 border-white"
       style={`background-image: url(${heroImage.src})`}
       aria-label="Hero section featuring barbershop interior"
     >
@@ -166,143 +166,6 @@ import toby from "../assets/toby.webp";
         />
       </div>
     </section>
-    <div
-      class="flex justify-center pt-12 bg-gray-50"
-      id="ig-embed"
-    >
-      <blockquote
-        class="instagram-media"
-        data-instgrm-permalink="https://www.instagram.com/rvabarbershop/?utm_source=ig_embed&utm_campaign=loading"
-        data-instgrm-version="14"
-        style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"
-      >
-        <div style="padding:16px;">
-          <a
-            href="https://www.instagram.com/rvabarbershop/?utm_source=ig_embed&utm_campaign=loading"
-            style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;"
-            target="_blank"
-          >
-            <div
-              style=" display: flex; flex-direction: row; align-items: center;"
-            >
-              <div
-                style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"
-              >
-              </div>
-              <div
-                style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"
-              >
-                <div
-                  style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"
-                >
-                </div>
-                <div
-                  style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"
-                >
-                </div>
-              </div>
-            </div><div style="padding: 19% 0;"></div>
-            <div
-              style="display:block; height:50px; margin:0 auto 12px; width:50px;"
-            >
-              <svg
-                width="50px"
-                height="50px"
-                viewBox="0 0 60 60"
-                version="1.1"
-                xmlns="https://www.w3.org/2000/svg"
-                xmlns:xlink="https://www.w3.org/1999/xlink"
-                ><g
-                  stroke="none"
-                  stroke-width="1"
-                  fill="none"
-                  fill-rule="evenodd"
-                  ><g
-                    transform="translate(-511.000000, -20.000000)"
-                    fill="#000000"
-                    ><g
-                      ><path
-                        d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"
-                      ></path></g
-                    ></g
-                  ></g
-                ></svg
-              >
-            </div><div style="padding-top: 8px;">
-              <div
-                style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;"
-              >
-                View this profile on Instagram
-              </div>
-            </div><div style="padding: 12.5% 0;"></div>
-            <div
-              style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"
-            >
-              <div>
-                <div
-                  style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"
-                >
-                </div>
-                <div
-                  style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"
-                >
-                </div>
-                <div
-                  style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"
-                >
-                </div>
-              </div><div style="margin-left: 8px;">
-                <div
-                  style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"
-                >
-                </div>
-                <div
-                  style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"
-                >
-                </div>
-              </div><div style="margin-left: auto;">
-                <div
-                  style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"
-                >
-                </div>
-                <div
-                  style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"
-                >
-                </div>
-                <div
-                  style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"
-                >
-                </div>
-              </div>
-            </div>
-            <div
-              style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"
-            >
-              <div
-                style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"
-              >
-              </div>
-              <div
-                style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"
-              >
-              </div>
-            </div></a
-          ><p
-            style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"
-          >
-            <a
-              href="https://www.instagram.com/rvabarbershop/?utm_source=ig_embed&utm_campaign=loading"
-              style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px;"
-              target="_blank">Richmond Barbershop</a
-            > (@<a
-              href="https://www.instagram.com/rvabarbershop/?utm_source=ig_embed&utm_campaign=loading"
-              style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px;"
-              target="_blank">rvabarbershop</a
-            >) • Instagram photos and videos
-          </p>
-        </div>
-      </blockquote>
-    </div>
 
     <section
       class="px-4 text-center flex flex-col items-center bg-white"
@@ -357,17 +220,25 @@ import toby from "../assets/toby.webp";
           >(804) 203-0221
           </a>
           </div>
-            <div class="flex flex-col gap-1 items-center justify-center">
-            <p class="text-2xl text-black dark:text-white">
-              2820 W Cary St Suite C
-            </p>
-            <p class="text-2xl text-black dark:text-white">
-              Richmond, VA 23221
-            </p>
-            </div>
-            <div class="mt-8">
+             <div class="flex flex-col gap-1 items-center justify-center">
+             <p class="text-2xl text-black dark:text-white">
+               2820 W Cary St STE C
+             </p>
+             <p class="text-2xl text-black dark:text-white">
+               Richmond, VA 23221
+             </p>
+             </div>
+             <div class="mt-4 flex gap-6 justify-center items-center">
+               <a href="https://instagram.com/rvabarbershop" target="_blank" rel="noopener noreferrer" class="text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-300">
+<svg class='w-8 h-8' viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>instagram [#167]</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Dribbble-Light-Preview" transform="translate(-340.000000, -7439.000000)" fill="#000000"> <g id="icons" transform="translate(56.000000, 160.000000)"> <path d="M289.869652,7279.12273 C288.241769,7279.19618 286.830805,7279.5942 285.691486,7280.72871 C284.548187,7281.86918 284.155147,7283.28558 284.081514,7284.89653 C284.035742,7285.90201 283.768077,7293.49818 284.544207,7295.49028 C285.067597,7296.83422 286.098457,7297.86749 287.454694,7298.39256 C288.087538,7298.63872 288.809936,7298.80547 289.869652,7298.85411 C298.730467,7299.25511 302.015089,7299.03674 303.400182,7295.49028 C303.645956,7294.859 303.815113,7294.1374 303.86188,7293.08031 C304.26686,7284.19677 303.796207,7282.27117 302.251908,7280.72871 C301.027016,7279.50685 299.5862,7278.67508 289.869652,7279.12273 M289.951245,7297.06748 C288.981083,7297.0238 288.454707,7296.86201 288.103459,7296.72603 C287.219865,7296.3826 286.556174,7295.72155 286.214876,7294.84312 C285.623823,7293.32944 285.819846,7286.14023 285.872583,7284.97693 C285.924325,7283.83745 286.155174,7282.79624 286.959165,7281.99226 C287.954203,7280.99968 289.239792,7280.51332 297.993144,7280.90837 C299.135448,7280.95998 300.179243,7281.19026 300.985224,7281.99226 C301.980262,7282.98483 302.473801,7284.28014 302.071806,7292.99991 C302.028024,7293.96767 301.865833,7294.49274 301.729513,7294.84312 C300.829003,7297.15085 298.757333,7297.47145 289.951245,7297.06748 M298.089663,7283.68956 C298.089663,7284.34665 298.623998,7284.88065 299.283709,7284.88065 C299.943419,7284.88065 300.47875,7284.34665 300.47875,7283.68956 C300.47875,7283.03248 299.943419,7282.49847 299.283709,7282.49847 C298.623998,7282.49847 298.089663,7283.03248 298.089663,7283.68956 M288.862673,7288.98792 C288.862673,7291.80286 291.150266,7294.08479 293.972194,7294.08479 C296.794123,7294.08479 299.081716,7291.80286 299.081716,7288.98792 C299.081716,7286.17298 296.794123,7283.89205 293.972194,7283.89205 C291.150266,7283.89205 288.862673,7286.17298 288.862673,7288.98792 M290.655732,7288.98792 C290.655732,7287.16159 292.140329,7285.67967 293.972194,7285.67967 C295.80406,7285.67967 297.288657,7287.16159 297.288657,7288.98792 C297.288657,7290.81525 295.80406,7292.29716 293.972194,7292.29716 C292.140329,7292.29716 290.655732,7290.81525 290.655732,7288.98792" id="instagram-[#167]"> </path> </g> </g> </g> </g></svg>
+               </a>
+               <a href="https://www.facebook.com/profile.php?id=61584927026935" target="_blank" rel="noopener noreferrer" class="text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-300">
+<svg class='w-10 h-10' viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path fill="none" d="M0 0h24v24H0z"></path> <path d="M12 2C6.477 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.879V14.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.989C18.343 21.129 22 16.99 22 12c0-5.523-4.477-10-10-10z"></path> </g> </g></svg>
+               </a>
+             </div>
+             <div class="mt-8">
               <a
-                href="https://www.google.com/maps/dir//2820+W+Cary+St+STE+C,+Richmond,+VA+23221/@37.5522573,-77.4773142,17z/data=!4m18!1m8!3m7!1s0x89b113e4b8649275:0x3b8dca60c187d633!2s2820+W+Cary+St+STE+C,+Richmond,+VA+23221!3b1!8m2!3d37.5522573!4d-77.4773142!16s%2Fg%2F11qzb0bxpk!4m8!1m0!1m5!1m1!1s0x89b113e4b8649275:0x3b8dca60c187d633!2m2!1d-77.4773142!4d37.5522573!3e0?entry=ttu&g_ep=EgoyMDI1MTAxNC4wIKXMDSoASAFQAw%3D%3D"
+                href="https://maps.app.goo.gl/gv7wy3RtPVX4iEvw8"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="bg-black dark:bg-black border-white dark:border-white border-2 text-white dark:text-white font-bold py-4 px-12 rounded-lg text-xl uppercase tracking-widest hover:bg-white dark:hover:bg-white hover:text-black dark:hover:text-black transition-all duration-300 shadow-xl transform hover:scale-105"
@@ -376,16 +247,12 @@ import toby from "../assets/toby.webp";
             </div>
           </div>
           <div>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3163.1191159807377!2d-77.4773142!3d37.55225730000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b113e4b8649275%3A0x3b8dca60c187d633!2s2820%20W%20Cary%20St%20STE%20C%2C%20Richmond%2C%20VA%2023221!5e0!3m2!1sen!2sus!4v1760832403794!5m2!1sen!2sus"
-              style="border:0;"
-              allowfullscreen=""
-              loading="lazy"
-              title="Richmond Barber Location"
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d790.7805099320608!2d-77.47802503034775!3d37.55218841147862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b113db68bc08b1%3A0x9ca083c0e9faa6c0!2sRichmond%20Barbershop!5e0!3m2!1sen!2sus!4v1766692323074!5m2!1sen!2sus" 
+
               width="100%"
               height="450"
               class="rounded-lg shadow-xl"
-              referrerpolicy="no-referrer-when-downgrade"></iframe>
+            style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
     </section>
@@ -449,12 +316,22 @@ import toby from "../assets/toby.webp";
           }
         },
         {
-          rootMargin: "-100px",
+          rootMargin: "-40%",
         },
       );
       observer.observe(bestBarbershop);
     }
   }
+
+  (() => {
+    const name = 'outbound-link-click';
+    document.querySelectorAll('a').forEach(a => {
+      if (a.host !== window.location.host && !a.getAttribute('data-umami-event')) {
+        a.setAttribute('data-umami-event', name);
+        a.setAttribute('data-umami-event-url', a.href);
+      }
+    });
+  })();
 </script>
 <style>
   @reference "../styles/global.css";
