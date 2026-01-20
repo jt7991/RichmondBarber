@@ -5,31 +5,31 @@
 	const testimonials = [
 		{
 			id: 1,
-			name: "Gage Waugh",
+			name: "Gage W.",
 			rating: 5,
 			text: "Joe has been extremely generous with his time and his attention to detail when cutting my hair is second to none. He’s always open to feedback and he’s super easy to schedule with. I moved to Richmond a year ago and have been in search for a consistent barber for a while, and I’ve finally found one. Couldn’t recommend this shop enough."
 		},
 		{
 			id: 2,
-			name: "Daryl Milach",
+			name: "Daryl M.",
 			rating: 5,
 			text: "Joe did an amazing job—friendly, professional, and clearly takes pride in his work. The shop was spotless, and he took the time to make sure my haircut was absolutely perfect."
 		},
 		{
 			id: 3,
-			name: "Aidan Reider",
+			name: "Aidan R.",
 			rating: 5,
 			text: "This shop just opened and is exactly what I've been looking for in a barber. Joe is very chill and knows his stuff, definitely recommend!"
 		},
 		{
 			id: 4,
-			name: "Jonathan Fitzpatrick",
+			name: "Jonathan F.",
 			rating: 5,
 			text: "Awesome shop. Joe was friendly, easy to talk to, took great skill and care with my hair and beard. Fantastic experience, will definitely return."
 		},
 		{
 			id: 5,
-			name: "Eric Ramos",
+			name: "Eric R.",
 			rating: 5,
 			text: "Walked past and decided to get my haircut here, phenomenal service and the owner is a really stand up guy. Highly recommend for an all around great cut, I normally don’t leave reviews but I think this might be the best haircut I’ve gotten in Richmond so far!"
 		}
