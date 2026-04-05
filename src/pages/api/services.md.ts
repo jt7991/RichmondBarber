@@ -1,67 +1,47 @@
+import {
+  ADDRESS_SINGLE_LINE,
+  BOOKING_URL,
+  BUSINESS_HOURS_NOTE,
+  BUSINESS_NAME,
+  PHONE_DISPLAY,
+  SERVICES,
+  WEBSITE_URL,
+} from "../../data/business";
+
 export async function GET() {
-  const services = [
-    {
-      name: "Haircut",
-      price: "$40",
-      description:
-        "Professional precision cuts tailored to your style at our Richmond VA barbershop. Expert men's haircuts in Carytown.",
-    },
-    {
-      name: "Scissor Cut",
-      price: "$50",
-      description:
-        "Premium scissor cuts with attention to detail. Skilled barbers in Richmond VA providing quality haircuts for men.",
-    },
-    {
-      name: "Beard Trim",
-      price: "$20",
-      description:
-        "Expert beard shaping and grooming for a sharp, professional look. Beard trimming services in Richmond VA.",
-    },
-    {
-      name: "Straight Razor Shave",
-      price: "$30",
-      description:
-        "Traditional hot towel shave for ultimate comfort and smoothness. Classic barber services in Carytown Richmond.",
-    },
-  ];
+  const markdown = `# ${BUSINESS_NAME} Services
 
-  const markdown = `# Richmond Barbershop Services
-
-Professional barber services in Richmond, VA. Located in Carytown at 2820 W Cary St Suite C.
+Professional barber services in Richmond, VA.
 
 ## Services Offered
 
-${services
+${SERVICES
   .map(
     (service) => `### ${service.name}
-- **Price**: ${service.price}
 - **Description**: ${service.description}
 `,
   )
   .join("\n")}
 
 ## Business Information
-- **Phone**: (555) 123-4567
-- **Address**: 2820 W Cary St Suite C, Richmond, VA 23221
-- **Hours**:
-  - Monday-Friday: 9:00 AM - 7:00 PM
-  - Saturday: 8:00 AM - 5:00 PM
-  - Sunday: 10:00 AM - 4:00 PM
+- **Phone**: ${PHONE_DISPLAY}
+- **Address**: ${ADDRESS_SINGLE_LINE}
+- **Hours**: ${BUSINESS_HOURS_NOTE}
 
 ## Contact & Booking
-Book appointments online at: https://www.acuityscheduling.com
+Book appointments online at: ${BOOKING_URL}
 
-For more information, visit: https://richmondbarber.com
+For more information, visit: ${WEBSITE_URL}
 `;
 
   return new Response(markdown, {
     headers: {
       "Content-Type": "text/markdown",
+      "Cache-Control": "public, max-age=300, must-revalidate",
+      "X-Robots-Tag": "noindex, nofollow",
       "Access-Control-Allow-Origin": "*",
       "Access-Control-Allow-Methods": "GET",
       "Access-Control-Allow-Headers": "Content-Type",
     },
   });
 }
-

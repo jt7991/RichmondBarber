@@ -1,11 +1,13 @@
 ---
+import { BOOKING_URL } from "../data/business";
+
 const { service, index } = Astro.props;
 const serviceId = service.name.replace(/\s+/g, "-").toLowerCase();
 ---
 
 <a
   id={`${serviceId}-checker`}
-  href="https://book.squareup.com/appointments/e82z6hm5h0k6nr/location/L0C7SP53VGCK0/services"
+  href={BOOKING_URL}
 >
   <div
     id={serviceId}

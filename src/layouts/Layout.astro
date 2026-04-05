@@ -2,8 +2,23 @@
 import Navigation from "../components/Navigation.astro";
 import logoImage from "../assets/sms_preview.webp";
 import heroImage from "../assets/hero.webp";
+import {
+  ADDRESS,
+  BOOKING_URL,
+  BUSINESS_HOURS_NOTE,
+  BUSINESS_NAME,
+  FACEBOOK_URL,
+  GOOGLE_PROFILE_URL,
+  INSTAGRAM_URL,
+  MAPS_URL,
+  PHONE_DISPLAY,
+  PHONE_E164,
+  SERVICE_AREAS,
+  SERVICES,
+  WEBSITE_URL,
+} from "../data/business";
 
-const defaultTitle = "Richmond Barbershop | Barber in Richmond, VA";
+const defaultTitle = `${BUSINESS_NAME} | Barber in Richmond, VA`;
 const defaultDescription =
   "Richmond Barbershop in Carytown offers precision haircuts, beard trims, and straight razor shaves. Book your appointment today.";
 
@@ -16,43 +31,22 @@ const {
 const barbershopSchema = {
   "@context": "https://schema.org",
   "@type": "Barbershop",
-  name: "Richmond Barbershop",
+  name: BUSINESS_NAME,
   description,
-  url: "https://richmondbarbershop.com",
-  image: `https://richmondbarbershop.com${logoImage.src}`,
-  telephone: "+18042030221",
+  url: WEBSITE_URL,
+  image: `${WEBSITE_URL}${logoImage.src}`,
+  telephone: PHONE_E164,
   address: {
     "@type": "PostalAddress",
-    streetAddress: "2820 W Cary St STE C",
-    addressLocality: "Richmond",
-    addressRegion: "VA",
-    postalCode: "23221",
-    addressCountry: "US",
+    ...ADDRESS,
   },
-  hasMap: "https://maps.app.goo.gl/gv7wy3RtPVX4iEvw8",
-  sameAs: [
-    "https://share.google/wbJjqNOCH4Rwny71W",
-    "https://instagram.com/rvabarbershop",
-    "https://www.facebook.com/profile.php?id=61584927026935",
-  ],
-  areaServed: [
-    "Richmond, VA",
-    "Carytown",
-    "The Fan",
-    "Museum District",
-    "Scott's Addition",
-    "Church Hill",
-    "West End",
-    "Henrico",
-    "Midlothian",
-  ],
-  serviceType: [
-    "Men's Haircut",
-    "Scissor Cut",
-    "Beard Trim",
-    "Straight Razor Shave",
-  ],
+  hasMap: MAPS_URL,
+  sameAs: [GOOGLE_PROFILE_URL, INSTAGRAM_URL, FACEBOOK_URL],
+  areaServed: SERVICE_AREAS,
+  serviceType: SERVICES.map((service) => service.name),
 };
+
+const copyrightYear = new Date().getFullYear();
 ---
 
 <!doctype html>
@@ -85,7 +79,7 @@ const barbershopSchema = {
     <meta property="og:url" content={canonical} />
     <meta
       property="og:image"
-      content={`https://richmondbarbershop.com${logoImage.src}`}
+      content={`${WEBSITE_URL}${logoImage.src}`}
     />
     <meta
       property="og:image:alt"
@@ -96,7 +90,7 @@ const barbershopSchema = {
     <meta name="twitter:description" content={description} />
     <meta
       name="twitter:image"
-      content={`https://richmondbarbershop.com${logoImage.src}`}
+      content={`${WEBSITE_URL}${logoImage.src}`}
     />
     <link rel="canonical" href={canonical} />
     <script type="application/ld+json" set:html={JSON.stringify(barbershopSchema)} />
@@ -111,5 +105,56 @@ const barbershopSchema = {
   <body class="font-sans">
     <Navigation />
     <slot />
+    <footer
+      class="bg-gray-100 dark:bg-zinc-950 text-black dark:text-white border-t border-gray-300 dark:border-zinc-800 py-8 px-4"
+    >
+      <div class="max-w-7xl mx-auto flex flex-col gap-2 text-center text-sm md:text-base">
+        <p class="font-semibold">{BUSINESS_NAME}</p>
+        <p>
+          <a class="underline" href={`tel:${PHONE_E164}`}>{PHONE_DISPLAY}</a>
+          ·
+          <a class="underline" href={MAPS_URL} target="_blank" rel="noopener noreferrer"
+            >{ADDRESS.streetAddress}, {ADDRESS.addressLocality}, {ADDRESS.addressRegion} {ADDRESS.postalCode}</a
+          >
+        </p>
+        <p>
+          {BUSINESS_HOURS_NOTE}
+          <a class="underline" href={MAPS_URL} target="_blank" rel="noopener noreferrer"
+            >View live hours</a
+          >
+        </p>
+        <p class="text-xs opacity-70">&copy; {copyrightYear} {BUSINESS_NAME}. All rights reserved.</p>
+      </div>
+    </footer>
+    <script is:inline define:vars={{ BOOKING_URL }}>
+      (() => {
+        document.querySelectorAll('a[href]').forEach((link) => {
+          const href = link.getAttribute('href') || '';
+          if (link.getAttribute('data-umami-event')) {
+            return;
+          }
+
+          if (href.startsWith('tel:')) {
+            link.setAttribute('data-umami-event', 'phone-click');
+            return;
+          }
+
+          if (href.startsWith(BOOKING_URL)) {
+            link.setAttribute('data-umami-event', 'booking-click');
+            return;
+          }
+
+          if (href.includes('maps.app.goo.gl') || href.includes('google.com/maps')) {
+            link.setAttribute('data-umami-event', 'directions-click');
+            return;
+          }
+
+          if (href.startsWith('http') && link.host !== window.location.host) {
+            link.setAttribute('data-umami-event', 'outbound-link-click');
+            link.setAttribute('data-umami-event-url', link.href);
+          }
+        });
+      })();
+    </script>
   </body>
 </html>

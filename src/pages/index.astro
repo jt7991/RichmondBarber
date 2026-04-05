@@ -15,6 +15,15 @@ import client_5 from "../assets/client_5.webp";
 import client_6 from "../assets/client_6.webp";
 import beard_guy from "../assets/beard_guy.webp"
 import toby from "../assets/toby.webp";
+import {
+  ADDRESS,
+  BOOKING_URL,
+  FACEBOOK_URL,
+  INSTAGRAM_URL,
+  MAPS_URL,
+  PHONE_DISPLAY,
+  PHONE_E164,
+} from "../data/business";
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -49,7 +58,7 @@ const faqSchema = {
       name: "What is your cancellation policy?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Cancelations need to be made at least 8 hours before your appointment online or by phone. Otherwise you will be charged in full for your missed appointment.",
+        text: "Cancellations need to be made at least 8 hours before your appointment online or by phone. Otherwise you will be charged in full for your missed appointment.",
       },
     },
     {
@@ -95,7 +104,7 @@ const faqSchema = {
       >
         <Logo />
         <a
-          href="https://book.squareup.com/appointments/e82z6hm5h0k6nr/location/L0C7SP53VGCK0/services"
+          href={BOOKING_URL}
           rel="noopener noreferrer"
           class="bg-black border-white border-2 text-white font-bold py-3 px-9 sm:px-12 sm:py-4 rounded-lg text-md sm:text-xl uppercase tracking-widest hover:bg-white  hover:text-black dark:hover:text-black active:bg-white dark:active:bg-white active:text-black dark:active:text-black transition-all duration-300 shadow-xl transform hover:scale-105"
           >Book Now</a
@@ -257,7 +266,7 @@ const faqSchema = {
           We offer haircuts for ages 8+
         </Accordion>
         <Accordion title="What is your cancellation policy?">
-          Cancelations need to be made at least 8 hours before your appointment
+          Cancellations need to be made at least 8 hours before your appointment
           online or by phone. Otherwise you will be charged in full for your
           missed appointment.
         </Accordion>
@@ -285,33 +294,33 @@ const faqSchema = {
           <div class="text-center flex flex-col gap-4">
           <div>
             <a
-              href="tel:+18042030221"
+              href={`tel:${PHONE_E164}`}
               class="text-2xl text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-300 "
-          >(804) 203-0221
+          >{PHONE_DISPLAY}
           </a>
           </div>
              <div class="flex flex-col gap-1 items-center justify-center">
              <p class="text-2xl text-black dark:text-white">
-               2820 W Cary St STE C
+               {ADDRESS.streetAddress}
              </p>
              <p class="text-2xl text-black dark:text-white">
-               Richmond, VA 23221
+               {ADDRESS.addressLocality}, {ADDRESS.addressRegion} {ADDRESS.postalCode}
              </p>
              </div>
              <div class="mt-4 flex gap-6 justify-center items-center">
-               <a href="https://instagram.com/rvabarbershop" target="_blank" rel="noopener noreferrer" class="text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-300">
+               <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" class="text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-300">
 <svg class='w-8 h-8' viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>instagram [#167]</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Dribbble-Light-Preview" transform="translate(-340.000000, -7439.000000)" fill="#000000"> <g id="icons" transform="translate(56.000000, 160.000000)"> <path d="M289.869652,7279.12273 C288.241769,7279.19618 286.830805,7279.5942 285.691486,7280.72871 C284.548187,7281.86918 284.155147,7283.28558 284.081514,7284.89653 C284.035742,7285.90201 283.768077,7293.49818 284.544207,7295.49028 C285.067597,7296.83422 286.098457,7297.86749 287.454694,7298.39256 C288.087538,7298.63872 288.809936,7298.80547 289.869652,7298.85411 C298.730467,7299.25511 302.015089,7299.03674 303.400182,7295.49028 C303.645956,7294.859 303.815113,7294.1374 303.86188,7293.08031 C304.26686,7284.19677 303.796207,7282.27117 302.251908,7280.72871 C301.027016,7279.50685 299.5862,7278.67508 289.869652,7279.12273 M289.951245,7297.06748 C288.981083,7297.0238 288.454707,7296.86201 288.103459,7296.72603 C287.219865,7296.3826 286.556174,7295.72155 286.214876,7294.84312 C285.623823,7293.32944 285.819846,7286.14023 285.872583,7284.97693 C285.924325,7283.83745 286.155174,7282.79624 286.959165,7281.99226 C287.954203,7280.99968 289.239792,7280.51332 297.993144,7280.90837 C299.135448,7280.95998 300.179243,7281.19026 300.985224,7281.99226 C301.980262,7282.98483 302.473801,7284.28014 302.071806,7292.99991 C302.028024,7293.96767 301.865833,7294.49274 301.729513,7294.84312 C300.829003,7297.15085 298.757333,7297.47145 289.951245,7297.06748 M298.089663,7283.68956 C298.089663,7284.34665 298.623998,7284.88065 299.283709,7284.88065 C299.943419,7284.88065 300.47875,7284.34665 300.47875,7283.68956 C300.47875,7283.03248 299.943419,7282.49847 299.283709,7282.49847 C298.623998,7282.49847 298.089663,7283.03248 298.089663,7283.68956 M288.862673,7288.98792 C288.862673,7291.80286 291.150266,7294.08479 293.972194,7294.08479 C296.794123,7294.08479 299.081716,7291.80286 299.081716,7288.98792 C299.081716,7286.17298 296.794123,7283.89205 293.972194,7283.89205 C291.150266,7283.89205 288.862673,7286.17298 288.862673,7288.98792 M290.655732,7288.98792 C290.655732,7287.16159 292.140329,7285.67967 293.972194,7285.67967 C295.80406,7285.67967 297.288657,7287.16159 297.288657,7288.98792 C297.288657,7290.81525 295.80406,7292.29716 293.972194,7292.29716 C292.140329,7292.29716 290.655732,7290.81525 290.655732,7288.98792" id="instagram-[#167]"> </path> </g> </g> </g> </g></svg>
                </a>
-               <a href="https://www.facebook.com/profile.php?id=61584927026935" target="_blank" rel="noopener noreferrer" class="text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-300">
+               <a href={FACEBOOK_URL} target="_blank" rel="noopener noreferrer" class="text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-300">
 <svg class='w-10 h-10' viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path fill="none" d="M0 0h24v24H0z"></path> <path d="M12 2C6.477 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.879V14.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.989C18.343 21.129 22 16.99 22 12c0-5.523-4.477-10-10-10z"></path> </g> </g></svg>
                </a>
              </div>
              <div class="mt-8">
-              <a
-                href="https://maps.app.goo.gl/gv7wy3RtPVX4iEvw8"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="bg-black dark:bg-black border-white dark:border-white border-2 text-white dark:text-white font-bold py-4 px-12 rounded-lg text-xl uppercase tracking-widest hover:bg-white dark:hover:bg-white hover:text-black dark:hover:text-black transition-all duration-300 shadow-xl transform hover:scale-105"
+               <a
+                 href={MAPS_URL}
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 class="bg-black dark:bg-black border-white dark:border-white border-2 text-white dark:text-white font-bold py-4 px-12 rounded-lg text-xl uppercase tracking-widest hover:bg-white dark:hover:bg-white hover:text-black dark:hover:text-black transition-all duration-300 shadow-xl transform hover:scale-105"
                 >Get Directions</a
               >
             </div>
@@ -328,41 +337,42 @@ const faqSchema = {
     </section>
   </main>
 
-  <footer
-    class="text-black dark:text-white text-center py-12 px-4 bg-gray-100 dark:bg-zinc-950 border-t border-gray-300 dark:border-zinc-800"
-  >
-    <p class="text-lg">&copy; 2026 Richmond Barbershop. All rights reserved.</p>
-  </footer>
 </Layout>
 <script>
   const logo = document.getElementById("logo");
   const logoSmall = document.getElementById("logo-small");
 
-  window.updateLogoVisibility = function () {
+  const updateLogoVisibility = () => {
     const menu = document.getElementById("menu");
     if (menu && menu.hasAttribute("data-active")) {
-      // Menu is open, keep small logo visible
       logoSmall?.classList.add("opacity-100");
       logoSmall?.classList.remove("opacity-0");
+      return;
+    }
+
+    const rect = logo?.getBoundingClientRect();
+    const isVisible =
+      (rect?.top ?? Number.POSITIVE_INFINITY) < window.innerHeight - 200 &&
+      (rect?.bottom ?? Number.NEGATIVE_INFINITY) > 100;
+
+    if (isVisible) {
+      logoSmall?.classList.add("opacity-0");
+      logoSmall?.classList.remove("opacity-100");
     } else {
-      // Menu is closed, check if main logo is in viewport
-      const rect = logo?.getBoundingClientRect();
-      const isVisible =
-        rect?.top < window.innerHeight - 200 && rect?.bottom > 100; // Similar to rootMargin logic
-      if (isVisible) {
-        logoSmall?.classList.add("opacity-0");
-        logoSmall?.classList.remove("opacity-100");
-      } else {
-        logoSmall.classList.add("opacity-100");
-        logoSmall.classList.remove("opacity-0");
-      }
+      logoSmall?.classList.add("opacity-100");
+      logoSmall?.classList.remove("opacity-0");
     }
   };
+
+  const globalWindow = window as Window & {
+    updateLogoVisibility?: () => void;
+  };
+  globalWindow.updateLogoVisibility = updateLogoVisibility;
 
   if (logo && logoSmall) {
     const observer = new IntersectionObserver(
       (entries) => {
-        window?.updateLogoVisibility();
+        updateLogoVisibility();
       },
       {
         rootMargin: "-200px 0px -100px 0px",
@@ -370,8 +380,7 @@ const faqSchema = {
     );
     observer.observe(logo);
 
-    // Also update on scroll to handle menu close
-    window.addEventListener("scroll", window.updateLogoVisibility);
+    window.addEventListener("scroll", updateLogoVisibility);
 
     const bestBarbershop = document.getElementById("best-barbershop");
 
@@ -393,15 +402,6 @@ const faqSchema = {
     }
   }
 
-  (() => {
-    const name = 'outbound-link-click';
-    document.querySelectorAll('a').forEach(a => {
-      if (a.host !== window.location.host && !a.getAttribute('data-umami-event')) {
-        a.setAttribute('data-umami-event', name);
-        a.setAttribute('data-umami-event-url', a.href);
-      }
-    });
-  })();
 </script>
 <style>
   @reference "../styles/global.css";

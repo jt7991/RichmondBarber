@@ -2,23 +2,80 @@
 import Layout from "../layouts/Layout.astro";
 import "../styles/global.css";
 import client_2 from "../assets/client_2.webp";
+import { BOOKING_URL, BUSINESS_NAME, WEBSITE_URL } from "../data/business";
+
+const pageUrl = `${WEBSITE_URL}/mens-haircut-richmond-va`;
+
+const faqItems = [
+  {
+    question: "Do I need an appointment for a men's haircut?",
+    answer:
+      "Appointments are recommended. Walk-ins are welcome when availability allows.",
+  },
+  {
+    question: "Do you offer both classic and modern men's haircuts?",
+    answer:
+      "Yes. We handle classic cuts and modern styles based on your hair type and preferences.",
+  },
+  {
+    question: "Do you also offer beard trims?",
+    answer:
+      "Yes. You can pair your haircut with a beard trim during the same booking.",
+  },
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.answer,
+    },
+  })),
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: WEBSITE_URL,
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Men's Haircut in Richmond, VA",
+      item: pageUrl,
+    },
+  ],
+};
 ---
 
 <Layout
-  title="Men's Haircut in Richmond, VA | Richmond Barbershop"
-  description="Get a professional men's haircut in Richmond, VA at Richmond Barbershop in Carytown. Precision cuts, modern styles, and easy online booking."
-  canonical="https://richmondbarbershop.com/mens-haircut-richmond-va"
+  title={`Men's Haircut in Richmond, VA | ${BUSINESS_NAME}`}
+  description={`Get a professional men's haircut in Richmond, VA at ${BUSINESS_NAME} in Carytown. Precision cuts, modern styles, and easy online booking.`}
+  canonical={pageUrl}
 >
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  </Fragment>
   <main class="bg-white dark:bg-zinc-900 text-black dark:text-white">
     <section class="px-4 py-24 text-center bg-gray-50 dark:bg-zinc-900">
       <div class="max-w-4xl mx-auto flex flex-col gap-6">
         <h1 class="text-4xl md:text-5xl font-bold">Men's Haircut in Richmond, VA</h1>
         <p class="text-lg leading-relaxed">
-          Richmond Barbershop provides men's haircuts in Carytown for clients who want reliable, clean results without the hassle. From classic cuts to modern looks, our team keeps every appointment focused on quality and consistency.
+          {BUSINESS_NAME} provides men's haircuts in Carytown for clients who want reliable, clean results without the hassle. From classic cuts to modern looks, our team keeps every appointment focused on quality and consistency.
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href="https://book.squareup.com/appointments/e82z6hm5h0k6nr/location/L0C7SP53VGCK0/services"
+            href={BOOKING_URL}
             rel="noopener noreferrer"
             class="bg-black border-white border-2 text-white font-bold py-3 px-8 rounded-lg text-md uppercase tracking-widest hover:bg-white hover:text-black transition-all duration-300"
           >
@@ -43,16 +100,50 @@ import client_2 from "../assets/client_2.webp";
           loading="lazy"
         />
         <div class="flex flex-col gap-4 text-left">
-          <h2 class="text-3xl font-bold">Barber service built around your style</h2>
+          <h2 class="text-3xl font-bold">Men's haircuts done right</h2>
           <p class="text-lg leading-relaxed">
-            We work with your hair type, preferred length, and daily routine to make sure your haircut looks sharp in the shop and stays easy to manage afterward.
+            We work with your hair type and preferred length to make sure your haircut looks sharp in the shop and keeps its shape between visits.
+          </p>
+          <p class="text-lg leading-relaxed">
+            We serve clients from Carytown, The Fan, Museum District, Scott's Addition, Church Hill, and nearby Richmond neighborhoods.
           </p>
           <p class="text-lg leading-relaxed">
             You can also pair your cut with a
             <a href="/beard-trim-richmond-va" class="underline font-semibold">beard trim in Richmond, VA</a>
-            for a full grooming appointment.
+            for a full service appointment.
           </p>
         </div>
+      </div>
+    </section>
+
+    <section class="px-4 pb-16">
+      <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-6 text-left">
+        <article class="bg-gray-50 dark:bg-zinc-800 rounded-xl p-6 border border-gray-200 dark:border-zinc-700">
+          <h2 class="text-xl font-bold mb-3">Consistent results</h2>
+          <p class="leading-relaxed">
+            Every appointment is focused on clean execution and a haircut that holds up between visits.
+          </p>
+        </article>
+        <article class="bg-gray-50 dark:bg-zinc-800 rounded-xl p-6 border border-gray-200 dark:border-zinc-700">
+          <h2 class="text-xl font-bold mb-3">Online booking</h2>
+          <p class="leading-relaxed">
+            Reserve your appointment online in a few clicks and choose the service that matches your needs.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="px-4 pb-24">
+      <div class="max-w-4xl mx-auto flex flex-col gap-4">
+        <h2 class="text-3xl font-bold text-center">Men's Haircut FAQ</h2>
+        {
+          faqItems.map((item) => (
+            <details class="bg-gray-50 dark:bg-zinc-800 rounded-xl p-5 border border-gray-200 dark:border-zinc-700">
+              <summary class="font-semibold cursor-pointer">{item.question}</summary>
+              <p class="mt-3 leading-relaxed">{item.answer}</p>
+            </details>
+          ))
+        }
       </div>
     </section>
   </main>

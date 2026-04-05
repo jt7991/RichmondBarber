@@ -1,7 +1,12 @@
 <IfModule mod_expires.c>
   ExpiresActive On
   ExpiresByType text/html "access plus 0 seconds"
-  ExpiresByType application/json "access plus 1 year"
+  ExpiresByType application/json "access plus 5 minutes"
+  ExpiresByType text/plain "access plus 5 minutes"
+  ExpiresByType application/xml "access plus 5 minutes"
+  ExpiresByType text/xml "access plus 5 minutes"
+  ExpiresByType application/yaml "access plus 5 minutes"
+  ExpiresByType text/yaml "access plus 5 minutes"
   ExpiresByType application/javascript "access plus 1 year"
   ExpiresByType text/css "access plus 1 year"
   ExpiresByType image/webp "access plus 1 year"
@@ -14,10 +19,16 @@
 </IfModule>
 
 <IfModule mod_headers.c>
-  <FilesMatch "\.(js|css|webp|png|jpg|jpeg|svg|woff2|ico|xml|txt|json)$">
+  <FilesMatch "\.(js|css|webp|png|jpg|jpeg|svg|woff2|ico)$">
     Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.(xml|txt|json|ya?ml)$">
+    Header set Cache-Control "public, max-age=300, must-revalidate"
   </FilesMatch>
   <FilesMatch "\.(html)$">
     Header set Cache-Control "public, max-age=0, must-revalidate"
   </FilesMatch>
+  <Files "openapi.yaml">
+    Header set X-Robots-Tag "noindex, nofollow"
+  </Files>
 </IfModule>

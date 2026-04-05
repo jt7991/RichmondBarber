@@ -1,6 +1,5 @@
 <script>
-	import { onMount, onDestroy } from 'svelte';
-	import { fade, fly} from 'svelte/transition';
+	import { fade } from 'svelte/transition';
 
 	const testimonials = [
 		{
@@ -35,9 +34,9 @@
 		}
 	];
 
-	let currentIndex = 0;
-	let interval;
-	let isPaused = false;
+	let currentIndex = $state(0);
+	let interval = $state(null);
+	let isPaused = $state(false);
 
 	function goToTestimonial(index) {
 		currentIndex = index;
@@ -69,11 +68,8 @@
 		resetTimer();
 	}
 
-	onMount(() => {
-	  interval = setInterval(nextTestimonial, 6000);
-	});
 
-	$: currentTestimonial = testimonials[currentIndex];
+	const currentTestimonial = $derived(testimonials[currentIndex]);
 </script>
 
 <section 
@@ -91,7 +87,7 @@
 				type="button"
 				class="bg-white dark:bg-zinc-800 rounded-full p-2 shadow-lg border border-gray-200 dark:border-zinc-700 hover:bg-gray-50 dark:hover:bg-zinc-700 transition-colors duration-300 w-fit h-fit hidden md:block"
 				aria-label="Previous testimonial"
-				on:click={prevTestimonial}
+				onclick={prevTestimonial}
 			>
 				<svg class="w-6 h-6 text-black dark:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
@@ -102,8 +98,8 @@
 				role="region"
 				aria-label="Testimonial carousel"
 				aria-live="polite"
-	      on:mouseenter={handleMouseEnter}
-	      on:mouseleave={handleMouseLeave}
+	      onmouseenter={handleMouseEnter}
+	      onmouseleave={handleMouseLeave}
 			>
 			  {#key currentTestimonial.id}
 					<div 
@@ -141,7 +137,7 @@
 				type="button"
 				class="bg-white dark:bg-zinc-800 rounded-full p-2 shadow-lg border border-gray-200 dark:border-zinc-700 hover:bg-gray-50 dark:hover:bg-zinc-700 transition-colors duration-300 w-fit h-fit hidden md:block"
 				aria-label="Next testimonial"
-				on:click={nextTestimonial}
+				onclick={nextTestimonial}
 			>
 				<svg class="w-6 h-6 text-black dark:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
@@ -156,7 +152,7 @@
 						role="tab"
 						aria-selected={index === currentIndex}
 						aria-label={`Go to testimonial ${index + 1} of ${testimonials.length}`}
-						on:click={() => goToTestimonial(index)}
+						onclick={() => goToTestimonial(index)}
 					></button>
 				{/each}
 			</div>

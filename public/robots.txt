@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /api/
+Disallow: /openapi.yaml
 
 Sitemap: https://richmondbarbershop.com/sitemap-index.xml

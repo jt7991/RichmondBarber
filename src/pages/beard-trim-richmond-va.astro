@@ -2,23 +2,80 @@
 import Layout from "../layouts/Layout.astro";
 import "../styles/global.css";
 import beard_guy from "../assets/beard_guy.webp";
+import { BOOKING_URL, BUSINESS_NAME, WEBSITE_URL } from "../data/business";
+
+const pageUrl = `${WEBSITE_URL}/beard-trim-richmond-va`;
+
+const faqItems = [
+  {
+    question: "Do beard trims require an appointment?",
+    answer:
+      "Appointments are recommended, and walk-ins are accepted when the schedule allows.",
+  },
+  {
+    question: "Can I combine a beard trim with a haircut?",
+    answer:
+      "Yes. Many clients book both services during one visit for a full grooming appointment.",
+  },
+  {
+    question: "Do you offer straight razor services?",
+    answer:
+      "Yes. Traditional straight razor services are available as a separate booking option.",
+  },
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.answer,
+    },
+  })),
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: WEBSITE_URL,
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Beard Trim in Richmond, VA",
+      item: pageUrl,
+    },
+  ],
+};
 ---
 
 <Layout
-  title="Beard Trim in Richmond, VA | Richmond Barbershop"
-  description="Book a beard trim in Richmond, VA at Richmond Barbershop in Carytown. Traditional barber service with easy online booking."
-  canonical="https://richmondbarbershop.com/beard-trim-richmond-va"
+  title={`Beard Trim in Richmond, VA | ${BUSINESS_NAME}`}
+  description={`Book a beard trim in Richmond, VA at ${BUSINESS_NAME} in Carytown. Traditional barber service with easy online booking.`}
+  canonical={pageUrl}
 >
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  </Fragment>
   <main class="bg-white dark:bg-zinc-900 text-black dark:text-white">
     <section class="px-4 py-24 text-center bg-gray-50 dark:bg-zinc-900">
       <div class="max-w-4xl mx-auto flex flex-col gap-6">
         <h1 class="text-4xl md:text-5xl font-bold">Beard Trim in Richmond, VA</h1>
         <p class="text-lg leading-relaxed">
-          Richmond Barbershop offers beard trims in Carytown for clients who want a clean, maintained look with traditional barber service. Book online and stop in for a trim that fits your style.
+          {BUSINESS_NAME} offers beard trims in Carytown for clients who want a clean, maintained look with traditional barber service. Book online and stop in for a trim that fits your style.
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href="https://book.squareup.com/appointments/e82z6hm5h0k6nr/location/L0C7SP53VGCK0/services"
+            href={BOOKING_URL}
             rel="noopener noreferrer"
             class="bg-black border-white border-2 text-white font-bold py-3 px-8 rounded-lg text-md uppercase tracking-widest hover:bg-white hover:text-black transition-all duration-300"
           >
@@ -48,11 +105,45 @@ import beard_guy from "../assets/beard_guy.webp";
             Our beard trim appointments are focused on practical upkeep and a clean finish, whether you are maintaining your current look or tidying things up before an event.
           </p>
           <p class="text-lg leading-relaxed">
+            We serve clients from Carytown, The Fan, Museum District, Scott's Addition, Church Hill, and surrounding Richmond neighborhoods.
+          </p>
+          <p class="text-lg leading-relaxed">
             Need a full cut too? Explore our
             <a href="/mens-haircut-richmond-va" class="underline font-semibold">men's haircut in Richmond, VA</a>
             page to plan your appointment.
           </p>
         </div>
+      </div>
+    </section>
+
+    <section class="px-4 pb-16">
+      <div class="max-w-5xl mx-auto grid md:grid-cols-3 gap-6 text-left">
+        <article class="bg-gray-50 dark:bg-zinc-800 rounded-xl p-6 border border-gray-200 dark:border-zinc-700">
+          <h2 class="text-xl font-bold mb-3">Built for consistency</h2>
+          <p class="leading-relaxed">
+            We keep your shape clean so your beard stays easy to manage between appointments.
+          </p>
+        </article>
+        <article class="bg-gray-50 dark:bg-zinc-800 rounded-xl p-6 border border-gray-200 dark:border-zinc-700">
+          <h2 class="text-xl font-bold mb-3">Easy scheduling</h2>
+          <p class="leading-relaxed">
+            Booking online takes a few clicks, and you can combine services in one session.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="px-4 pb-24">
+      <div class="max-w-4xl mx-auto flex flex-col gap-4">
+        <h2 class="text-3xl font-bold text-center">Beard Trim FAQ</h2>
+        {
+          faqItems.map((item) => (
+            <details class="bg-gray-50 dark:bg-zinc-800 rounded-xl p-5 border border-gray-200 dark:border-zinc-700">
+              <summary class="font-semibold cursor-pointer">{item.question}</summary>
+              <p class="mt-3 leading-relaxed">{item.answer}</p>
+            </details>
+          ))
+        }
       </div>
     </section>
   </main>
