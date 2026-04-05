@@ -1,8 +1,58 @@
 ---
 import Navigation from "../components/Navigation.astro";
-import { SEO } from "astro-seo";
 import logoImage from "../assets/sms_preview.webp";
 import heroImage from "../assets/hero.webp";
+
+const defaultTitle = "Richmond Barbershop | Barber in Richmond, VA";
+const defaultDescription =
+  "Richmond Barbershop in Carytown offers precision haircuts, beard trims, and straight razor shaves. Book your appointment today.";
+
+const {
+  title = defaultTitle,
+  description = defaultDescription,
+  canonical = Astro.url.href,
+} = Astro.props;
+
+const barbershopSchema = {
+  "@context": "https://schema.org",
+  "@type": "Barbershop",
+  name: "Richmond Barbershop",
+  description,
+  url: "https://richmondbarbershop.com",
+  image: `https://richmondbarbershop.com${logoImage.src}`,
+  telephone: "+18042030221",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "2820 W Cary St STE C",
+    addressLocality: "Richmond",
+    addressRegion: "VA",
+    postalCode: "23221",
+    addressCountry: "US",
+  },
+  hasMap: "https://maps.app.goo.gl/gv7wy3RtPVX4iEvw8",
+  sameAs: [
+    "https://share.google/wbJjqNOCH4Rwny71W",
+    "https://instagram.com/rvabarbershop",
+    "https://www.facebook.com/profile.php?id=61584927026935",
+  ],
+  areaServed: [
+    "Richmond, VA",
+    "Carytown",
+    "The Fan",
+    "Museum District",
+    "Scott's Addition",
+    "Church Hill",
+    "West End",
+    "Henrico",
+    "Midlothian",
+  ],
+  serviceType: [
+    "Men's Haircut",
+    "Scissor Cut",
+    "Beard Trim",
+    "Straight Razor Shave",
+  ],
+};
 ---
 
 <!doctype html>
@@ -27,198 +77,36 @@ import heroImage from "../assets/hero.webp";
       crossorigin="anonymous"
     />
     <meta name="generator" content={Astro.generator} />
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "Richmond Barbershop",
-        "description": "Experience top-notch barber services in Richmond. From classic cuts to modern styles, our skilled barbers provide exceptional grooming for men.",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "2820 W Cary St Suite C",
-          "addressLocality": "Richmond",
-          "addressRegion": "VA",
-          "postalCode": "23221",
-          "addressCountry": "US"
-        },
-        "telephone": "+15551234567",
-        "url": "https://richmondbarbershop.com",
-        "image": "/richmond-barbershop-logo.png",
-        "priceRange": "$$",
-      }
-    </script>
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Do I need to make an appointment at Richmond Barbershop?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Appointments are highly recommended and you can make an appointment ahead of time by scheduling here. Walk-ins are welcome when available!"
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Do you have onsite parking?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "We do not have onsite parking, however there is street parking, as well as a 2 story parking garage directly across the street!"
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What ages are welcome?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "We offer haircuts for ages 8+"
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What is your cancellation policy?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Cancelations need to be made at least 8 hours before your appointment online or by phone. Otherwise you will be charged in full for your missed appointment."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What areas of Richmond, VA do you serve?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "We proudly serve the following nearby neighborhoods: Carytown, The Fan, Museum District, Scott's Addition, Church Hill, Rocketts Landing, Shockoe Bottom, Lakeside, Forest Hill, Henrico, The West End, Bon Air, Glen Allen, Mechanicsville, Midlothian, Chesterfield, and other surrounding areas!"
-            }
-          }
-        ]
-      }
-    </script>
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "Richmond Barbershop",
-        "url": "https://richmondbarbershop.com",
-        "hasOfferCatalog": {
-          "@type": "OfferCatalog",
-          "name": "Barber Services",
-          "itemListElement": [
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Haircut",
-                "description": "Precision cuts tailored to your style.",
-                "provider": {
-                  "@type": "LocalBusiness",
-                  "name": "Richmond Barbershop"
-                }
-              },
-              "priceSpecification": {
-                "@type": "PriceSpecification",
-                "price": "40",
-                "priceCurrency": "USD"
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Scissor Cut",
-                "description": "Precision cuts tailored to your style.",
-                "provider": {
-                  "@type": "LocalBusiness",
-                  "name": "Richmond Barbershop"
-                }
-              },
-              "priceSpecification": {
-                "@type": "PriceSpecification",
-                "price": "50",
-                "priceCurrency": "USD"
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Beard Trim",
-                "description": "Expert shaping and grooming for a sharp look.",
-                "provider": {
-                  "@type": "LocalBusiness",
-                  "name": "Richmond Barbershop"
-                }
-              },
-              "priceSpecification": {
-                "@type": "PriceSpecification",
-                "price": "20",
-                "priceCurrency": "USD"
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Straight Razor Shave",
-                "description": "Traditional hot towel shave for ultimate comfort.",
-                "provider": {
-                  "@type": "LocalBusiness",
-                  "name": "Richmond Barbershop"
-                }
-              },
-              "priceSpecification": {
-                "@type": "PriceSpecification",
-                "price": "30",
-                "priceCurrency": "USD"
-              }
-            }
-          ]
-        }
-       }
-     </script>
-     <script type="application/ld+json">
-       {
-         "@context": "https://schema.org",
-         "@type": "WebSite",
-         "name": "Richmond Barbershop",
-         "url": "https://richmondbarbershop.com"
-       }
-     </script>
-     <link rel="canonical" href={Astro.url} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
     <meta
-      property="og:description"
-      name="description"
-      content="Experience top-notch barber services in Richmond VA. From classic cuts to modern styles, our skilled barbers provide exceptional grooming for men in Carytown and surrounding areas."
+      property="og:image"
+      content={`https://richmondbarbershop.com${logoImage.src}`}
     />
-    <SEO
-      title="Richmond Barbershop - Professional Haircuts and Grooming"
-      description="Experience top-notch barber services in Richmond VA. From classic cuts to modern styles, our skilled barbers provide exceptional grooming for men in Carytown and surrounding areas."
-      openGraph={{
-        basic: {
-          title: "Richmond Barbershop",
-          type: "website",
-          image: `https://richmondbarbershop.com${logoImage.src}`,
-          url: "https://richmondbarbershop.com",
-        },
-        image: {
-          alt: "Richmond barbershop interior and services",
-        },
-      }}
-      twitter={{
-        card: "summary_large_image",
-        title: "Richmond Barbershop",
-        description: "Top barber services in Richmond VA.",
-        image: `https://richmondbarbershop.com${logoImage.src}`,
-        imageAlt: "Richmond Barbershop logo",
-      }}
+    <meta
+      property="og:image:alt"
+      content="Richmond barbershop interior and services"
     />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta
+      name="twitter:image"
+      content={`https://richmondbarbershop.com${logoImage.src}`}
+    />
+    <link rel="canonical" href={canonical} />
+    <script type="application/ld+json" set:html={JSON.stringify(barbershopSchema)} />
+    <slot name="head" />
     <style>
       body {
         font-family: "Oswald", sans-serif;
       }
-    </style></head
-  >
+    </style>
+  </head>
 
   <body class="font-sans">
     <Navigation />

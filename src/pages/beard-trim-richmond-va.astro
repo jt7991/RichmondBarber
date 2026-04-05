@@ -1,0 +1,59 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "../styles/global.css";
+import beard_guy from "../assets/beard_guy.webp";
+---
+
+<Layout
+  title="Beard Trim in Richmond, VA | Richmond Barbershop"
+  description="Book a beard trim in Richmond, VA at Richmond Barbershop in Carytown. Traditional barber service with easy online booking."
+  canonical="https://richmondbarbershop.com/beard-trim-richmond-va"
+>
+  <main class="bg-white dark:bg-zinc-900 text-black dark:text-white">
+    <section class="px-4 py-24 text-center bg-gray-50 dark:bg-zinc-900">
+      <div class="max-w-4xl mx-auto flex flex-col gap-6">
+        <h1 class="text-4xl md:text-5xl font-bold">Beard Trim in Richmond, VA</h1>
+        <p class="text-lg leading-relaxed">
+          Richmond Barbershop offers beard trims in Carytown for clients who want a clean, maintained look with traditional barber service. Book online and stop in for a trim that fits your style.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="https://book.squareup.com/appointments/e82z6hm5h0k6nr/location/L0C7SP53VGCK0/services"
+            rel="noopener noreferrer"
+            class="bg-black border-white border-2 text-white font-bold py-3 px-8 rounded-lg text-md uppercase tracking-widest hover:bg-white hover:text-black transition-all duration-300"
+          >
+            Book a Beard Trim
+          </a>
+          <a
+            href="/"
+            class="border-2 border-black dark:border-white py-3 px-8 rounded-lg text-md uppercase tracking-widest hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-300"
+          >
+            Back to Homepage
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="px-4 py-16">
+      <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+        <img
+          src={beard_guy.src}
+          alt="Beard trim service at Richmond Barbershop in Richmond, Virginia"
+          class="w-full h-[420px] object-cover object-top rounded-xl shadow-xl"
+          loading="lazy"
+        />
+        <div class="flex flex-col gap-4 text-left">
+          <h2 class="text-3xl font-bold">Keep your beard looking clean and consistent</h2>
+          <p class="text-lg leading-relaxed">
+            Our beard trim appointments are focused on practical upkeep and a clean finish, whether you are maintaining your current look or tidying things up before an event.
+          </p>
+          <p class="text-lg leading-relaxed">
+            Need a full cut too? Explore our
+            <a href="/mens-haircut-richmond-va" class="underline font-semibold">men's haircut in Richmond, VA</a>
+            page to plan your appointment.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>

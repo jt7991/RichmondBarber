@@ -1,0 +1,59 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "../styles/global.css";
+import client_2 from "../assets/client_2.webp";
+---
+
+<Layout
+  title="Men's Haircut in Richmond, VA | Richmond Barbershop"
+  description="Get a professional men's haircut in Richmond, VA at Richmond Barbershop in Carytown. Precision cuts, modern styles, and easy online booking."
+  canonical="https://richmondbarbershop.com/mens-haircut-richmond-va"
+>
+  <main class="bg-white dark:bg-zinc-900 text-black dark:text-white">
+    <section class="px-4 py-24 text-center bg-gray-50 dark:bg-zinc-900">
+      <div class="max-w-4xl mx-auto flex flex-col gap-6">
+        <h1 class="text-4xl md:text-5xl font-bold">Men's Haircut in Richmond, VA</h1>
+        <p class="text-lg leading-relaxed">
+          Richmond Barbershop provides men's haircuts in Carytown for clients who want reliable, clean results without the hassle. From classic cuts to modern looks, our team keeps every appointment focused on quality and consistency.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="https://book.squareup.com/appointments/e82z6hm5h0k6nr/location/L0C7SP53VGCK0/services"
+            rel="noopener noreferrer"
+            class="bg-black border-white border-2 text-white font-bold py-3 px-8 rounded-lg text-md uppercase tracking-widest hover:bg-white hover:text-black transition-all duration-300"
+          >
+            Book a Haircut
+          </a>
+          <a
+            href="/"
+            class="border-2 border-black dark:border-white py-3 px-8 rounded-lg text-md uppercase tracking-widest hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-300"
+          >
+            Back to Homepage
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="px-4 py-16">
+      <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+        <img
+          src={client_2.src}
+          alt="Men's haircut service at Richmond Barbershop in Richmond, VA"
+          class="w-full h-[420px] object-cover rounded-xl shadow-xl"
+          loading="lazy"
+        />
+        <div class="flex flex-col gap-4 text-left">
+          <h2 class="text-3xl font-bold">Barber service built around your style</h2>
+          <p class="text-lg leading-relaxed">
+            We work with your hair type, preferred length, and daily routine to make sure your haircut looks sharp in the shop and stays easy to manage afterward.
+          </p>
+          <p class="text-lg leading-relaxed">
+            You can also pair your cut with a
+            <a href="/beard-trim-richmond-va" class="underline font-semibold">beard trim in Richmond, VA</a>
+            for a full grooming appointment.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>

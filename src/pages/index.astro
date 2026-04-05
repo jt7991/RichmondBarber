@@ -15,9 +15,70 @@ import client_5 from "../assets/client_5.webp";
 import client_6 from "../assets/client_6.webp";
 import beard_guy from "../assets/beard_guy.webp"
 import toby from "../assets/toby.webp";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Do I need to make an appointment at Richmond Barbershop?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Appointments are highly recommended and you can make an appointment ahead of time by scheduling here. Walk-ins are welcome when available!",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you have onsite parking?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We do not have onsite parking, however there is street parking, as well as a 2 story parking garage directly across the street!",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What ages are welcome?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We offer haircuts for ages 8+",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What is your cancellation policy?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Cancelations need to be made at least 8 hours before your appointment online or by phone. Otherwise you will be charged in full for your missed appointment.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What areas of Richmond, VA do you serve?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We proudly serve the following nearby neighborhoods: Carytown, The Fan, Museum District, Scott's Addition, Church Hill, Rocketts Landing, Shockoe Bottom, Lakeside, Forest Hill, Henrico, The West End, Bon Air, Glen Allen, Mechanicsville, Midlothian, Chesterfield, and other surrounding areas!",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What services do you offer?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We offer professional precision cuts tailored to your style, premium scissor cuts with attention to detail, beard trims, and traditional hot towel shaves.",
+      },
+    },
+  ],
+};
 ---
 
-<Layout>
+<Layout
+  title="Richmond Barbershop | Barber in Richmond, VA"
+  description="Richmond Barbershop in Carytown offers precision haircuts, beard trims, and straight razor shaves. Book your appointment today."
+>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+  </Fragment>
   <main class="bg-white dark:bg-zinc-900 h-full w-full">
     <section
       id="hero"
@@ -32,7 +93,6 @@ import toby from "../assets/toby.webp";
       <div
         class="relative z-10 flex flex-col items-center justify-center h-full text-black dark:text-white text-center p-4"
       >
-        <h1 class="hidden">RICHMOND BARBERSHOP</h1>
         <Logo />
         <a
           href="https://book.squareup.com/appointments/e82z6hm5h0k6nr/location/L0C7SP53VGCK0/services"
@@ -58,7 +118,7 @@ import toby from "../assets/toby.webp";
 
         
     <section
-      class="px-4 text-center bg-gray-50 dark:bg-zinc-900 mt-0"
+      class="px-4 text-center bg-gray-50 mt-0"
       id="gallery"
       data-ai-section="gallery"
       data-ai-type="work-samples"
@@ -166,10 +226,17 @@ import toby from "../assets/toby.webp";
           index={3}
         />
       </div>
+      <p class="mt-8 text-lg max-w-3xl mx-auto">
+        Learn more about our
+        <a href="/mens-haircut-richmond-va" class="underline font-semibold">men's haircut in Richmond, VA</a>
+        and
+        <a href="/beard-trim-richmond-va" class="underline font-semibold">beard trim in Richmond, VA</a>
+        services.
+      </p>
     </section>
 
     <section
-      class="px-4 text-center flex flex-col items-center bg-white"
+      class="px-4 text-center flex flex-col items-center bg-gray-50"
       id="faq"
       data-ai-section="faq"
       data-ai-type="frequently-asked-questions"
