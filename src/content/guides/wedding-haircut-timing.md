@@ -43,7 +43,7 @@ Your first important photographs may happen before the ceremony. We recommend co
 | After your trial | How many days after a cut you like the result best |
 | Booking your final visit | The services and appointment time that fit your plans |
 | Wedding week | Your confirmed schedule and familiar styling routine |
-| Photo day | Enough time to groom, dress, and feel ready |
+| Photo day | Enough time to style your hair, dress, and feel ready |
 
 We suggest keeping your final request clear and familiar. Bring a photo of the successful trial and tell us what you want repeated. If you would like a small adjustment, identify the area specifically, such as the fringe or the beard's side profile.
 

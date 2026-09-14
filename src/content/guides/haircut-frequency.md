@@ -34,7 +34,7 @@ Use these ranges as starting points for a conversation with us. Your ideal inter
 | Medium-length shape | Roughly 5–8 weeks | Front falling poorly or uneven bulk |
 | Deliberate grow-out | Review by shape rather than automatic trimming | Areas that need reshaping without losing target length |
 
-Tell us your preferred schedule so we can discuss a shape that works with it. A cut designed around monthly visits is a different request from keeping a close outline refreshed every other week. Our goal is a considered plan that keeps you feeling well groomed between appointments.
+Tell us your preferred schedule so we can discuss a shape that works with it. A cut designed around monthly visits is a different request from keeping a close outline refreshed every other week. Our goal is a considered plan that keeps you looking sharp between appointments.
 
 ## Watch the cut, not just the calendar
 

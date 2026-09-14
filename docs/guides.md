@@ -1,4 +1,4 @@
-# Grooming guides
+# Haircut & beard guides
 
 Twenty researched Markdown articles live in `src/content/guides/`. The shared editorial template is `docs/article-template.md`; Astro validates frontmatter with `src/content.config.ts` and renders every article through `src/layouts/GuideLayout.astro`.
 
@@ -6,7 +6,7 @@ Twenty researched Markdown articles live in `src/content/guides/`. The shared ed
 
 The homepage targets Richmond barber, barber in Richmond VA, and Carytown barber. The men's haircut page supports men's haircut Richmond VA and fade haircut intent; the beard page supports beard trim Richmond VA. Guides answer distinct supporting questions and link readers back to these pages and booking. These are relevance targets, not claims of measured search volume. Preserve natural phrasing and distinct intent instead of making all articles compete for the same broad query.
 
-A discreet Grooming Guides link in the shared footer connects the main site to `/guides/`. The homepage body and main navigation do not promote individual articles. The collection is public and indexable, with related article links and inclusion in the generated sitemap. Indexing, ranking, and AI citations cannot be guaranteed.
+A discreet Haircut & Beard Guides link in the shared footer connects the main site to `/guides/`. The homepage body and main navigation do not promote individual articles. The collection is public and indexable, with related article links and inclusion in the generated sitemap. Indexing, ranking, and AI citations cannot be guaranteed.
 
 ## Editing and publishing
 

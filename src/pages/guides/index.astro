@@ -12,16 +12,16 @@ const categories = ['Planning your visit', 'Haircuts & styling', 'Beards & shavi
 const canonical = `${WEBSITE_URL}/guides/`;
 const schema = {
   '@context': 'https://schema.org', '@type': 'CollectionPage',
-  name: 'Haircut & Grooming Guides', url: canonical,
+  name: 'Haircut & Beard Guides', url: canonical,
   mainEntity: { '@type': 'ItemList', itemListElement: guides.map((guide, index) => ({
     '@type': 'ListItem', position: index + 1, name: guide.data.title, url: `${canonical}${guide.id}/`,
   })) },
 };
 ---
-<Layout title="Haircut & Grooming Guides | Richmond Barbershop" description="Plan your Carytown barber visit and explore practical guides to haircuts, beard care, shaving, styling, and grooming from Richmond Barbershop." canonical={canonical}>
+<Layout title="Haircut & Beard Guides | Richmond Barbershop" description="Plan your Carytown barber visit and explore practical guides to haircuts, beard care, shaving, and styling from Richmond Barbershop in Richmond, VA." canonical={canonical}>
   <Fragment slot="head"><script type="application/ld+json" set:html={JSON.stringify(schema)} /></Fragment>
   <main>
-    <header><a href="/">← Richmond Barbershop</a><p class="eyebrow">The grooming library</p><h1>A little knowledge.<br />A better next haircut.</h1><p>Practical guides to choosing a cut, caring for your beard, and planning your visit to Carytown.</p></header>
+    <header><a href="/">← Richmond Barbershop</a><p class="eyebrow">Haircut & beard advice</p><h1>A little knowledge.<br />A better next haircut.</h1><p>Practical guides to choosing a cut, caring for your beard, and planning your visit to Carytown.</p></header>
     {categories.map(category => <section><h2>{category}</h2><div class="cards">{guides.filter(guide => guide.data.category === category).map(guide => <a class="card" href={`/guides/${guide.id}/`}><h3>{guide.data.title}</h3><p>{guide.data.description}</p><span>Read guide →</span></a>)}</div></section>)}
   </main>
 </Layout>

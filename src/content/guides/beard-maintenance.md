@@ -21,13 +21,13 @@ A great beard should look intentional throughout the week. At Richmond Barbersho
 
 After your trim, take a front photo and a photo of each side. Notice the overall silhouette and the direction the beard sits. These references make it easy to explain what you loved when you return, whether that is the fuller chin, the softer sides, or the way the mustache frames your face.
 
-Tell us whether you want to maintain your current length or grow toward a longer style. We can use that goal to guide the conversation at your next visit and keep your grooming plan focused.
+Tell us whether you want to maintain your current length or grow toward a longer style. We can use that goal to guide the conversation at your next visit and keep your beard-care plan focused.
 
 ## Cleanse and condition with your skin in mind
 
-The [American Academy of Dermatology recommends daily gentle cleansing, moisturizing suited to your skin, and combing for grooming](https://www.aad.org/public/everyday-care/skin-care-secrets/face/healthy-beard). Its guidance distinguishes beard conditioner for acne-prone skin, beard oil for normal or dry skin, and a fragrance-free, non-comedogenic moisturizer for sensitive skin.
+The [American Academy of Dermatology recommends daily gentle cleansing, moisturizing suited to your skin, and combing to keep your beard neat](https://www.aad.org/public/everyday-care/skin-care-secrets/face/healthy-beard). Its guidance distinguishes beard conditioner for acne-prone skin, beard oil for normal or dry skin, and a fragrance-free, non-comedogenic moisturizer for sensitive skin.
 
-We recommend making that care routine easy to remember. Keep your cleanser and chosen conditioner or moisturizer together, follow their directions, and give the beard the same consistent attention as the rest of your grooming.
+We recommend making that care routine easy to remember. Keep your cleanser and chosen conditioner or moisturizer together, follow their directions, and give the beard the same consistent attention as the rest of your daily care.
 
 When you visit us, mention how your beard feels between washes and what products you use. Softness, styling control, and comfort are useful things to discuss separately. A product you enjoy using consistently is a better foundation for your routine than a shelf full of products with overlapping purposes.
 

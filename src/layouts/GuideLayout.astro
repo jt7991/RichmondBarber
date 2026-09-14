@@ -40,7 +40,7 @@ const schema = {
     {
       '@type': 'BreadcrumbList', itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Home', item: WEBSITE_URL },
-        { '@type': 'ListItem', position: 2, name: 'Grooming guides', item: `${WEBSITE_URL}/guides/` },
+        { '@type': 'ListItem', position: 2, name: 'Haircut & beard guides', item: `${WEBSITE_URL}/guides/` },
         { '@type': 'ListItem', position: 3, name: data.title, item: canonical },
       ],
     },
@@ -58,7 +58,7 @@ const schema = {
   </Fragment>
   <main class="guide-shell">
     <div class="guide-wrap">
-      <nav aria-label="Breadcrumb" class="breadcrumbs"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/guides/">Grooming guides</a></nav>
+      <nav aria-label="Breadcrumb" class="breadcrumbs"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/guides/">Haircut & beard guides</a></nav>
       <article>
         <header>
           <p class="eyebrow">{data.category}</p>
@@ -85,7 +85,7 @@ const schema = {
       <aside class="related" aria-labelledby="related-heading">
         <h2 id="related-heading">Keep reading</h2>
         <div>{related.map(entry => <a href={`/guides/${entry.id}/`}><span>{entry.data.category}</span><strong>{entry.data.title}</strong></a>)}</div>
-        <a class="all-guides" href="/guides/">Browse all grooming guides →</a>
+        <a class="all-guides" href="/guides/">Browse all haircut and beard guides →</a>
       </aside>
     </div>
   </main>

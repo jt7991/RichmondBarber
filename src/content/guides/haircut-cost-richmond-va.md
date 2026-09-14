@@ -48,7 +48,7 @@ We are happy to help you choose the appropriate service. Call us at (804) 203-02
 
 ## Make your next visit part of feeling your best
 
-We see grooming as a chance to give your everyday appearance some attention. A haircut can bring definition back to a familiar style or mark a change you have been ready to make. Your visit should support the way you want to present yourself at work, on a night out, or simply during an ordinary week.
+We see a barber visit as a chance to give your everyday appearance some attention. A haircut can bring definition back to a familiar style or mark a change you have been ready to make. Your visit should support the way you want to present yourself at work, on a night out, or simply during an ordinary week.
 
 Before your appointment, think about three things: what you want to keep, what you want to change, and how you want your hair to feel when you style it yourself. At the finish, ask us about arranging the shape at home and planning your next visit around the look you enjoy.
 

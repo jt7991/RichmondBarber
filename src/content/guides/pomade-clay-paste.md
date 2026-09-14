@@ -35,7 +35,7 @@ Pomade, clay, and paste describe overlapping product families. A pomade can have
 | Prospectors Coal Mine | Medium hold, matte finish | Natural texture and finger-styled definition |
 | Tip Top Clay Paste | Medium hold, natural finish | Volume and a fuller-looking style |
 | Suavecito Texturizing Powder | Strong hold, no shine | Lift, grip, and lightweight texture |
-| Prospectors Styling Cream | Light hold, natural shine | Soft movement and a naturally groomed finish |
+| Prospectors Styling Cream | Light hold, natural shine | Soft movement and a naturally styled finish |
 
 ## Why we recommend Prospectors Diamond pomade
 
@@ -59,7 +59,7 @@ Our **Tip Top Clay** is [Tip Top Clay Paste](https://www.tiptopindustries.com/st
 
 **Suavecito Texturizing Powder** takes a different approach. [Suavecito specifies a no-shine finish, strong hold, and lightweight volume](https://suavecito.com/products/texturizing-powder), making it an option to discuss when you want extra lift and grip. The manufacturer's directions call for a small amount on dry hair, worked through with your fingers; add gradually as needed.
 
-For softer control, we carry **Prospectors Styling Cream**. Its [water-based formula offers light hold and natural shine](https://prospectorspomade.com/products/prospectors-styling-cream), with conditioning benefits and a lightweight feel. We recommend considering it when you want movement and a groomed appearance without a strongly held shape. It is also an option to discuss with us for finer hair.
+For softer control, we carry **Prospectors Styling Cream**. Its [water-based formula offers light hold and natural shine](https://prospectorspomade.com/products/prospectors-styling-cream), with conditioning benefits and a lightweight feel. We recommend considering it when you want movement and a polished appearance without a strongly held shape. It is also an option to discuss with us for finer hair.
 
 ## Bring the finished look into your daily routine
 

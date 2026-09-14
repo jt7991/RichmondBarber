@@ -4,7 +4,7 @@ seoTitle: "Choosing a Beard Shape"
 description: "Find your next beard shape with Richmond Barbershop. Explore balanced proportions, natural growth, and professional upkeep for a polished, personal finish."
 date: 2026-09-14
 category: "Beards & shaving"
-summary: "We help you choose a beard shape using your growth pattern, preferred outline, and everyday style. From a compact beard to a fuller silhouette, our goal is balanced grooming that feels personal and looks polished."
+summary: "We help you choose a beard shape using your growth pattern, preferred outline, and everyday style. From a compact beard to a fuller silhouette, our goal is a balanced shape that feels personal and looks polished."
 service: beard
 related:
   - professional-beard-trim
@@ -64,4 +64,4 @@ We can discuss whether retaining more length supports the shape you want or whet
 
 ### Can beard oil fill in patches?
 
-Choose grooming products for their stated cosmetic purpose, not as a promise of new growth. The AAD's [beard guidance](https://www.aad.org/public/everyday-care/skin-care-secrets/face/diy-treatment-common-beard-problems) discusses adapting the style to sparse growth. Seek professional medical advice about sudden or unexplained changes.
+Choose beard-care products for their stated cosmetic purpose, not as a promise of new growth. The AAD's [beard guidance](https://www.aad.org/public/everyday-care/skin-care-secrets/face/diy-treatment-common-beard-problems) discusses adapting the style to sparse growth. Seek professional medical advice about sudden or unexplained changes.

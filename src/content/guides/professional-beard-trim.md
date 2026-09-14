@@ -42,7 +42,7 @@ Our [guide to choosing a beard shape](/guides/choosing-beard-shape) helps you ex
 
 ## Book your beard trim in Carytown
 
-Our [professional beard trim](/beard-trim-richmond-va) is **$40**. You can book it alongside a haircut for a coordinated grooming appointment, or choose a beard trim on its own when the outline needs attention.
+Our [professional beard trim](/beard-trim-richmond-va) is **$40**. You can book it alongside a haircut for a coordinated haircut and beard appointment, or choose a beard trim on its own when the outline needs attention.
 
 For a traditional shave experience, we also offer a [hot towel straight razor shave](/guides/hot-towel-straight-razor-shave) as a separate service. Select the services you want in our booking menu so your reservation reflects the visit you have in mind.
 
