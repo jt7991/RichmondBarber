@@ -1,0 +1,46 @@
+---
+import Layout from '../layouts/Layout.astro';
+import TestimonialOption from '../components/TestimonialOption.astro';
+import '../styles/global.css';
+const options = [
+  { variant: 'editorial', name: 'Editorial', description: 'Open columns, strong typography, fine dividing rules.' },
+  { variant: 'night', name: 'After hours', description: 'Dark charcoal, centered reviews, yellow accents.' },
+  { variant: 'feature', name: 'Yellow spotlight', description: 'A bold yellow surface with the Sam review taking the lead.' },
+  { variant: 'ledger', name: 'The short list', description: 'A quiet, stacked layout with neatly separated reviews.' },
+] as const;
+---
+<Layout title="Review Style Options | Richmond Barbershop" description="Compare four testimonial styles for Richmond Barbershop.">
+  <Fragment slot="head"><meta name="robots" content="noindex, nofollow" /></Fragment>
+  <main>
+    <header class="comparison-header">
+      <h1>Four ways to hear from our clients.</h1>
+      <p>The same reviews, in four different styles. Choose an option below to compare.</p>
+      <nav aria-label="Review style options">
+        {options.map((option, index) => <a href={`#${option.variant}`}>{index + 1}. {option.name}</a>)}
+      </nav>
+      <a class="home-link" href="/#testimonials-section">Compare with the current homepage</a>
+    </header>
+    {options.map((option, index) => (
+      <div id={option.variant} class="option">
+        <div class="option-label"><h2>Option {index + 1}: {option.name}</h2><p>{option.description}</p></div>
+        <TestimonialOption variant={option.variant} />
+      </div>
+    ))}
+  </main>
+</Layout>
+<style>
+  main { background: #fff; color: #18181b; }
+  .comparison-header { max-width: 1168px; margin: auto; padding: 64px 24px 48px; }
+  h1 { font-family: 'Oswald', sans-serif; font-size: clamp(32px, 4vw, 48px); line-height: 1.15; margin-bottom: 20px; }
+  p { color: #52525b; line-height: 1.6; }
+  nav { display: flex; flex-wrap: wrap; gap: 12px; margin-block: 28px 20px; }
+  nav a { padding: 12px 18px; border: 1px solid #a1a1aa; border-radius: 8px; text-decoration: none; font-weight: 600; }
+  nav a:hover { background: #18181b; color: #fff; }
+  a:focus-visible { outline: 2px solid #18181b; outline-offset: 4px; }
+  .home-link { display: inline-block; padding-block: 8px; text-decoration: underline; text-underline-offset: 4px; }
+  .option { scroll-margin-top: 88px; }
+  .option-label { padding: 24px max(24px, calc((100% - 1120px) / 2)); background: #f4f4f5; border-block: 1px solid #d4d4d8; }
+  .option-label h2 { font-size: 18px; font-weight: 700; margin-bottom: 4px; }
+  .option-label p { font-size: 14px; }
+  ::selection { background: #facc15; color: #18181b; }
+</style>
