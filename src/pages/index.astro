@@ -9,7 +9,7 @@ import GalleryImage from "../components/GalleryImage.astro";
 import { galleryPhotos, gallerySchema } from "../data/gallery";
 import TestimonialOption from "../components/TestimonialOption.svelte";
 import IntroSection from "../components/IntroSection.astro";
-import ContactStylePicker from "../components/ContactStylePicker.svelte";
+import ContactSection from "../components/ContactSection.astro";
 import heroImage from "../assets/barbershop_interior.webp";
 import client_1 from "../assets/client_1.webp";
 import client_2 from "../assets/client_2.webp";
@@ -187,7 +187,7 @@ const faqSchema = {
 
     <TestimonialOption variant="editorial" client:load />
 
-    <ContactStylePicker client:load />
+    <ContactSection />
 
   </main>
 
