@@ -3,8 +3,10 @@ import Layout from "../layouts/Layout.astro";
 import VisitDetails from "../components/VisitDetails.astro";
 import { Image } from "astro:assets";
 import interior from "../assets/barbershop_interior.webp";
-import { BUSINESS_DESCRIPTION, BUSINESS_NAME, BOOKING_URL, GOOGLE_PROFILE_URL, SERVICES, WEBSITE_URL, BARBERS, HAIRCUT_BEARD_COMBO } from "../data/business";
+import { BUSINESS_DESCRIPTION, BUSINESS_NAME, BOOKING_URL, GOOGLE_PROFILE_URL, SERVICES, WEBSITE_URL, BARBERS } from "../data/business";
 import "../styles/global.css";
+const haircut = SERVICES.find((service) => service.path === "/mens-haircut-richmond-va")!;
+const haircutBookingUrl = `${BOOKING_URL}/UXBCSR3DPEYGVY3OBVTLUFPX`;
 const canonical = `${WEBSITE_URL}/about/`;
 const schema = { "@context": "https://schema.org", "@type": "AboutPage", "@id": `${canonical}#page`, url: canonical, name: `About ${BUSINESS_NAME}`, description: BUSINESS_DESCRIPTION, about: { "@id": `${WEBSITE_URL}/#business` }, mentions: BARBERS.map((barber) => ({ "@type": "Person", "@id": `${canonical}#${barber.id}`, name: barber.name, jobTitle: "Barber", worksFor: { "@id": `${WEBSITE_URL}/#business` } })) };
 ---
@@ -33,9 +35,9 @@ const schema = { "@context": "https://schema.org", "@type": "AboutPage", "@id": 
     </section>
     <section class="px-4 pb-16 max-w-5xl mx-auto grid md:grid-cols-2 gap-10">
       <div><h2 class="text-3xl font-bold mb-4">Meet your barbers</h2>
-        <p class="text-lg leading-relaxed mb-5">Choose Joe or Sam when booking your haircut. Both also offer a combined haircut and beard trim, including a hot towel and straight-razor line-up.</p>
+        <p class="text-lg leading-relaxed mb-5">Book a ${haircut.price} haircut with Joe or Sam. Your appointment includes a hot towel and straight-razor neck shave. Choose your barber after selecting the haircut service.</p>
         <div class="grid sm:grid-cols-2 gap-4">
-          {BARBERS.map((barber) => <article id={barber.id} class="border border-gray-200 rounded-xl p-5"><h3 class="text-2xl font-bold">{barber.name}</h3><p class="mt-3">Haircut &amp; beard trim<br />${HAIRCUT_BEARD_COMBO.price} · {HAIRCUT_BEARD_COMBO.durationMinutes} minutes</p><a href={barber.bookingUrl} class="inline-block underline mt-4">Book with {barber.name}</a></article>)}
+          {BARBERS.map((barber) => <article id={barber.id} class="border border-gray-200 rounded-xl p-5"><h3 class="text-2xl font-bold">{barber.name}</h3><p class="mt-3">Haircut<br />${haircut.price} · {haircut.durationMinutes} minutes</p><a href={haircutBookingUrl} class="inline-block underline mt-4">Book a haircut with {barber.name}</a></article>)}
         </div>
       </div>
       <div><h2 class="text-3xl font-bold mb-4">Customer recommendations</h2><blockquote class="border-l-4 border-yellow-300 pl-5 text-xl leading-relaxed">“Joe T is the nicest dude and solid service.”</blockquote><p class="mt-3 text-sm">A public customer recommendation on <a class="underline" href="https://www.reddit.com/r/rva/comments/1w3xlwb/barber_recommendations/">r/rva</a>.</p><a class="inline-block underline mt-4" href={GOOGLE_PROFILE_URL}>View our Google Business Profile and reviews</a></div>
