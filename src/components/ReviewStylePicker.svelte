@@ -39,7 +39,7 @@
         <option value={option.value}>{index + 1}. {option.name}</option>
       {/each}
     </select>
-    <a href="/#testimonials-section">Try the floating switcher on the homepage</a>
+    <a href="/#testimonials-section">View the selected editorial style on the homepage</a>
   </div>
 </header>
 {/if}
