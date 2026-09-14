@@ -23,6 +23,7 @@ import {
   MAPS_URL,
   PHONE_DISPLAY,
   PHONE_E164,
+  WEBSITE_URL,
 } from "../data/business";
 
 const faqSchema = {
@@ -82,8 +83,9 @@ const faqSchema = {
 ---
 
 <Layout
-  title="Richmond Barbershop | Barber in Richmond, VA"
-  description="Richmond Barbershop in Carytown offers precision haircuts, beard trims, and straight razor shaves. Book your appointment today."
+  title="Richmond Barber in Carytown | Richmond Barbershop"
+  description="Visit our Carytown barbershop in Richmond, VA for precision men's haircuts, fades, scissor cuts, beard trims, and hot towel shaves. Book your next visit."
+  canonical={`${WEBSITE_URL}/`}
 >
   <Fragment slot="head">
     <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
@@ -117,11 +119,11 @@ const faqSchema = {
       data-ai-section="best-barbershop-in-richmond"
       data-ai-type="best-barbershop-in-richmond"
     >
-      <h2 class="text-4xl font-bold text-black dark:text-white">
-        Looking for the best barbershop in Richmond Virginia?
-      </h2>
+      <h1 class="text-4xl font-bold text-black dark:text-white">
+        Your Richmond Barber in Carytown
+      </h1>
       <p class="text-lg max-w-xl mx-auto leading-relaxed">
-        Located in the heart of Carytown, Richmond Barbershop is a privately owned upscale barbershop that specializes in haircuts, beard trims, hot towel shaves, and other barber services. Our mission is to provide our community with top-notch service while staying true to the “old school” barbering traditions.
+        At Richmond Barbershop, we bring precision haircuts and old-school barbering traditions to the heart of Carytown in Richmond, VA. From clean fades and detailed scissor cuts to beard shaping and hot towel shaves, we focus on the details that help you look sharp and feel confident. We take pride in quality work, personal attention, and a style you enjoy wearing.
       </p>
     </section>
 
@@ -170,7 +172,7 @@ const faqSchema = {
           index={5}
           id="image4"
           src={client_4}
-          alt="Professional grooming session at Richmond VA barber shop"
+          alt="Professional haircut at Richmond Barbershop in Richmond, VA"
         />
         <GalleryImage
           index={6}
@@ -278,7 +280,7 @@ const faqSchema = {
           surrounding areas!
         </Accordion>
          <Accordion title="What services do you offer?">
-           We offer professional precision cuts tailored to your style, premium scissor cuts with attention to detail, expert beard shaping and grooming for a sharp look, and traditional hot towel shaves for ultimate comfort and smoothness. Our skilled barbers in Richmond, VA, provide quality men's haircuts and grooming services in Carytown and surrounding areas.
+           We offer professional precision cuts tailored to your style, premium scissor cuts with attention to detail, expert beard trimming and shaping for a sharp look, and traditional hot towel shaves for ultimate comfort and smoothness. Our skilled barbers in Richmond, VA, provide quality men's haircuts, beard trims, and shaves in Carytown and surrounding areas.
          </Accordion>
       </div>
     </section>
