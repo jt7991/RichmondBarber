@@ -1,72 +1,64 @@
 ---
-title: "Hot Towel Straight Razor Shave: What to Know Before Booking"
+title: "Our Hot Towel Straight Razor Shave: A Classic Finish in Carytown"
 seoTitle: "Hot Towel Straight Razor Shave in Richmond, VA"
-description: "Considering a hot towel straight razor shave in Richmond? Learn how it differs from a beard trim, what to discuss beforehand, and how to plan your visit."
+description: "Enjoy a classic hot towel straight razor shave with us in Carytown. Explore our $50 service, prepare for your visit, and choose the finish you want."
 date: 2026-09-14
 category: "Beards & shaving"
-summary: "Richmond Barbershop offers a straight razor shave with a hot towel, listed at $50. Choose a shave when you want facial hair removed close to the skin; choose a beard trim when you want to preserve and shape length."
+summary: "Our $50 straight razor shave combines a hot towel with a close finish. Whether you are refreshing your everyday look or preparing for an occasion, tell us the facial hair you want to keep and the areas you want clean-shaven."
 service: shave
 related:
   - professional-beard-trim
   - beard-maintenance
   - wedding-haircut-timing
 sources:
-  - title: "Richmond Barbershop shave service"
+  - title: "Our straight razor shave service"
     url: "https://richmondbarbershop.com/"
   - title: "American Academy of Dermatology: How to shave"
     url: "https://www.aad.org/public/everyday-care/skin-care-basics/hair/how-to-shave"
 ---
 
-## Decide between a shave and a beard trim
+## Choose a classic barber service
 
-A straight razor shave aims for a close finish on the areas being shaved. A beard trim keeps facial hair and adjusts its length, outline, or balance. If you want a shorter beard rather than a clean-shaven face, describe that clearly before selecting a service.
+A close shave gives your appearance a different character from a beard trim. It can reveal a clean outline, complement a fresh haircut, and become a moment of care in a busy day. Our straight razor shave brings the hot towel experience to your visit with us in Carytown.
 
-Richmond Barbershop lists a hot towel straight razor shave on its [service menu](https://richmondbarbershop.com/). The published price is $50; check the current booking menu before reserving. For retaining and shaping your beard, review the [beard trim service](/beard-trim-richmond-va) instead.
+Our service is $50. You can review our [service menu](/#services) and confirm the current price when booking. If you would like a haircut as well, include both services when arranging your appointment so your visit reflects the complete result you have in mind.
 
-A photo can help explain whether you want all facial hair removed or certain features preserved. Point out your mustache, sideburns, and any beard sections you want to keep so the intended outline is clear.
+If you prefer to keep your beard, our [beard trim service](/beard-trim-richmond-va) is the place to start. We can discuss the length and outline you want to preserve, while a shave is the choice for a close finish on the areas being shaved.
 
-## Understand the role of preparation
+## Tell us the finish you are looking for
 
-The hot towel is part of the shop's listed service. In general shaving care, moisture helps soften hair before a blade passes over the skin. The American Academy of Dermatology recommends wetting the skin and hair and using shaving cream or gel before shaving. It also advises shaving with the direction of growth to help reduce razor bumps and burn. [AAD shaving guidance](https://www.aad.org/public/everyday-care/skin-care-basics/hair/how-to-shave)
+Before your visit, think about the facial hair that defines your preferred look. You may want a clean-shaven face, or you may have a mustache or sideburns you want to keep. Tell us those details so we can discuss the boundaries clearly.
 
-Those principles explain why preparation matters; they do not establish an exact sequence, towel temperature, product brand, or number of passes for this shop. If a particular product or method matters to you, ask before booking.
+A reference photo can help if you are changing your appearance. Point to the outline you like and explain what you want to preserve. We want you to feel confident about the intended result before the service begins.
 
-You do not need to learn straight razor technique to receive the service. The useful preparation on your part is explaining your desired finish and how your skin usually responds to shaving.
+Your shaving history matters too. Let us know if your neck tends to feel sensitive, if a particular product has bothered you, or if you prefer a less-close finish in certain areas. Those details belong in the conversation alongside the look you want.
 
-## Tell the barber about your shaving history
+## Understand why preparation matters
 
-Mention recurring irritation, areas that tend to develop bumps, and products that have bothered your skin before. This gives the barber information for discussing whether the requested finish is appropriate that day.
+Our shave includes a hot towel. Moisture is also a foundation of general shaving preparation: the American Academy of Dermatology recommends softening the skin and hair with water and applying shaving cream or gel before shaving. Its guidance explains why preparation deserves attention, alongside the blade work itself. [AAD shaving guidance](https://www.aad.org/public/everyday-care/skin-care-basics/hair/how-to-shave)
 
-A short pre-appointment checklist:
+We encourage you to ask about anything that affects your comfort, including product sensitivities and previous irritation. If you have persistent skin concerns, a dermatologist can help you understand them; the AAD notes that shaving can aggravate acne. [AAD guidance on shaving and skin](https://www.aad.org/public/everyday-care/skin-care-basics/hair/how-to-shave)
 
-- Decide which facial hair you want removed or preserved.
-- Note whether your neck or cheeks usually react after a close shave.
-- Mention any known product sensitivities.
-- Ask how much growth to leave before arriving; no specific minimum is published here.
-- If you have an event afterward, discuss timing before booking.
+For your arrival, ask us how to prepare your facial hair rather than shaving it away immediately beforehand. That lets us plan around your starting point and the finish you want.
 
-Do not assume a professional shave guarantees irritation-free skin. The AAD cautions that shaving can aggravate acne and recommends seeking a dermatologist's advice for skin-care concerns. [AAD guidance on shaving and skin](https://www.aad.org/public/everyday-care/skin-care-basics/hair/how-to-shave)
+## Make the shave part of your next occasion
 
-## Plan the visit and the finish you want
+A shave can be a finishing touch before an important event or simply a service you choose for yourself. If your visit is connected to a wedding, interview, or photographs, tell us the date when booking so you can plan the appointment around the rest of your day.
 
-Reserve the shave as the service you need. If you also want a haircut, include or confirm that work when arranging the appointment; a shave selection does not automatically reserve time for a cut.
+For an unfamiliar look or shave routine, we recommend trying it ahead of the occasion. You will have a chance to see the result, notice how your skin feels afterward, and decide when you like the finish best. Our [wedding grooming guide](/guides/wedding-haircut-timing) can help you plan that timing.
 
-Before the service begins, clarify whether your priority is the closest possible appearance, keeping particular facial hair, or avoiding a finish that has bothered you in the past. Those are more helpful details than simply asking for “the usual” on a first visit.
-
-Afterward, ask which care steps fit the products used and your skin. Keep a note of what worked for you. If the shave is preparation for a wedding or other photographed event, trying an unfamiliar routine well before the date gives you a chance to assess the result without an immediate deadline.
-
-For a first trip to the Carytown shop, check the [visit guide](/guides/first-visit-richmond-barbershop) for location and parking details.
+At the end of your visit, ask us about caring for your skin after the service and maintaining the appearance you enjoy. For directions and parking before you arrive, see our [first-visit guide](/guides/first-visit-richmond-barbershop).
 
 ## Frequently asked questions
 
-### How much is a hot towel straight razor shave?
+### How much is our hot towel straight razor shave?
 
-Richmond Barbershop lists the service at $50. Verify the current price in the booking menu before confirming.
+Our straight razor shave is $50 and includes a hot towel. Confirm current pricing and appointment availability through our booking menu.
 
-### Should I shave at home just before the appointment?
+### Should I shave before visiting you?
 
-Ask the shop how to prepare rather than arriving freshly shaved by default. Your starting length and intended service should guide that decision.
+Ask us how to prepare when arranging your visit. We can discuss the starting length and the service you want rather than having you arrive freshly shaved.
 
-### Is a straight razor shave the right choice for sensitive skin?
+### Can I book a shave if my skin is sensitive?
 
-That depends on your skin and shaving history. Discuss recurring irritation before booking; persistent skin problems are a reason to ask a dermatologist for individualized guidance.
+Let us know about your shaving history and any sensitivities before booking. For ongoing skin problems, we recommend getting individualized advice from a dermatologist.

@@ -1,41 +1,39 @@
 ---
 title: "How to Ask Your Barber for the Haircut You Actually Want"
 seoTitle: "How to Ask Your Barber for a Haircut: A Checklist"
-description: "Prepare for your barber consultation with reference-photo tips, clear length requests, a simple checklist, and examples that help explain your haircut."
+description: "Plan your consultation with us using clear reference photos, length preferences, and a practical checklist for a confident haircut at Richmond Barbershop."
 date: 2026-09-14
 category: "Haircuts & styling"
-summary: "Describe what you want to keep, what you want to change, and how you style your hair at home. Bring useful reference photos, agree on the shortest areas and top length, and confirm the plan before cutting begins. You do not need to know every barbering term."
+summary: "Tell us what you want to keep, what you want to change, and how you style your hair at home. Bring reference photos, and we can help you agree on the shape, shortest areas, and top length before cutting begins. Our consultation turns those preferences into a clear plan for your haircut."
 service: haircut
 related:
   - taper-vs-fade
   - scissor-vs-clipper-cut
   - first-visit-richmond-barbershop
 sources:
-  - title: "Scissors & Scotch: Professional grooming training guide"
-    url: "https://classic.scissorsscotch.com/s/Grooming-How-We-Work-Book-Trainee-Version.pdf"
   - title: "Wahl UK: Understanding clipper guide combs"
     url: "https://www.wahl.co.uk/content-hub/product-guides/hair-clipper-buying-guide/"
 ---
 
 ## Start with the problem you want solved
 
-An effective request can begin in ordinary language: the sides stick out, the front falls into your eyes, the crown is hard to style, or the last cut showed more scalp than you liked. Explain the problem before naming a trend.
+An effective consultation begins with what matters to you. Tell us if the sides stick out, the front falls into your eyes, or the crown is hard to style. Those everyday details help us understand what you want your next haircut to do.
 
-Then identify what already works. You might want the same top with neater sides, or the same outline with enough extra front length to sweep back. Stating both helps prevent an unwanted redesign.
+Then tell us what already works. You might want the same top with neater sides, or the same outline with enough extra front length to sweep back. We can build on what you like and refine the details that will make the cut feel finished.
 
-Professional consultation is more than choosing a style name. Scissors & Scotch's published training guide includes a consultation section and treats scalp exposure, transitions, and finishing choices as separate design considerations. [Professional grooming training guide](https://classic.scissorsscotch.com/s/Grooming-How-We-Work-Book-Trainee-Version.pdf).
+We take the conversation beyond a style name. The amount of scalp you want to show, the transition into the top, and the finish around the ears and neck each deserve attention. Taking time to clarify those choices helps us bring the whole haircut together.
 
 ## Bring photos that answer different questions
 
-Choose a small number of clear pictures. A front view shows the fringe and overall balance; a side or back view helps explain the blend and neckline. Avoid expecting one tightly cropped portrait to show the whole haircut.
+Bring us a small number of clear pictures. A front view shows the fringe and overall balance; a side or back view helps explain the blend and neckline. Together, those views give us a better starting point for the complete shape.
 
-Point to the exact feature you like. “I want the shape at the front, but more hair on the sides” is more useful than handing over a picture without explanation. Tell the barber when two references show alternatives rather than parts of one intended cut.
+Point to the exact feature you like. “I want the shape at the front, but more hair on the sides” helps us understand your preference. Tell us when two references show alternatives rather than parts of one intended cut.
 
-A photo of your own previous haircut is particularly helpful because it shows your hair at a known length. If your inspiration has a different curl pattern or density, ask what a realistic version would look like with your hair. The goal is agreement on an achievable result.
+A photo of your own previous haircut is particularly helpful because it shows your hair at a known length. If your inspiration has a different curl pattern or density, ask us how we could adapt the shape to your hair. We want you to feel confident in a result designed around you.
 
 ## Make length and finish specific
 
-“Short” and “a little off” are relative. Ask the barber to show how much would be removed, or describe where you want the hair to sit after drying: above the eyebrows, clear of the ears, or long enough to tuck back.
+“Short” and “a little off” are relative. Ask us to show how much would be removed, or describe where you want the hair to sit after drying: above the eyebrows, clear of the ears, or long enough to tuck back.
 
 Guard numbers communicate clipper length, but they do not specify the entire shape. Wahl's guide identifies numbered combs with remaining lengths; fade placement and blending still require separate instructions. [Wahl's guide comb explanation](https://www.wahl.co.uk/content-hub/product-guides/hair-clipper-buying-guide/).
 
@@ -56,18 +54,18 @@ For a change, try: “I like the front in this photo and the softer sides in thi
 
 For a grow-out, try: “I want the front and upper sides to get longer. Please show me any length you recommend removing before you cut it.”
 
-These are examples to adapt, not technical formulas. During your [Richmond haircut visit](/mens-haircut-richmond-va), mention discomfort or uncertainty as it comes up. At the finish, use the mirror to check the back and ask how to style the cut yourself. Save a photo and a short note if it is a result you want to repeat.
+Adapt these examples for your [haircut visit with us in Richmond](/mens-haircut-richmond-va). Tell us when you have a question so we can keep the plan clear. At the finish, use the mirror to see the back and ask us how to style the cut at home. Save a photo if it is a result you want to repeat, and plan your next visit with us to keep the shape and finish maintained.
 
 ## Frequently asked questions
 
 ### Is it rude to bring a haircut photo?
 
-No. A reference gives you a shared visual starting point. Be open to discussing how it translates to your length, texture, and routine.
+Please bring one. It gives us a shared visual starting point so we can discuss how the look translates to your length, texture, and routine.
 
 ### What if I do not know which haircut I want?
 
-Bring examples of what appeals to you and explain your daily routine. Set boundaries such as minimum top length or whether you are comfortable with exposed scalp, then discuss options.
+Bring us examples of what appeals to you and explain your daily routine. Tell us your minimum top length and whether you like a skin-close finish, and we can guide the conversation from there.
 
 ### Should I say something if it looks too short during the cut?
 
-Yes, calmly clarify what you are noticing. Ask which areas are finished and restate what you want preserved. Speaking up before more hair is removed gives you the most useful opportunity to adjust the plan.
+Yes. Tell us what you are noticing and ask which areas are finished. Clear communication helps us confirm what you want preserved and keep the remaining work aligned with your preferences.

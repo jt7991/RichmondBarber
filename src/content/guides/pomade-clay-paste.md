@@ -1,74 +1,82 @@
 ---
-title: "Pomade vs. Clay vs. Paste: Choosing a Product for Your Haircut"
-seoTitle: "Pomade vs. Clay vs. Paste: Hold, Shine, and Styling"
-description: "Compare pomade, clay, and paste by hold, shine, and application. Use real manufacturer specifications to choose a styling finish that suits your haircut."
+title: "Pomade vs. Clay vs. Paste: Our Guide to a Great Finish"
+seoTitle: "Pomade vs. Clay vs. Paste: Our Styling Product Guide"
+description: "Explore the styling products we carry at Richmond Barbershop, from Prospectors Diamond and our best-selling Coal Mine to Tip Top Clay and Suavecito powder."
 date: 2026-09-14
 category: "Haircuts & styling"
-summary: "Compare the specific formula’s hold, shine, and application directions before choosing between pomade, clay, and paste. Product names overlap; a matte clay cream and a firm clay can behave differently, just as different pomades can offer different finishes."
+summary: "At Richmond Barbershop, we match your styling product to the shape of your haircut and the finish you love. We carry Prospectors Diamond, Tip Top Clay, Prospectors Coal Mine—our best seller—Suavecito Texturizing Powder, and Prospectors Styling Cream. Here's how we help you choose."
 service: haircut
 related:
   - low-maintenance-haircuts
   - curly-wavy-haircuts
   - fine-thinning-haircuts
 sources:
-  - title: "American Crew Pomade specifications"
-    url: "https://www.americancrew.com/products/pomade"
-  - title: "American Crew Matte Clay Cream specifications"
-    url: "https://www.americancrew.com/products/matte-clay-cream"
-  - title: "American Crew Defining Paste specifications"
-    url: "https://www.americancrew.com/products/defining-paste"
+  - title: "Prospectors Diamond Pomade"
+    url: "https://prospectorspomade.com/products/diamond-pomade"
+  - title: "Prospectors Coal Mine Pomade"
+    url: "https://prospectorspomade.com/products/prospectors-coal-mine-pomade"
+  - title: "Tip Top Clay Paste"
+    url: "https://www.tiptopindustries.com/store/p647/Tip_Top_Clay_Paste_4.25oz.html"
+  - title: "Suavecito Texturizing Powder"
+    url: "https://suavecito.com/products/texturizing-powder"
+  - title: "Prospectors Styling Cream"
+    url: "https://prospectorspomade.com/products/prospectors-styling-cream"
 ---
 
-## Choose the finish before the product category
+## Start with your haircut and your preferred finish
 
-Start with a visual goal. Do you want a shiny, combed finish, separated texture with little shine, or soft movement you can rearrange? Then decide how much control you need and whether you like using your fingers or a comb.
+A great haircut gives your style its shape. The right product brings out the details: a clean part, a little lift through the front, or texture that looks relaxed and intentional. We want you to enjoy that finished feeling when you leave our Carytown shop and when you get ready the next morning.
 
-A product called “paste” is not automatically stronger than a pomade, and “clay” alone does not specify the hold. Read the full description. This guide uses three products from one manufacturer to demonstrate the differences; these are manufacturer specifications, not shop product tests or a claim that the shop stocks them.
+Pomade, clay, and paste describe overlapping product families. A pomade can have shine or a matte finish, and a clay can also be called a paste. We make the choice simpler by focusing on the result you want.
 
-## Compare real specifications
-
-| Example | Manufacturer’s stated finish | Useful comparison point |
+| Product we carry | Hold and finish | A styling goal to discuss with us |
 | --- | --- | --- |
-| American Crew Pomade | Medium hold, high shine | A polished or slicked style |
-| American Crew Matte Clay Cream | Medium hold, matte finish | Definition with a lower-shine appearance |
-| American Crew Defining Paste | Medium hold, low shine | Flexible texture and separation |
+| Prospectors Diamond Pomade | Medium, pliable hold with shine | Polished side parts, slick backs, and pompadours |
+| Prospectors Coal Mine | Medium hold, matte finish | Natural texture and finger-styled definition |
+| Tip Top Clay Paste | Medium hold, natural finish | Volume and a fuller-looking style |
+| Suavecito Texturizing Powder | Strong hold, no shine | Lift, grip, and lightweight texture |
+| Prospectors Styling Cream | Light hold, natural shine | Soft movement and a naturally groomed finish |
 
-American Crew describes its [Pomade as water-based and designed for a shiny, pliable finish](https://www.americancrew.com/products/pomade). Its [Matte Clay Cream specifies medium hold and a matte look](https://www.americancrew.com/products/matte-clay-cream), while [Defining Paste emphasizes texture with medium hold and low shine](https://www.americancrew.com/products/defining-paste).
+## Why we recommend Prospectors Diamond pomade
 
-Notice that all three examples state medium hold. That is why choosing only by category can miss the distinction that matters to you. Other formulas, including other products from the same brand, can have different specifications.
+Diamond earns its place on our shelf because it combines three qualities we value in a polished style: easy application, flexible control, and an attractive sheen. [Prospectors describes Diamond](https://prospectorspomade.com/products/diamond-pomade) as a water-based formula with a creamy texture and medium hold that remains pliable for restyling.
 
-## Match the application to your routine
+That combination is the advantage we want clients to understand. When your goal is a classic, combed look, choosing the strongest hold on the shelf can miss the point. Diamond gives you control while letting you adjust your hair during the day. Its creamy consistency also makes it approachable when you want a straightforward styling routine.
 
-Read whether the product is intended for dry, damp, or towel-dried hair. The three examples above permit some variation: Pomade and Defining Paste specify damp or dry hair, while Matte Clay Cream specifies dry or towel-dried hair. Their directions also start with a small amount. Follow the label for the particular formula you buy.
+We recommend it when you want a side part with definition, a swept-back shape, or a pompadour with a polished finish. If a firm, rigid finish is what you dislike about your current pomade, Diamond's pliability is a meaningful reason to consider switching. Bring your styling questions to us and we can help match that finish to your cut.
 
-For your own comparison, keep the haircut, amount of moisture, and drying method consistent. Try one product at a time. Record whether the result looks right immediately, how easily you can restyle it, and whether you enjoy washing it out.
+## Prospectors Coal Mine: our best seller
 
-If your fringe collapses, do not immediately assume you need the strongest product available. Ask whether its length, styling direction, or amount of product is contributing. Similarly, a formula that controls the hair but leaves a finish you dislike has not solved your actual problem.
+**Coal Mine is our best-selling styling product at Richmond Barbershop.** If you love a natural-looking finish with texture, this is an excellent place to start the conversation with us.
 
-## Make a small, useful decision at your haircut
+[Coal Mine is a water-based clay pomade](https://prospectorspomade.com/products/prospectors-coal-mine-pomade) with medium hold and a matte finish. Prospectors explains that warming it between your hands softens it for application. You can work it through with your fingers for a relaxed shape or use a comb for more definition.
 
-At a [men’s haircut appointment](/mens-haircut-richmond-va), describe what you want the hair to do at home. Bring the name or a photo of your current product and explain what works and what does not. That is more informative than asking for “the best product.”
+The main choice between Diamond and Coal Mine is the look you want: Diamond brings shine to a polished style; Coal Mine keeps the finish matte. We can help you connect that choice to the texture and movement in your haircut.
 
-Use this checklist before purchasing:
+## Tip Top Clay Paste, texture powder, and styling cream
 
-- Does the stated shine match the finish I want?
-- Does the suggested application fit my morning routine?
-- Am I buying control, texture, or both?
-- Do I understand the manufacturer’s washing instructions?
-- Can I achieve the style without adding several unfamiliar products at once?
+Our **Tip Top Clay** is [Tip Top Clay Paste](https://www.tiptopindustries.com/store/p647/Tip_Top_Clay_Paste_4.25oz.html). It offers medium hold with a natural finish and is designed to create volume and a fuller-looking style. Its water-soluble formula washes out easily. Ask us about it when you want shape and body without a high-shine look.
 
-If you prefer almost no styling, make that a haircut requirement first. Our [low-maintenance haircut guide](/guides/low-maintenance-haircuts) helps you plan around the amount of daily work you actually want.
+**Suavecito Texturizing Powder** takes a different approach. [Suavecito specifies a no-shine finish, strong hold, and lightweight volume](https://suavecito.com/products/texturizing-powder), making it an option to discuss when you want extra lift and grip. The manufacturer's directions call for a small amount on dry hair, worked through with your fingers; add gradually as needed.
+
+For softer control, we carry **Prospectors Styling Cream**. Its [water-based formula offers light hold and natural shine](https://prospectorspomade.com/products/prospectors-styling-cream), with conditioning benefits and a lightweight feel. We recommend considering it when you want movement and a groomed appearance without a strongly held shape. It is also an option to discuss with us for finer hair.
+
+## Bring the finished look into your daily routine
+
+During your [haircut with us](/mens-haircut-richmond-va), tell us how you usually get ready. Do you enjoy a precise combed style, or would you rather shape the front with your fingers and head out? That answer helps us connect the cut and the product.
+
+Ask us to explain the amount to use, the starting moisture level, and the direction to work it through. Keep washing and styling simple between visits, and let us maintain the cut, blend, and outline at your next appointment. Quality barbering and a product you enjoy using make a strong combination.
 
 ## Frequently asked questions
 
-### Is clay always matte?
+### Is Coal Mine a clay or a pomade?
 
-Check the formula. “Clay” is part of a product name or ingredient description, not a complete specification of its finish. Look for an explicit shine rating or finish description.
+Both: Prospectors calls it a clay pomade. Its medium hold and matte finish are more useful decision points than choosing by the category name alone.
 
-### Is pomade difficult to wash out?
+### Which product should I choose for a shiny finish?
 
-It depends on the formula. American Crew says its water-based Pomade shampoos out easily. That statement applies to that product and should not be generalized to every pomade.
+We recommend discussing Diamond with us. Its sheen and flexible hold suit polished styles, while Coal Mine is the matte option in our Prospectors pomade selection.
 
-### Which product is best for fine hair?
+### Can you help me choose during my haircut?
 
-Begin with the finish and amount you need, then assess whether the product leaves your hair feeling too heavy or separated. Ask for help matching the formula to your cut rather than choosing by category alone.
+Absolutely. Tell us the finish you want and what you like or dislike about your current product. We can guide you through the products we carry and help you make the most of your haircut.
