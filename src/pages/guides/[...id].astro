@@ -1,0 +1,17 @@
+---
+import { getCollection, render } from 'astro:content';
+import GuideLayout from '../../layouts/GuideLayout.astro';
+
+export async function getStaticPaths() {
+  const guides = await getCollection('guides');
+  return guides.map(guide => ({ params: { id: guide.id }, props: { guide, guides } }));
+}
+const { guide, guides } = Astro.props;
+const { Content, headings } = await render(guide);
+const related = guide.data.related.map((id: string) => {
+  const match = guides.find(entry => entry.id === id);
+  if (!match) throw new Error(`Missing related guide ${id} in ${guide.id}`);
+  return match;
+});
+---
+<GuideLayout guide={guide} headings={headings} related={related}><Content /></GuideLayout>

@@ -1,0 +1,139 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import Layout from './Layout.astro';
+import '../styles/global.css';
+import '@fontsource/inter';
+import shopImage from '../assets/barbershop_interior.webp';
+import { BUSINESS_NAME, WEBSITE_URL, BOOKING_URL } from '../data/business';
+
+interface Props {
+  guide: CollectionEntry<'guides'>;
+  headings: { depth: number; slug: string; text: string }[];
+  related: CollectionEntry<'guides'>[];
+}
+const { guide, headings, related } = Astro.props;
+const { data } = guide;
+const canonical = `${WEBSITE_URL}/guides/${guide.id}/`;
+const date = data.date.toISOString();
+const dateLabel = new Intl.DateTimeFormat('en-US', { dateStyle: 'long', timeZone: 'UTC' }).format(data.date);
+const minutes = Math.max(1, Math.ceil((guide.body ?? '').split(/\s+/).length / 220));
+const services = {
+  haircut: { label: "Men’s haircuts in Richmond", href: '/mens-haircut-richmond-va' },
+  beard: { label: 'Beard trims in Richmond', href: '/beard-trim-richmond-va' },
+  shave: { label: 'Straight razor shave services', href: '/#services' },
+  scissor: { label: 'Scissor cut services', href: '/#services' },
+};
+const service = services[data.service];
+const schema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'BlogPosting', '@id': `${canonical}#article`,
+      headline: data.title, description: data.description,
+      url: canonical, mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+      datePublished: date, dateModified: date,
+      author: { '@type': 'Organization', name: BUSINESS_NAME, url: WEBSITE_URL },
+      publisher: { '@type': 'Organization', name: BUSINESS_NAME, url: WEBSITE_URL },
+      inLanguage: 'en-US', articleSection: data.category,
+      citation: data.sources.map(source => source.url),
+    },
+    {
+      '@type': 'BreadcrumbList', itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: WEBSITE_URL },
+        { '@type': 'ListItem', position: 2, name: 'Haircut & beard guides', item: `${WEBSITE_URL}/guides/` },
+        { '@type': 'ListItem', position: 3, name: data.title, item: canonical },
+      ],
+    },
+  ],
+};
+---
+<Layout title={`${data.seoTitle} | ${BUSINESS_NAME}`} description={data.description} canonical={canonical}
+  ogType="article" socialImage={`${WEBSITE_URL}${shopImage.src}`} socialImageAlt="Inside Richmond Barbershop in Carytown">
+  <Fragment slot="head">
+    <meta property="article:published_time" content={date} />
+    <meta property="article:modified_time" content={date} />
+    <meta property="article:section" content={data.category} />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <script type="application/ld+json" set:html={JSON.stringify(schema).replace(/</g, '\\u003c')} />
+  </Fragment>
+  <main class="guide-shell">
+    <div class="guide-wrap">
+      <nav aria-label="Breadcrumb" class="breadcrumbs"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/guides/">Haircut & beard guides</a></nav>
+      <article>
+        <header>
+          <p class="eyebrow">{data.category}</p>
+          <h1>{data.title}</h1>
+          <p class="byline">Published by <a href="/">{BUSINESS_NAME}</a> · <time datetime={date}>{dateLabel}</time> · {minutes} min read</p>
+          <p class="answer">{data.summary}</p>
+        </header>
+        <nav class="guide-toc" aria-label="In this guide">
+          <h2>In this guide</h2>
+          <ul>{headings.filter(h => h.depth === 2).map(h => <li><a href={`#${h.slug}`}>{h.text}</a></li>)}</ul>
+        </nav>
+        <div class="guide-body"><slot /></div>
+        <aside class="booking" aria-label="Plan your appointment">
+          <p class="eyebrow">Carytown · Richmond, VA</p>
+          <h2>Ready for your next visit?</h2>
+          <p>Let us help you look sharp and feel your best. Choose your service and reserve your next visit with us.</p>
+          <div class="booking-links"><a class="button" href={BOOKING_URL}>View appointments</a><a href={service.href}>{service.label} →</a></div>
+        </aside>
+        <section class="sources" aria-labelledby="sources-heading">
+          <h2 id="sources-heading">Sources & further reading</h2>
+          <ul>{data.sources.map(source => <li><a href={source.url}>{source.title}</a></li>)}</ul>
+        </section>
+      </article>
+      <aside class="related" aria-labelledby="related-heading">
+        <h2 id="related-heading">Keep reading</h2>
+        <div>{related.map(entry => <a href={`/guides/${entry.id}/`}><span>{entry.data.category}</span><strong>{entry.data.title}</strong></a>)}</div>
+        <a class="all-guides" href="/guides/">Browse all haircut and beard guides →</a>
+      </aside>
+    </div>
+  </main>
+</Layout>
+<style>
+  .guide-shell { background: #faf9f6; color: #202020; font-family: 'Inter', sans-serif; }
+  .guide-wrap { max-width: 860px; margin: auto; padding: 36px 24px 80px; }
+  a { text-underline-offset: 4px; }
+  .breadcrumbs { display: flex; gap: 12px; font-size: .85rem; margin-bottom: 44px; }
+  .breadcrumbs a, .byline a, .sources a, .all-guides { text-decoration: underline; }
+  .eyebrow { font-size: .75rem; text-transform: uppercase; letter-spacing: .14em; font-weight: 700; }
+  h1 { font-family: 'Oswald', sans-serif; font-size: clamp(2.25rem, 5vw, 3.6rem); line-height: 1.13; margin: 14px 0 22px; }
+  .byline { color: #595959; font-size: .8rem; line-height: 1.8; }
+  .answer { margin: 30px 0; font-size: 1.13rem; line-height: 1.8; border-left: 3px solid #282828; padding-left: 22px; }
+  .guide-toc { background: #efede7; padding: 24px 28px; margin-bottom: 40px; border-radius: 8px; }
+  h2 { font-family: 'Oswald', sans-serif; font-size: 1.7rem; line-height: 1.3; }
+  .guide-toc h2 { font-size: 1.2rem; margin-bottom: 12px; }
+  .guide-toc ul { padding-left: 20px; list-style: disc; }
+  .guide-toc li { padding: 4px 0; line-height: 1.6; font-size: .9rem; }
+  .guide-toc a:hover { text-decoration: underline; }
+  .guide-body { font-size: 1rem; line-height: 1.85; }
+  .guide-body :global(h2) { font-family: 'Oswald', sans-serif; font-size: 1.8rem; line-height: 1.3; margin: 40px 0 16px; scroll-margin-top: 100px; }
+  .guide-body :global(h3) { font-weight: 700; font-size: 1.12rem; margin: 25px 0 10px; scroll-margin-top: 100px; }
+  .guide-body :global(p) { margin: 0 0 18px; }
+  .guide-body :global(a) { text-decoration: underline; overflow-wrap: anywhere; }
+  .guide-body :global(ul), .guide-body :global(ol) { padding-left: 24px; margin: 16px 0 24px; }
+  .guide-body :global(ul) { list-style: disc; }
+  .guide-body :global(ol) { list-style: decimal; }
+  .guide-body :global(li) { margin-bottom: 8px; }
+  .guide-body :global(table) { display: block; overflow-x: auto; width: 100%; border-collapse: collapse; margin: 24px 0; font-size: .88rem; }
+  .guide-body :global(th), .guide-body :global(td) { padding: 12px; border: 1px solid #d6d2c9; text-align: left; min-width: 120px; }
+  .guide-body :global(th) { background: #efede7; }
+  .booking { background: #202020; color: #fff; padding: 30px; border-radius: 8px; margin: 44px 0; }
+  .booking h2 { margin: 10px 0; }
+  .booking p { line-height: 1.7; }
+  .booking-links { display: flex; align-items: center; flex-wrap: wrap; gap: 22px; margin-top: 22px; font-size: .9rem; }
+  .booking-links a { text-decoration: underline; }
+  .booking-links .button { background: #fff; color: #202020; padding: 13px 20px; border-radius: 4px; font-weight: 700; text-decoration: none; }
+  .sources { border-bottom: 1px solid #d6d2c9; padding-bottom: 28px; font-size: .85rem; }
+  .sources h2 { font-size: 1.2rem; }
+  .sources ul { padding-left: 20px; list-style: disc; margin-top: 16px; }
+  .sources li { margin: 10px 0; line-height: 1.6; overflow-wrap: anywhere; }
+  .related { margin-top: 36px; }
+  .related > div { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin: 20px 0; }
+  .related > div a { border: 1px solid #d6d2c9; padding: 20px; border-radius: 6px; }
+  .related span { display: block; font-size: .7rem; text-transform: uppercase; margin-bottom: 10px; }
+  .related strong { line-height: 1.5; }
+  .related a:hover strong { text-decoration: underline; }
+  .all-guides { font-size: .9rem; }
+  @media (max-width: 520px) { .related > div { grid-template-columns: 1fr; } .guide-wrap { padding-inline: 20px; } .booking { padding: 24px; } }
+</style>
