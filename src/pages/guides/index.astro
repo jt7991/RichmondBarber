@@ -1,0 +1,41 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import '../../styles/global.css';
+import '@fontsource/inter';
+import { WEBSITE_URL } from '../../data/business';
+const guides = (await getCollection('guides')).sort((a, b) => a.data.title.localeCompare(b.data.title));
+const categories = ['Planning your visit', 'Haircuts & styling', 'Beards & shaving'];
+const canonical = `${WEBSITE_URL}/guides/`;
+const schema = {
+  '@context': 'https://schema.org', '@type': 'CollectionPage',
+  name: 'Haircut & Grooming Guides', url: canonical,
+  mainEntity: { '@type': 'ItemList', itemListElement: guides.map((guide, index) => ({
+    '@type': 'ListItem', position: index + 1, name: guide.data.title, url: `${canonical}${guide.id}/`,
+  })) },
+};
+---
+<Layout title="Haircut & Grooming Guides | Richmond Barbershop" description="Plan your Carytown barber visit and explore practical guides to haircuts, beard care, shaving, styling, and grooming from Richmond Barbershop." canonical={canonical}>
+  <Fragment slot="head"><script type="application/ld+json" set:html={JSON.stringify(schema)} /></Fragment>
+  <main>
+    <header><a href="/">← Richmond Barbershop</a><p class="eyebrow">The grooming library</p><h1>A little knowledge.<br />A better next haircut.</h1><p>Practical guides to choosing a cut, caring for your beard, and planning your visit to Carytown.</p></header>
+    {categories.map(category => <section><h2>{category}</h2><div class="cards">{guides.filter(guide => guide.data.category === category).map(guide => <a class="card" href={`/guides/${guide.id}/`}><h3>{guide.data.title}</h3><p>{guide.data.description}</p><span>Read guide →</span></a>)}</div></section>)}
+  </main>
+</Layout>
+<style>
+  main { background: #faf9f6; color: #202020; padding: 40px max(24px, calc((100vw - 1120px) / 2)) 80px; font-family: 'Inter', sans-serif; }
+  header { max-width: 760px; margin-bottom: 64px; }
+  header > a { font-size: .85rem; text-decoration: underline; text-underline-offset: 4px; }
+  .eyebrow { text-transform: uppercase; letter-spacing: .15em; font-size: .75rem; font-weight: 700; margin-top: 52px; }
+  h1 { font-family: 'Oswald', sans-serif; font-size: clamp(2.7rem, 6vw, 4.6rem); line-height: 1.13; margin: 18px 0 24px; }
+  header > p:last-child { font-size: 1.08rem; line-height: 1.8; color: #555; }
+  section { margin-top: 46px; }
+  h2 { font-family: 'Oswald', sans-serif; font-size: 1.8rem; margin-bottom: 22px; }
+  .cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+  .card { border: 1px solid #d6d2c9; border-radius: 6px; padding: 26px; background: #fff; display: flex; flex-direction: column; }
+  .card:hover { border-color: #202020; }
+  h3 { font-family: 'Oswald', sans-serif; font-size: 1.4rem; line-height: 1.4; }
+  .card p { color: #555; line-height: 1.7; font-size: .9rem; margin: 14px 0 24px; }
+  .card span { margin-top: auto; font-weight: 700; font-size: .8rem; }
+  @media (max-width: 640px) { .cards { grid-template-columns: 1fr; } }
+</style>

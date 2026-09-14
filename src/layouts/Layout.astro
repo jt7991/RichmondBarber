@@ -26,13 +26,17 @@ const {
   title = defaultTitle,
   description = defaultDescription,
   canonical = Astro.url.href,
+  ogType = 'website',
+  socialImage = `${WEBSITE_URL}${logoImage.src}`,
+  socialImageAlt = 'Richmond barbershop interior and services',
 } = Astro.props;
 
 const barbershopSchema = {
   "@context": "https://schema.org",
-  "@type": "Barbershop",
+  "@type": "HairSalon",
+  "@id": `${WEBSITE_URL}/#business`,
   name: BUSINESS_NAME,
-  description,
+  description: defaultDescription,
   url: WEBSITE_URL,
   image: `${WEBSITE_URL}${logoImage.src}`,
   telephone: PHONE_E164,
@@ -43,7 +47,14 @@ const barbershopSchema = {
   hasMap: MAPS_URL,
   sameAs: [GOOGLE_PROFILE_URL, INSTAGRAM_URL, FACEBOOK_URL],
   areaServed: SERVICE_AREAS,
-  serviceType: SERVICES.map((service) => service.name),
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: 'Barber services',
+    itemListElement: SERVICES.map((service) => ({
+      "@type": "Offer",
+      itemOffered: { "@type": "Service", name: service.name, description: service.description },
+    })),
+  },
 };
 
 const copyrightYear = new Date().getFullYear();
@@ -75,22 +86,22 @@ const copyrightYear = new Date().getFullYear();
     <meta name="description" content={description} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={ogType} />
     <meta property="og:url" content={canonical} />
     <meta
       property="og:image"
-      content={`${WEBSITE_URL}${logoImage.src}`}
+      content={socialImage}
     />
     <meta
       property="og:image:alt"
-      content="Richmond barbershop interior and services"
+      content={socialImageAlt}
     />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta
       name="twitter:image"
-      content={`${WEBSITE_URL}${logoImage.src}`}
+      content={socialImage}
     />
     <link rel="canonical" href={canonical} />
     <script type="application/ld+json" set:html={JSON.stringify(barbershopSchema)} />
