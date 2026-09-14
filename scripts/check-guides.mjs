@@ -39,6 +39,9 @@ for (const slug of slugs) {
   }
 }
 for (const page of ['index.html', 'mens-haircut-richmond-va/index.html', 'beard-trim-richmond-va/index.html']) {
-  assert.ok(!read(page).includes('href="/guides'), `${page}: no guide links on main site`);
+  const html = read(page);
+  const footer = html.match(/<footer\b[^>]*>([\s\S]*?)<\/footer>/)?.[1] ?? '';
+  assert.ok(footer.includes('href="/guides/"'), `${page}: guide discovery link in footer`);
+  assert.ok(!html.replace(/<footer\b[^>]*>[\s\S]*?<\/footer>/, '').includes('href="/guides'), `${page}: guide links stay in footer`);
 }
-console.log('Verified 20 guides: unique metadata, structured data, canonicals, sitemap inclusion, internal links, headings, and no main-site guide links.');
+console.log('Verified 20 guides: unique metadata, structured data, canonicals, sitemap inclusion, internal links, headings, and footer discovery links.');
