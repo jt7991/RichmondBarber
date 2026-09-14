@@ -4,7 +4,10 @@ import Layout from '../../layouts/Layout.astro';
 import '../../styles/global.css';
 import '@fontsource/inter';
 import { WEBSITE_URL } from '../../data/business';
-const guides = (await getCollection('guides')).sort((a, b) => a.data.title.localeCompare(b.data.title));
+const guides = (await getCollection('guides')).sort((a, b) => {
+  const kidsLast = Number(a.id === 'kids-haircuts-richmond-va') - Number(b.id === 'kids-haircuts-richmond-va');
+  return kidsLast || a.data.title.localeCompare(b.data.title);
+});
 const categories = ['Planning your visit', 'Haircuts & styling', 'Beards & shaving'];
 const canonical = `${WEBSITE_URL}/guides/`;
 const schema = {
