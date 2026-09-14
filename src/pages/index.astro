@@ -6,7 +6,7 @@ import Logo from "../components/Logo.astro";
 import Service from "../components/Service.astro";
 import GalleryImage from "../components/GalleryImage.astro";
 import { galleryPhotos, gallerySchema } from "../data/gallery";
-import TestimonialSlider from "../components/TestimonialSlider.svelte";
+import ReviewStylePicker from "../components/ReviewStylePicker.svelte";
 import heroImage from "../assets/barbershop_interior.webp";
 import client_1 from "../assets/client_1.webp";
 import client_2 from "../assets/client_2.webp";
@@ -201,7 +201,7 @@ const faqSchema = {
       </div>
     </section>
 
-    <TestimonialSlider client:load />
+    <ReviewStylePicker embedded client:load />
 
       <section
         class="bg-gray-50 text-black dark:text-white px-4 text-center shadow-lg"
