@@ -25,7 +25,7 @@ const widths = [...new Set([320, 480, 640, 960].filter((width) => width < src.wi
       decoding="async"
       width={Math.min(960, src.width)}
       widths={widths}
-      sizes="(min-width: 1312px) 411px, (min-width: 640px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)"
+      sizes="(min-width: 1088px) 336px, (min-width: 641px) calc((100vw - 80px) / 3), calc((100vw - 60px) / 2)"
       format="webp"
       class:list={["gallery-photo", classNames]}
       id={id}

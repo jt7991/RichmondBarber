@@ -1,37 +1,23 @@
 ---
 const { title } = Astro.props;
 ---
-
-<details
-  class="group border-gray-300 dark:border-zinc-700 text-black dark:text-white border-b-0 border-1 first:rounded-t-md last:rounded-b-md last:border-b-2"
-  itemscope
-  itemprop="mainEntity"
-  itemtype="https://schema.org/Question"
->
-  <summary
-    class="flex justify-between items-center p-4 cursor-pointer bg-gray-100 dark:bg-zinc-950 first:rounded-t-md last:rounded-b-md text-left"
-  >
-    <h3 class="text-lg font-medium" itemprop="name">{title}</h3>
-    <svg
-      class="w-5 h-5 transition-transform group-open:rotate-180"
-      fill="none"
-      stroke="currentColor"
-      viewBox="0 0 24 24"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="2"
-        d="M19 9l-7 7-7-7"></path>
-    </svg>
+<details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+  <summary>
+    <h3 itemprop="name">{title}</h3>
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14" /><path class="plus" d="M12 5v14" /></svg>
   </summary>
-  <div
-    class="p-4 bg-white dark:bg-zinc-900 text-left text-black dark:text-white"
-    itemscope
-    itemprop="acceptedAnswer"
-    itemtype="https://schema.org/Answer"
-  >
-    <span itemprop="text"><slot /></span>
-  </div>
+  <div class="answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text"><slot /></span></div>
 </details>
+<style>
+  details { border-bottom: 1px solid #d4d4d8; color: #18181b; }
+  summary { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 20px 0; cursor: pointer; list-style: none; min-height: 64px; }
+  details:first-child summary { padding-top: 0; min-height: 44px; }
+  summary::-webkit-details-marker { display: none; }
+  h3 { font-size: 20px; font-weight: 500; line-height: 1.4; margin: 0; }
+  svg { width: 20px; height: 20px; flex-shrink: 0; fill: none; stroke: currentColor; stroke-width: 1.5; }
+  details[open] .plus { display: none; }
+  .answer { padding: 0 32px 20px 0; font-size: 17px; line-height: 1.6; color: #3f3f46; }
+  summary:hover h3 { text-decoration: underline; text-underline-offset: 5px; }
+  summary:focus-visible { outline: 2px solid #18181b; outline-offset: 5px; }
+  ::selection { background: #facc15; color: #18181b; }
+</style>

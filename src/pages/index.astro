@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import "../styles/global.css";
+import "../styles/homepage.css";
 import Accordion from "../components/Accordion.astro";
 import Logo from "../components/Logo.astro";
 import Service from "../components/Service.astro";
@@ -50,7 +51,7 @@ const faqSchema = {
     <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
     <script type="application/ld+json" set:html={JSON.stringify(gallerySchema)}></script>
   </Fragment>
-  <main class="bg-white dark:bg-zinc-900 h-full w-full">
+  <main class="homepage bg-white dark:bg-zinc-900 h-full w-full">
     <section
       id="hero"
       class="min-h-[520px] h-[calc(100svh-76px)] relative px-2 sm:px-4 parallax-hero border-16 border-white"
@@ -75,7 +76,7 @@ const faqSchema = {
     </section>
     <section
       id="best-barbershop"
-      class="text-black px-4 text-center flex flex-col md:gap-4 gap-8 bg-white"
+      class="home-intro text-black px-4 text-center flex flex-col md:gap-4 gap-8 bg-white"
       data-ai-section="best-barbershop-in-richmond"
       data-ai-type="best-barbershop-in-richmond"
     >
@@ -89,18 +90,18 @@ const faqSchema = {
 
 
     <section
-      class="px-4 text-center bg-gray-50 mt-0"
+      class="content-section"
       id="gallery"
       data-ai-section="gallery"
       data-ai-type="work-samples"
     >
-      <h2 class="text-4xl font-bold mb-4 text-black dark:text-white">
+      <h2 class="home-section-title">
         Gallery
       </h2>
-      <p class="text-lg text-gray-700 max-w-2xl mx-auto mb-10">
+      <p class="home-section-description">
         Fresh haircuts, textured styles, tapers, and beard work from our chairs in Carytown, Richmond, VA.
       </p>
-      <div class="grid grid-cols-2 sm:grid-cols-3 gap-x-4 gap-y-8 sm:gap-x-6 max-w-7xl mx-auto">
+      <div class="home-gallery-grid">
         {galleryPhotos.map((photo, index) => (
           <GalleryImage
             index={index}
@@ -164,19 +165,19 @@ const faqSchema = {
     </section>
     <section
       id="services"
-      class="bg-white dark:bg-zinc-900 text-black dark:text-white px-4 text-center"
+      class="content-section"
       data-ai-section="services"
       data-ai-type="barber-services"
     >
-      <h2 class="text-4xl font-bold mb-16 text-black dark:text-white">
+      <h2 class="home-section-title">
         Our Services
       </h2>
       <div
-        class="flex flex-col gap-4 max-w-7xl mx-auto overflow-x-hidden"
+        class="home-service-list"
       >
-        {SERVICES.map((service, index) => <Service service={service} index={index} />)}
+        {SERVICES.map((service) => <Service service={service} />)}
       </div>
-      <p class="mt-8 text-lg max-w-3xl mx-auto">
+      <p class="home-service-note">
         Learn more about our
         <a href="/mens-haircut-richmond-va" class="underline font-semibold">men's haircut in Richmond, VA</a>,
         <a href="/beard-trim-richmond-va" class="underline font-semibold">beard trim</a>,
@@ -187,13 +188,13 @@ const faqSchema = {
     </section>
 
     <section
-      class="px-4 text-center flex flex-col items-center bg-gray-50"
+      class="content-section"
       id="faq"
       data-ai-section="faq"
       data-ai-type="frequently-asked-questions"
     >
-      <h2 class="text-4xl font-bold mb-16 text-black dark:text-white">FAQ</h2>
-      <div class="max-w-7xl w-full">
+      <h2 class="home-section-title">FAQ</h2>
+      <div class="home-faq-list">
         {FAQS.map((faq) => (
           <Accordion title={faq.question}>{faq.answer}</Accordion>
         ))}
@@ -204,11 +205,11 @@ const faqSchema = {
     <TestimonialOption variant="editorial" client:load />
 
       <section
-        class="bg-gray-50 text-black dark:text-white px-4 text-center shadow-lg"
+        class="content-section"
         id='contact'
       >
-        <h2 class="text-4xl font-bold mb-12">Contact Us</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+        <h2 class="home-section-title">Contact Us</h2>
+        <div class="home-contact-grid">
           <div class="text-center flex flex-col gap-4">
           <div>
             <a
@@ -244,11 +245,11 @@ const faqSchema = {
             </div>
           </div>
           <div>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d790.7805099320608!2d-77.47802503034775!3d37.55218841147862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b113db68bc08b1%3A0x9ca083c0e9faa6c0!2sRichmond%20Barbershop!5e0!3m2!1sen!2sus!4v1766692323074!5m2!1sen!2sus"
+          <iframe title="Richmond Barbershop location in Carytown" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d790.7805099320608!2d-77.47802503034775!3d37.55218841147862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b113db68bc08b1%3A0x9ca083c0e9faa6c0!2sRichmond%20Barbershop!5e0!3m2!1sen!2sus!4v1766692323074!5m2!1sen!2sus"
 
               width="100%"
               height="450"
-              class="rounded-lg shadow-xl"
+              class="home-map"
             style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
@@ -258,8 +259,5 @@ const faqSchema = {
 </Layout>
 
 <style>
-  @reference "../styles/global.css";
-  section {
-    @apply py-24;
-  }
+  #hero { padding-block: 96px; }
 </style>

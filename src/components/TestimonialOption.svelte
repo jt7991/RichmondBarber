@@ -10,7 +10,7 @@
 
 <section id="testimonials-section" class="reviews {variant}" aria-labelledby="reviews-heading" aria-roledescription="carousel">
   <div class="review-inner">
-    <h2 id="reviews-heading">What Our Clients Say</h2>
+    <h2 id="reviews-heading" class="home-section-title">What Our Clients Say</h2>
     <div class="review-body">
       <div class="review-content" aria-live="polite" aria-atomic="true">
         <figure>
