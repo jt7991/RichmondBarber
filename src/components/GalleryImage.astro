@@ -1,36 +1,66 @@
 ---
 import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
 
-const { src, alt, id, index, classNames = "" } = Astro.props;
+interface Props {
+  src: ImageMetadata;
+  alt: string;
+  id: string;
+  index: number;
+  classNames?: string;
+  caption?: string;
+  fullSrc?: string;
+}
+const { src, alt, id, index, classNames = "", caption, fullSrc } = Astro.props;
+const MediaTag = fullSrc ? "a" : "div";
+const widths = [...new Set([320, 480, 640, 960].filter((width) => width < src.width).concat(Math.min(960, src.width)))];
 ---
 
-<div id={`${id}-checker`}>
-  <Image
-    src={src}
-    alt={alt}
-    loading="lazy"
-    class={`w-full h-full aspect-square object-cover rounded-lg shadow-lg transform transition-all duration-300 opacity-0  -translate-x-11/12 ${index % 2 ? "delay-200" : ""} ${classNames}`}
-    id={id}
-    quality={80}
-  />
-</div>
+<figure id={`${id}-checker`} data-gallery-item style={`--gallery-delay: ${(index % 3) * 60}ms`}>
+  <MediaTag href={fullSrc} class="gallery-media" aria-label={fullSrc ? `View larger photo: ${caption}` : undefined}>
+    <Image
+      src={src}
+      alt={alt}
+      loading="lazy"
+      decoding="async"
+      width={Math.min(960, src.width)}
+      widths={widths}
+      sizes="(min-width: 1312px) 411px, (min-width: 640px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)"
+      format="webp"
+      class:list={["gallery-photo", classNames]}
+      id={id}
+      quality={82}
+    />
+  </MediaTag>
+</figure>
 
-<script define:vars={{ id }} is:inline>
-  const imgElem = document.getElementById(id);
-  const imgChecker = document.getElementById(`${id}-checker`);
-
-  if (imgChecker) {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        for (const entry of entries) {
-          if (entry.isIntersecting) {
-            imgElem.classList.add("!translate-x-0");
-            imgElem.classList.add("!opacity-100");
-          }
+<script>
+  // One observer for the gallery; photos remain visible without JavaScript.
+  if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    const observer = new IntersectionObserver((entries) => {
+      for (const entry of entries) {
+        if (entry.isIntersecting) {
+          entry.target.classList.remove("is-pending");
+          observer.unobserve(entry.target);
         }
-      },
-      { rootMargin: "-100px" },
-    );
-    observer.observe(imgChecker);
+      }
+    }, { threshold: 0.08 });
+    document.querySelectorAll("[data-gallery-item]").forEach((item) => {
+      item.classList.add("is-pending");
+      observer.observe(item);
+    });
   }
 </script>
+
+<style>
+  figure { min-width: 0; transition: opacity 400ms ease, transform 400ms ease; transition-delay: var(--gallery-delay, 0ms); }
+  .gallery-media { display: block; border-radius: 8px; overflow: hidden; }
+  .gallery-photo { display: block; width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; border-radius: 8px; }
+  a.gallery-media { box-shadow: 0 4px 16px rgb(0 0 0 / 8%); }
+  a.gallery-media:focus-visible { outline: 3px solid #a16207; outline-offset: 4px; }
+  .is-pending { opacity: 0; transform: translateY(16px); }
+  @media (prefers-reduced-motion: reduce) {
+    figure { transition: none; }
+    .is-pending { opacity: 1; transform: none; }
+  }
+</style>
