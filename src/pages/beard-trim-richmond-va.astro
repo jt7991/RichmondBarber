@@ -1,9 +1,12 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import VisitDetails from "../components/VisitDetails.astro";
+import { serviceSchema } from "../data/service-schema";
 import "../styles/global.css";
 import beard_guy from "../assets/beard_guy.webp";
-import { BOOKING_URL, BUSINESS_NAME, WEBSITE_URL } from "../data/business";
+import { BOOKING_URL, BUSINESS_NAME, WEBSITE_URL, SERVICES } from "../data/business";
 
+const service = SERVICES.find((item) => item.path === "/beard-trim-richmond-va")!;
 const pageUrl = `${WEBSITE_URL}/beard-trim-richmond-va`;
 
 const faqItems = [
@@ -63,6 +66,7 @@ const breadcrumbSchema = {
   canonical={pageUrl}
 >
   <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(serviceSchema("/beard-trim-richmond-va"))} />
     <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
     <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
   </Fragment>
@@ -70,6 +74,8 @@ const breadcrumbSchema = {
     <section class="px-4 py-24 text-center bg-gray-50 dark:bg-zinc-900">
       <div class="max-w-4xl mx-auto flex flex-col gap-6">
         <h1 class="text-4xl md:text-5xl font-bold">Beard Trim in Richmond, VA</h1>
+        <p class="text-xl font-semibold">${service.price} · {service.durationMinutes} minutes</p>
+        <p class="text-lg leading-relaxed">{service.description}</p>
         <p class="text-lg leading-relaxed">
           At {BUSINESS_NAME}, we bring shape, balance, and a polished finish to your beard. Visit us in Carytown for a professional beard trim in Richmond, VA, and let us help you look sharp and feel confident.
         </p>
@@ -146,5 +152,6 @@ const breadcrumbSchema = {
         }
       </div>
     </section>
+    <VisitDetails />
   </main>
 </Layout>

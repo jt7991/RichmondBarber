@@ -19,6 +19,8 @@ import toby from "../assets/toby.webp";
 import {
   ADDRESS,
   BOOKING_URL,
+  BUSINESS_DESCRIPTION,
+  SERVICES,
   FACEBOOK_URL,
   INSTAGRAM_URL,
   MAPS_URL,
@@ -125,7 +127,7 @@ const faqSchema = {
         Your Richmond Barber in Carytown
       </h1>
       <p class="text-lg max-w-xl mx-auto leading-relaxed">
-        At Richmond Barbershop, we bring precision haircuts and old-school barbering traditions to the heart of Carytown in Richmond, VA. From clean fades and detailed scissor cuts to beard shaping and hot towel shaves, we focus on the details that help you look sharp and feel confident. We take pride in quality work, personal attention, and a style you enjoy wearing.
+        {BUSINESS_DESCRIPTION} Visit us at 2820 W Cary St, Suite C, and explore our work below.
       </p>
     </section>
 
@@ -216,48 +218,15 @@ const faqSchema = {
       <div
         class="flex flex-col gap-4 max-w-7xl mx-auto overflow-x-hidden"
       >
-        <Service
-          service={{
-            name: "Haircut",
-            price: "$40",
-            description:
-              "Professional haircut with modern styling techniques and fade options.",
-            duration: "30-45 min",
-          }}
-          index={0}
-        />
-        <Service
-          service={{
-            name: "Scissor Cut",
-            price: "$60",
-            description: "Precision scissor cut for a refined, natural look.",
-          }}
-          index={1}
-        />
-        <Service
-          service={{
-            name: "Beard Trim",
-            price: "$40",
-            description: "Expert beard trimming, shaping, and maintenance.",
-          }}
-          index={2}
-        />
-        <Service
-          service={{
-            name: "Straight Razor Shave",
-            price: "$50",
-            description:
-              "Traditional hot shave with premium products for a smooth finish.",
-          }}
-          index={3}
-        />
+        {SERVICES.map((service, index) => <Service service={service} index={index} />)}
       </div>
       <p class="mt-8 text-lg max-w-3xl mx-auto">
         Learn more about our
-        <a href="/mens-haircut-richmond-va" class="underline font-semibold">men's haircut in Richmond, VA</a>
-        and
-        <a href="/beard-trim-richmond-va" class="underline font-semibold">beard trim in Richmond, VA</a>
-        services.
+        <a href="/mens-haircut-richmond-va" class="underline font-semibold">men's haircut in Richmond, VA</a>,
+        <a href="/beard-trim-richmond-va" class="underline font-semibold">beard trim</a>,
+        <a href="/scissor-cut-richmond-va" class="underline font-semibold">scissor cut</a>, and
+        <a href="/straight-razor-shave-richmond-va" class="underline font-semibold">straight-razor shave</a> services.
+        <a href="/about/" class="underline font-semibold">Get to know the shop and plan your visit.</a>
       </p>
     </section>
 

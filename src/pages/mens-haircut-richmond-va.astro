@@ -1,9 +1,12 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import VisitDetails from "../components/VisitDetails.astro";
+import { serviceSchema } from "../data/service-schema";
 import "../styles/global.css";
 import client_2 from "../assets/client_2.webp";
-import { BOOKING_URL, BUSINESS_NAME, WEBSITE_URL } from "../data/business";
+import { BOOKING_URL, BUSINESS_NAME, WEBSITE_URL, SERVICES } from "../data/business";
 
+const service = SERVICES.find((item) => item.path === "/mens-haircut-richmond-va")!;
 const pageUrl = `${WEBSITE_URL}/mens-haircut-richmond-va`;
 
 const faqItems = [
@@ -63,6 +66,7 @@ const breadcrumbSchema = {
   canonical={pageUrl}
 >
   <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(serviceSchema("/mens-haircut-richmond-va"))} />
     <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
     <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
   </Fragment>
@@ -70,6 +74,8 @@ const breadcrumbSchema = {
     <section class="px-4 py-24 text-center bg-gray-50 dark:bg-zinc-900">
       <div class="max-w-4xl mx-auto flex flex-col gap-6">
         <h1 class="text-4xl md:text-5xl font-bold">Men's Haircut in Richmond, VA</h1>
+        <p class="text-xl font-semibold">${service.price} · {service.durationMinutes} minutes</p>
+        <p class="text-lg leading-relaxed">{service.description}</p>
         <p class="text-lg leading-relaxed">
           At {BUSINESS_NAME}, we create men's haircuts in Richmond, VA with precision, personal attention, and a finish you can feel good about. Visit our Carytown barbershop for classic cuts, modern fades, and detailed shaping that brings out your style.
         </p>
@@ -146,5 +152,6 @@ const breadcrumbSchema = {
         }
       </div>
     </section>
+    <VisitDetails />
   </main>
 </Layout>

@@ -1,4 +1,5 @@
 export const BUSINESS_NAME = "Richmond Barbershop";
+export const BUSINESS_DESCRIPTION = "Richmond Barbershop is a barbershop in Carytown, Richmond, Virginia, offering men's haircuts, scissor cuts, beard trims, and hot-towel straight-razor shaves.";
 
 export const WEBSITE_URL = "https://richmondbarbershop.com";
 
@@ -13,6 +14,7 @@ export const INSTAGRAM_URL = "https://instagram.com/rvabarbershop";
 
 export const FACEBOOK_URL =
   "https://www.facebook.com/profile.php?id=61584927026935";
+export const APPLE_MAPS_URL = "https://maps.apple.com/place?place-id=I18DDFA22FD611F17";
 
 export const PHONE_E164 = "+18042030221";
 
@@ -47,23 +49,44 @@ export const SERVICE_AREAS = [
 export const SERVICES = [
   {
     name: "Haircut",
+    path: "/mens-haircut-richmond-va",
+    price: 40,
+    durationMinutes: 40,
     description:
-      "Professional men's haircut service with clean, consistent results.",
+      "A haircut using clippers and scissors, finished with a hot towel and straight-razor neck shave. Ages 8 and up.",
   },
   {
     name: "Scissor Cut",
+    path: "/scissor-cut-richmond-va",
+    price: 60,
+    durationMinutes: 40,
     description:
-      "Detailed scissor work for clients who prefer a natural finish.",
+      "Scissor work for longer masculine styles, with texturizing and a styled finish. Ages 8 and up.",
   },
   {
     name: "Beard Trim",
-    description: "Traditional beard trim service to keep your look maintained.",
+    path: "/beard-trim-richmond-va",
+    price: 40,
+    durationMinutes: 40,
+    description: "Beard shaping with a hot towel and straight-razor line-up.",
   },
   {
     name: "Straight Razor Shave",
+    path: "/straight-razor-shave-richmond-va",
+    price: 50,
+    durationMinutes: 40,
     description:
       "Classic straight razor shave with a hot towel and close finish.",
   },
+];
+
+// Verified in the public Square booking menu on 2026-09-14.
+// Update this data alongside Square when the menu changes.
+export const SERVICE_DETAILS_VERIFIED = "2026-09-14";
+export const HAIRCUT_BEARD_COMBO = { name: "Haircut and Beard Trim", price: 70, durationMinutes: 40 };
+export const BARBERS = [
+  { name: "Joe", id: "joe", bookingUrl: `${BOOKING_URL}/PUBAN2KEYN7APOI3Q642GIBN` },
+  { name: "Sam", id: "sam", bookingUrl: `${BOOKING_URL}/PKLMKZDNZQOUDJBFDN5OEHHR` },
 ];
 
 export const FAQS = [
