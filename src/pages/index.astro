@@ -91,12 +91,12 @@ const faqSchema = {
   <main class="bg-white dark:bg-zinc-900 h-full w-full">
     <section
       id="hero"
-      class="h-[calc(100vh-80px)] relative px-4 parallax-hero border-16 border-white"
+      class="min-h-[520px] h-[calc(100svh-76px)] relative px-2 sm:px-4 parallax-hero border-16 border-white"
       style={`background-image: url(${heroImage.src})`}
       aria-label="Hero section featuring barbershop interior"
     >
       <div
-        class="absolute inset-0 bg-white/20"
+        class="absolute inset-0 bg-black/15"
       >
       </div>
       <div
@@ -339,49 +339,6 @@ const faqSchema = {
 
 </Layout>
 <script>
-  const logo = document.getElementById("logo");
-  const logoSmall = document.getElementById("logo-small");
-
-  const updateLogoVisibility = () => {
-    const menu = document.getElementById("menu");
-    if (menu && menu.hasAttribute("data-active")) {
-      logoSmall?.classList.add("opacity-100");
-      logoSmall?.classList.remove("opacity-0");
-      return;
-    }
-
-    const rect = logo?.getBoundingClientRect();
-    const isVisible =
-      (rect?.top ?? Number.POSITIVE_INFINITY) < window.innerHeight - 200 &&
-      (rect?.bottom ?? Number.NEGATIVE_INFINITY) > 100;
-
-    if (isVisible) {
-      logoSmall?.classList.add("opacity-0");
-      logoSmall?.classList.remove("opacity-100");
-    } else {
-      logoSmall?.classList.add("opacity-100");
-      logoSmall?.classList.remove("opacity-0");
-    }
-  };
-
-  const globalWindow = window as Window & {
-    updateLogoVisibility?: () => void;
-  };
-  globalWindow.updateLogoVisibility = updateLogoVisibility;
-
-  if (logo && logoSmall) {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        updateLogoVisibility();
-      },
-      {
-        rootMargin: "-200px 0px -100px 0px",
-      },
-    );
-    observer.observe(logo);
-
-    window.addEventListener("scroll", updateLogoVisibility);
-
     const bestBarbershop = document.getElementById("best-barbershop");
 
     if (bestBarbershop) {
@@ -400,7 +357,6 @@ const faqSchema = {
       );
       observer.observe(bestBarbershop);
     }
-  }
 
 </script>
 <style>

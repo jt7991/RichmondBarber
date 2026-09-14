@@ -1,13 +1,14 @@
 ---
-import logo from "../assets/BARBERSHOP2.png";
-import { Image } from "astro:assets";
+import Logo from "./Logo.astro";
+
 import { BOOKING_URL } from "../data/business";
 ---
 
 <nav
   id="desktop-nav"
-  class="hidden md:flex sticky top-0 z-50 bg-gray-100 dark:bg-gray-900 text-black dark:text-white flex justify-between items-center py-4 px-4"
+  class="hidden md:flex sticky top-0 z-50 bg-white text-black flex justify-between items-center py-2 px-6"
 >
+  <a href="/" aria-label="Richmond Barbershop home"><Logo compact /></a>
   <div class="hidden md:flex space-x-4 items-center">
     <a href="/#hero" class="px-4 hover:text-blue-500">Home</a>
     <a href="/#services" class="px-4 hover:text-blue-500">Services</a>
@@ -37,33 +38,28 @@ import { BOOKING_URL } from "../data/business";
 
 <nav
   id="mobile-nav"
-  class="md:hidden sticky top-0 z-50 py-4 bg-white shadow-lg"
+  class="md:hidden sticky top-0 z-50 py-2 bg-white shadow-lg"
 >
-  <div class="flex items-center justify-between w-full px-4 grid grid-cols-3">
+  <div class="grid grid-cols-[1fr_auto_1fr] items-center w-full px-4">
     <button
       id="hamburger"
-      class="md:hidden flex flex-col justify-center items-center w-6 h-6 col-span-1"
+      aria-label="Toggle navigation"
+      aria-expanded="false"
+      aria-controls="menu"
+      class="md:hidden flex flex-col justify-center items-center w-11 h-11 col-span-1"
       onclick="toggleMenu()"
     >
       <span
-        class="bg-black dark:bg-white block w-5 h-0.5 mb-1 transition-all duration-300"
+        class="bg-black block w-5 h-0.5 mb-1 transition-all duration-300"
       ></span>
       <span
-        class="bg-black dark:bg-white block w-5 h-0.5 mb-1 transition-all duration-300"
+        class="bg-black block w-5 h-0.5 mb-1 transition-all duration-300"
       ></span>
       <span
-        class="bg-black dark:bg-white block w-5 h-0.5 transition-all duration-300"
+        class="bg-black block w-5 h-0.5 transition-all duration-300"
       ></span>
     </button>
-    <a href="/"
-      ><Image
-        src={logo}
-        alt="Richmond barbershop logo"
-        class="col-span-1 w-26 h-10 place-self-center opacity-0 transition-all"
-        loading="eager"
-        id="logo-small"
-      />
-    </a>
+    <a href="/" aria-label="Richmond Barbershop home"><Logo compact /></a>
     <a
       href={BOOKING_URL}
       class="col-span-1 flex justify-end p-2 hover:bg-gray-100 rounded-lg transition-colors duration-200"
@@ -89,7 +85,7 @@ import { BOOKING_URL } from "../data/business";
     id="menu"
     class="px-4 gap-8 flex flex-col absolute top-full left-0 right-0 bg-white dark:bg-black z-50 items-center w-full transition-all duration-300 ease-in-out [&:not([data-active])]:h-0 overflow-hidden data-active:h-screen -mt-1"
   >
-    <a href="/#hero" class="hover:text-blue-500 text-4xl border-b-black pt-8"
+    <a href="/#hero" onclick="toggleMenu()" class="hover:text-blue-500 text-4xl border-b-black pt-8"
       >Home</a
     >
     <a
@@ -118,22 +114,18 @@ import { BOOKING_URL } from "../data/business";
   </div>
 </nav>
 <script is:inline>
-  const logoSmall = document.getElementById("logo-small");
+
   function toggleMenu() {
     const menu = document.getElementById("menu");
     const hamburger = document.getElementById("hamburger");
     if (menu.hasAttribute("data-active")) {
       menu.removeAttribute("data-active");
-      // Update logo visibility when closing menu
-      if (window.updateLogoVisibility) {
-        window.updateLogoVisibility();
-      }
+
     } else {
-      logoSmall.classList.add("opacity-100");
-      logoSmall.classList.remove("opacity-0");
       menu.setAttribute("data-active", "true");
     }
     hamburger?.classList.toggle("open");
+    hamburger?.setAttribute("aria-expanded", String(menu.hasAttribute("data-active")));
   }
 
   window.addEventListener("scroll", () => {
@@ -142,10 +134,8 @@ import { BOOKING_URL } from "../data/business";
     if (menu.hasAttribute("data-active")) {
       menu.removeAttribute("data-active");
       hamburger?.classList.remove("open");
-      // Update logo visibility when closing menu via scroll
-      if (window.updateLogoVisibility) {
-        window.updateLogoVisibility();
-      }
+      hamburger?.setAttribute("aria-expanded", "false");
+
     }
   });
 </script>
