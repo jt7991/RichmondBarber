@@ -1,37 +1,16 @@
+import { serviceMenuMarkdown } from "../../data/service-menu";
 import {
-  ADDRESS_SINGLE_LINE,
-  BOOKING_URL,
   BUSINESS_HOURS_NOTE,
-  BUSINESS_NAME,
   PHONE_DISPLAY,
-  SERVICES,
-  WEBSITE_URL,
 } from "../../data/business";
 
 export async function GET() {
-  const markdown = `# ${BUSINESS_NAME} Services
+  const markdown = `${serviceMenuMarkdown()}
 
-Professional barber services in Richmond, VA.
+## Contact
 
-## Services Offered
-
-${SERVICES
-  .map(
-    (service) => `### ${service.name}
-- **Description**: ${service.description}
-`,
-  )
-  .join("\n")}
-
-## Business Information
-- **Phone**: ${PHONE_DISPLAY}
-- **Address**: ${ADDRESS_SINGLE_LINE}
-- **Hours**: ${BUSINESS_HOURS_NOTE}
-
-## Contact & Booking
-Book appointments online at: ${BOOKING_URL}
-
-For more information, visit: ${WEBSITE_URL}
+- Phone: ${PHONE_DISPLAY}
+- Hours: ${BUSINESS_HOURS_NOTE}
 `;
 
   return new Response(markdown, {

@@ -9,6 +9,8 @@ import {
   BOOKING_URL,
   BUSINESS_HOURS_NOTE,
   BUSINESS_NAME,
+  BUSINESS_DESCRIPTION,
+  APPLE_MAPS_URL,
   FACEBOOK_URL,
   GOOGLE_PROFILE_URL,
   INSTAGRAM_URL,
@@ -39,7 +41,7 @@ const barbershopSchema = {
   "@type": "HairSalon",
   "@id": `${WEBSITE_URL}/#business`,
   name: BUSINESS_NAME,
-  description: defaultDescription,
+  description: BUSINESS_DESCRIPTION,
   url: WEBSITE_URL,
   image: `${WEBSITE_URL}${logoImage.src}`,
   logo: `${WEBSITE_URL}${logoVector}`,
@@ -49,14 +51,17 @@ const barbershopSchema = {
     ...ADDRESS,
   },
   hasMap: MAPS_URL,
-  sameAs: [GOOGLE_PROFILE_URL, INSTAGRAM_URL, FACEBOOK_URL],
+  sameAs: [GOOGLE_PROFILE_URL, APPLE_MAPS_URL, INSTAGRAM_URL, FACEBOOK_URL],
   areaServed: SERVICE_AREAS,
   hasOfferCatalog: {
     "@type": "OfferCatalog",
     name: 'Barber services',
     itemListElement: SERVICES.map((service) => ({
       "@type": "Offer",
-      itemOffered: { "@type": "Service", name: service.name, description: service.description },
+      price: service.price,
+      priceCurrency: "USD",
+      url: `${WEBSITE_URL}${service.path}`,
+      itemOffered: { "@type": "Service", "@id": `${WEBSITE_URL}${service.path}#service`, name: service.name, description: service.description, url: `${WEBSITE_URL}${service.path}`, provider: { "@id": `${WEBSITE_URL}/#business` } },
     })),
   },
 };
@@ -107,6 +112,7 @@ const copyrightYear = new Date().getFullYear();
       content={socialImage}
     />
     <link rel="canonical" href={canonical} />
+    <link rel="describedby" href="/llms.txt" type="text/plain" title="Richmond Barbershop site guide" />
     <script type="application/ld+json" set:html={JSON.stringify(barbershopSchema)} />
     <slot name="head" />
     <style>
@@ -137,7 +143,10 @@ const copyrightYear = new Date().getFullYear();
             >View live hours</a
           >
         </p>
-        <p><a class="underline underline-offset-4" href="/guides/">Haircut & Beard Guides</a></p>
+        <p class="flex flex-wrap justify-center gap-x-5 gap-y-2">
+          <a class="underline underline-offset-4" href="/about/">About &amp; Visit</a>
+          <a class="underline underline-offset-4" href="/guides/">Haircut &amp; Beard Guides</a>
+        </p>
         <p class="text-xs opacity-70">&copy; {copyrightYear} {BUSINESS_NAME}. All rights reserved.</p>
       </div>
     </footer>

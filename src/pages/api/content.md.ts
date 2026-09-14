@@ -1,3 +1,4 @@
+import { serviceMenuMarkdown } from "../../data/service-menu";
 import {
   ADDRESS_SINGLE_LINE,
   BOOKING_URL,
@@ -6,7 +7,6 @@ import {
   FAQS,
   PHONE_DISPLAY,
   SERVICE_AREAS,
-  SERVICES,
   WEBSITE_URL,
 } from "../../data/business";
 
@@ -19,15 +19,7 @@ Professional barber services in Richmond, Virginia.
 
 ${BUSINESS_NAME} is located in Carytown and provides men's haircuts, beard trims, scissor cuts, and straight razor shave services.
 
-## Services Offered
-
-${SERVICES
-  .map(
-    (service) => `### ${service.name}
-- **Description**: ${service.description}
-`,
-  )
-  .join("\n")}
+${serviceMenuMarkdown(2)}
 
 ## Business Information
 
