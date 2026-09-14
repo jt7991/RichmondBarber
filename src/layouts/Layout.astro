@@ -1,7 +1,8 @@
 ---
 import Navigation from "../components/Navigation.astro";
 import { getImage } from "astro:assets";
-import logoSource from "../assets/richmond-barbershop-new-logo.png";
+import logoSource from "../assets/richmond-barbershop-social.png";
+import logoVector from "../assets/richmond-barbershop-logo.svg?url";
 import heroImage from "../assets/hero.webp";
 import {
   ADDRESS,
@@ -20,7 +21,7 @@ import {
 } from "../data/business";
 
 const defaultTitle = `${BUSINESS_NAME} | Barber in Richmond, VA`;
-const logoImage = await getImage({ src: logoSource, width: 1200, format: "webp", quality: 90 });
+const logoImage = await getImage({ src: logoSource, width: 1200, format: "png" });
 const defaultDescription =
   "Richmond Barbershop in Carytown offers precision haircuts, beard trims, and straight razor shaves. Book your appointment today.";
 
@@ -37,7 +38,7 @@ const barbershopSchema = {
   description,
   url: WEBSITE_URL,
   image: `${WEBSITE_URL}${logoImage.src}`,
-  logo: `${WEBSITE_URL}${logoImage.src}`,
+  logo: `${WEBSITE_URL}${logoVector}`,
   telephone: PHONE_E164,
   address: {
     "@type": "PostalAddress",
@@ -87,7 +88,7 @@ const copyrightYear = new Date().getFullYear();
       property="og:image:alt"
       content="Richmond Barbershop black lettering and yellow banner logo"
     />
-    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta

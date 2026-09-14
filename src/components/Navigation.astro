@@ -2,13 +2,14 @@
 import Logo from "./Logo.astro";
 
 import { BOOKING_URL } from "../data/business";
+const hasHero = Astro.url.pathname === "/";
 ---
 
 <nav
   id="desktop-nav"
   class="hidden md:flex sticky top-0 z-50 bg-white text-black flex justify-between items-center py-2 px-6"
 >
-  <a href="/" aria-label="Richmond Barbershop home"><Logo compact /></a>
+  <a href="/" aria-label="Richmond Barbershop home" data-header-logo class:list={["header-logo", { "is-hidden": hasHero }]} aria-hidden={hasHero ? "true" : undefined} tabindex={hasHero ? -1 : undefined}><Logo compact /></a>
   <div class="hidden md:flex space-x-4 items-center">
     <a href="/#hero" class="px-4 hover:text-blue-500">Home</a>
     <a href="/#services" class="px-4 hover:text-blue-500">Services</a>
@@ -59,7 +60,7 @@ import { BOOKING_URL } from "../data/business";
         class="bg-black block w-5 h-0.5 transition-all duration-300"
       ></span>
     </button>
-    <a href="/" aria-label="Richmond Barbershop home"><Logo compact /></a>
+    <a id="logo-small" href="/" aria-label="Richmond Barbershop home" data-header-logo class:list={["header-logo", { "is-hidden": hasHero }]} aria-hidden={hasHero ? "true" : undefined} tabindex={hasHero ? -1 : undefined}><Logo compact /></a>
     <a
       href={BOOKING_URL}
       class="col-span-1 flex justify-end p-2 hover:bg-gray-100 rounded-lg transition-colors duration-200"
@@ -114,6 +115,25 @@ import { BOOKING_URL } from "../data/business";
   </div>
 </nav>
 <script is:inline>
+  // Hand the branding off to the sticky header as the hero logo scrolls away.
+  // Pages without a hero keep their header logo visible.
+  window.updateLogoVisibility = () => {
+    const heroLogo = document.getElementById("logo");
+    const menuOpen = document.getElementById("menu")?.hasAttribute("data-active");
+    const nav = document.getElementById(window.innerWidth >= 768 ? "desktop-nav" : "mobile-nav");
+    const rect = heroLogo?.getBoundingClientRect();
+    const visible = !rect || menuOpen || rect.bottom <= (nav?.getBoundingClientRect().bottom ?? 76) + 24 || rect.top >= window.innerHeight;
+    document.querySelectorAll("[data-header-logo]").forEach((link) => {
+      link.classList.toggle("is-hidden", !visible);
+      if (visible) {
+        link.removeAttribute("aria-hidden");
+        link.removeAttribute("tabindex");
+      } else {
+        link.setAttribute("aria-hidden", "true");
+        link.setAttribute("tabindex", "-1");
+      }
+    });
+  };
 
   function toggleMenu() {
     const menu = document.getElementById("menu");
@@ -126,6 +146,7 @@ import { BOOKING_URL } from "../data/business";
     }
     hamburger?.classList.toggle("open");
     hamburger?.setAttribute("aria-expanded", String(menu.hasAttribute("data-active")));
+    window.updateLogoVisibility();
   }
 
   window.addEventListener("scroll", () => {
@@ -137,9 +158,27 @@ import { BOOKING_URL } from "../data/business";
       hamburger?.setAttribute("aria-expanded", "false");
 
     }
-  });
+    window.updateLogoVisibility();
+  }, { passive: true });
+  window.addEventListener("resize", window.updateLogoVisibility);
+  window.addEventListener("pageshow", window.updateLogoVisibility);
+  document.addEventListener("DOMContentLoaded", window.updateLogoVisibility);
 </script>
+<noscript><style>.header-logo.is-hidden { opacity: 1; transform: none; }</style></noscript>
 <style>
+  .header-logo {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 300ms ease, transform 300ms ease;
+  }
+  .header-logo.is-hidden {
+    opacity: 0;
+    transform: translateY(12px);
+    pointer-events: none;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .header-logo { transition: none; }
+  }
   #hamburger.open span:nth-child(1) {
     transform: rotate(45deg) translate(3px, 2px);
   }

@@ -1,6 +1,5 @@
 ---
-import { Image } from "astro:assets";
-import logo from "../assets/richmond-barbershop-new-logo.png";
+import logo from "../assets/richmond-barbershop-logo.svg?url";
 
 interface Props {
   compact?: boolean;
@@ -8,14 +7,12 @@ interface Props {
 const { compact = false } = Astro.props;
 ---
 
-<div class:list={["brand-logo", { "brand-logo--compact": compact }]}>
-  <Image
+<div id={compact ? undefined : "logo"} class:list={["brand-logo", { "brand-logo--compact": compact }]}>
+  <img
     src={logo}
     alt="Richmond Barbershop"
-    widths={compact ? [240, 480] : [640, 960, 1600]}
-    sizes={compact ? "112px" : "(max-width: 640px) 80vw, 560px"}
-    format="webp"
-    quality={90}
+    width="1494"
+    height="755"
     loading="eager"
     fetchpriority={compact ? "auto" : "high"}
   />
@@ -24,21 +21,12 @@ const { compact = false } = Astro.props;
 <style>
   .brand-logo {
     width: min(100%, 600px);
-    padding: clamp(12px, 3vw, 28px);
     margin-bottom: clamp(24px, 4vw, 40px);
-    background: white;
-    border-radius: 4px;
-    box-shadow: 0 16px 48px rgb(0 0 0 / 18%);
   }
   .brand-logo img {
     display: block;
     width: 100%;
     height: auto;
-    aspect-ratio: 1.9;
-    /* Frame the original square upload without altering its artwork.
-       The visible mark occupies y=463-1214 in the 1600px source. */
-    object-fit: cover;
-    object-position: center 55%;
   }
   .brand-logo--compact {
     width: 112px;
@@ -46,5 +34,15 @@ const { compact = false } = Astro.props;
     margin: 0;
     border-radius: 0;
     box-shadow: none;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .brand-logo:not(.brand-logo--compact) img {
+      animation: reveal-logo 700ms ease-out both;
+    }
+    @keyframes reveal-logo {
+      from { opacity: 0; transform: scale(0.75); }
+      to { opacity: 1; transform: scale(1); }
+    }
   }
 </style>
