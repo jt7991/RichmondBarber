@@ -8,6 +8,7 @@ import Service from "../components/Service.astro";
 import GalleryImage from "../components/GalleryImage.astro";
 import { galleryPhotos, gallerySchema } from "../data/gallery";
 import TestimonialOption from "../components/TestimonialOption.svelte";
+import IntroStylePicker from "../components/IntroStylePicker.svelte";
 import heroImage from "../assets/barbershop_interior.webp";
 import client_1 from "../assets/client_1.webp";
 import client_2 from "../assets/client_2.webp";
@@ -20,7 +21,6 @@ import toby from "../assets/toby.webp";
 import {
   ADDRESS,
   BOOKING_URL,
-  BUSINESS_DESCRIPTION,
   FAQS,
   SERVICES,
   FACEBOOK_URL,
@@ -74,19 +74,7 @@ const faqSchema = {
         >
       </div>
     </section>
-    <section
-      id="best-barbershop"
-      class="home-intro text-black px-4 text-center flex flex-col md:gap-4 gap-8 bg-white"
-      data-ai-section="best-barbershop-in-richmond"
-      data-ai-type="best-barbershop-in-richmond"
-    >
-      <h1 class="text-4xl font-bold text-black dark:text-white">
-        Looking for the best barbershop in Richmond Virginia?
-      </h1>
-      <p class="text-lg max-w-xl mx-auto leading-relaxed">
-        {BUSINESS_DESCRIPTION} Visit us at 2820 W Cary St, Suite C, and explore our work below.
-      </p>
-    </section>
+    <IntroStylePicker client:load />
 
 
     <section
