@@ -20,6 +20,7 @@ import {
   ADDRESS,
   BOOKING_URL,
   BUSINESS_DESCRIPTION,
+  FAQS,
   SERVICES,
   FACEBOOK_URL,
   INSTAGRAM_URL,
@@ -32,56 +33,11 @@ import {
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "Do I need to make an appointment at Richmond Barbershop?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Appointments are highly recommended and you can make an appointment ahead of time by scheduling here. Walk-ins are welcome when available!",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do you have onsite parking?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "We do not have onsite parking, however there is street parking, as well as a 2 story parking garage directly across the street!",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What ages are welcome?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "We offer haircuts for ages 8+",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What is your cancellation policy?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Cancellations need to be made at least 8 hours before your appointment online or by phone. Otherwise you will be charged in full for your missed appointment.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What areas of Richmond, VA do you serve?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "We proudly serve the following nearby neighborhoods: Carytown, The Fan, Museum District, Scott's Addition, Church Hill, Rocketts Landing, Shockoe Bottom, Lakeside, Forest Hill, Henrico, The West End, Bon Air, Glen Allen, Mechanicsville, Midlothian, Chesterfield, and other surrounding areas!",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What services do you offer?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "We offer professional precision cuts tailored to your style, premium scissor cuts with attention to detail, beard trims, and traditional hot towel shaves.",
-      },
-    },
-  ],
+  mainEntity: FAQS.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: { "@type": "Answer", text: faq.answer },
+  })),
 };
 ---
 
@@ -119,7 +75,7 @@ const faqSchema = {
     </section>
     <section
       id="best-barbershop"
-      class="text-black px-4 text-center opacity-0 translate-y-8 transition-all duration-700 ease-out flex flex-col md:gap-4 gap-8 bg-white"
+      class="text-black px-4 text-center flex flex-col md:gap-4 gap-8 bg-white"
       data-ai-section="best-barbershop-in-richmond"
       data-ai-type="best-barbershop-in-richmond"
     >
@@ -220,6 +176,7 @@ const faqSchema = {
       >
         {SERVICES.map((service, index) => <Service service={service} index={index} />)}
       </div>
+      <p class="mt-6"><a class="underline" href="/pricing.md">View the plain-text service menu</a></p>
       <p class="mt-8 text-lg max-w-3xl mx-auto">
         Learn more about our
         <a href="/mens-haircut-richmond-va" class="underline font-semibold">men's haircut in Richmond, VA</a>,
@@ -238,34 +195,10 @@ const faqSchema = {
     >
       <h2 class="text-4xl font-bold mb-16 text-black dark:text-white">FAQ</h2>
       <div class="max-w-7xl w-full">
-        <Accordion
-          title="Do I need to make an appointment at Richmond Barbershop?"
-        >
-          Appointments are highly recommended and you can make an appointment
-          ahead of time by scheduling here. Walk-ins are welcome when available!
-        </Accordion>
-        <Accordion title="Do you have onsite parking?">
-          We do not have onsite parking, however there is street parking, as
-          well as a 2 story parking garage directly across the street!
-        </Accordion>
-        <Accordion title="What ages are welcome?">
-          We offer haircuts for ages 8+
-        </Accordion>
-        <Accordion title="What is your cancellation policy?">
-          Cancellations need to be made at least 8 hours before your appointment
-          online or by phone. Otherwise you will be charged in full for your
-          missed appointment.
-        </Accordion>
-        <Accordion title="What areas of Richmond, VA do you serve?">
-          We proudly serve the following nearby neighborhoods: Carytown, The
-          Fan, Museum District, Scott's Addition, Church Hill, Rocketts Landing,
-          Shockoe Bottom, Lakeside, Forest Hill, Henrico, The West End, Bon Air,
-          Glen Allen, Mechanicsville, Midlothian, Chesterfield, and other
-          surrounding areas!
-        </Accordion>
-         <Accordion title="What services do you offer?">
-           We offer professional precision cuts tailored to your style, premium scissor cuts with attention to detail, expert beard trimming and shaping for a sharp look, and traditional hot towel shaves for ultimate comfort and smoothness. Our skilled barbers in Richmond, VA, provide quality men's haircuts, beard trims, and shaves in Carytown and surrounding areas.
-         </Accordion>
+        {FAQS.map((faq) => (
+          <Accordion title={faq.question}>{faq.answer}</Accordion>
+        ))}
+        <p class="mt-6 text-lg"><a class="underline" href={BOOKING_URL}>Book an appointment on Square</a></p>
       </div>
     </section>
 
@@ -324,27 +257,7 @@ const faqSchema = {
   </main>
 
 </Layout>
-<script>
-    const bestBarbershop = document.getElementById("best-barbershop");
 
-    if (bestBarbershop) {
-      const observer = new IntersectionObserver(
-        (entries) => {
-          for (const entry of entries) {
-            if (entry.isIntersecting) {
-              bestBarbershop.classList.add("!opacity-100");
-              bestBarbershop.classList.add("!translate-y-0");
-            }
-          }
-        },
-        {
-          rootMargin: "-40%",
-        },
-      );
-      observer.observe(bestBarbershop);
-    }
-
-</script>
 <style>
   @reference "../styles/global.css";
   section {

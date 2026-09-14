@@ -93,7 +93,7 @@ export const FAQS = [
   {
     question: "Do I need to make an appointment at Richmond Barbershop?",
     answer:
-      "Appointments are highly recommended and you can make an appointment ahead of time by scheduling here. Walk-ins are welcome when available.",
+      "Appointments at Richmond Barbershop are highly recommended. Book online through Square. Walk-ins are welcome when available.",
   },
   {
     question: "Do you have onsite parking?",
@@ -113,5 +113,13 @@ export const FAQS = [
     question: "What areas of Richmond, VA do you serve?",
     answer:
       "We proudly serve Carytown, The Fan, Museum District, Scott's Addition, Church Hill, Henrico, Midlothian, and surrounding areas.",
+  },
+  {
+    question: "What services do you offer?",
+    answer: BUSINESS_DESCRIPTION,
+  },
+  {
+    question: "How much do services cost at Richmond Barbershop?",
+    answer: `${SERVICES.map((service) => `${service.name}: $${service.price}`).join("; ")}. ${HAIRCUT_BEARD_COMBO.name}: $${HAIRCUT_BEARD_COMBO.price}. All prices are in USD. Check the Square booking menu for current prices and availability.`,
   },
 ];

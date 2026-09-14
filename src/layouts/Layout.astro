@@ -112,6 +112,7 @@ const copyrightYear = new Date().getFullYear();
       content={socialImage}
     />
     <link rel="canonical" href={canonical} />
+    <link rel="describedby" href="/llms.txt" type="text/plain" title="Richmond Barbershop site guide" />
     <script type="application/ld+json" set:html={JSON.stringify(barbershopSchema)} />
     <slot name="head" />
     <style>
