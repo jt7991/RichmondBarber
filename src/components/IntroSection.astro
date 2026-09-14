@@ -1,0 +1,29 @@
+---
+import { BUSINESS_DESCRIPTION } from '../data/business';
+---
+
+<section
+  id="best-barbershop"
+  class="intro"
+  data-ai-section="best-barbershop-in-richmond"
+  data-ai-type="best-barbershop-in-richmond"
+  aria-labelledby="intro-heading"
+>
+  <div class="intro-inner">
+    <h1 id="intro-heading">Looking for the best barbershop in Richmond Virginia?</h1>
+    <p>{BUSINESS_DESCRIPTION} Visit us at 2820 W Cary St, Suite C, and explore our work below.</p>
+  </div>
+</section>
+
+<style>
+  .intro { padding: 56px 24px 32px; background: #fff; color: #18181b; scroll-margin-top: 88px; }
+  .intro-inner { max-width: 1040px; margin-inline: auto; }
+  h1 { max-width: 25ch; margin: 0 0 24px; font-family: 'Oswald', sans-serif; font-size: clamp(36px, 4.5vw, 56px); font-weight: 500; line-height: 1.12; letter-spacing: -.025em; text-wrap: balance; }
+  p { max-width: 60ch; margin: 0; color: #52525b; font-size: 19px; line-height: 1.65; text-wrap: pretty; }
+  ::selection { background: #facc15; color: #18181b; }
+  @media (max-width: 640px) {
+    .intro { padding: 40px 24px 24px; }
+    h1 { margin-bottom: 20px; }
+    p { font-size: 18px; line-height: 1.6; }
+  }
+</style>
