@@ -27,12 +27,11 @@ const widths = [...new Set([320, 480, 640, 960].filter((width) => width < src.wi
       widths={widths}
       sizes="(min-width: 1312px) 411px, (min-width: 640px) calc((100vw - 80px) / 3), calc((100vw - 48px) / 2)"
       format="webp"
-      class:list={["gallery-photo", { "gallery-photo--portrait": !!caption }, classNames]}
+      class:list={["gallery-photo", classNames]}
       id={id}
       quality={82}
     />
   </MediaTag>
-  {caption && <figcaption class="mt-3 text-base sm:text-lg font-medium text-gray-900 text-left">{caption}</figcaption>}
 </figure>
 
 <script>
@@ -57,7 +56,6 @@ const widths = [...new Set([320, 480, 640, 960].filter((width) => width < src.wi
   figure { min-width: 0; transition: opacity 400ms ease, transform 400ms ease; transition-delay: var(--gallery-delay, 0ms); }
   .gallery-media { display: block; border-radius: 8px; overflow: hidden; }
   .gallery-photo { display: block; width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; border-radius: 8px; }
-  .gallery-photo--portrait { aspect-ratio: 3 / 4; }
   a.gallery-media { box-shadow: 0 4px 16px rgb(0 0 0 / 8%); }
   a.gallery-media:focus-visible { outline: 3px solid #a16207; outline-offset: 4px; }
   .is-pending { opacity: 0; transform: translateY(16px); }
