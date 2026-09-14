@@ -1,38 +1,7 @@
 <script>
 	import { fade } from 'svelte/transition';
 
-	const testimonials = [
-		{
-			id: 1,
-			name: "Gage W.",
-			rating: 5,
-			text: "Joe has been extremely generous with his time and his attention to detail when cutting my hair is second to none. He’s always open to feedback and he’s super easy to schedule with. I moved to Richmond a year ago and have been in search for a consistent barber for a while, and I’ve finally found one. Couldn’t recommend this shop enough."
-		},
-		{
-			id: 2,
-			name: "Daryl M.",
-			rating: 5,
-			text: "Joe did an amazing job—friendly, professional, and clearly takes pride in his work. The shop was spotless, and he took the time to make sure my haircut was absolutely perfect."
-		},
-		{
-			id: 3,
-			name: "Aidan R.",
-			rating: 5,
-			text: "This shop just opened and is exactly what I've been looking for in a barber. Joe is very chill and knows his stuff, definitely recommend!"
-		},
-		{
-			id: 4,
-			name: "Jonathan F.",
-			rating: 5,
-			text: "Awesome shop. Joe was friendly, easy to talk to, took great skill and care with my hair and beard. Fantastic experience, will definitely return."
-		},
-		{
-			id: 5,
-			name: "Eric R.",
-			rating: 5,
-			text: "Walked past and decided to get my haircut here, phenomenal service and the owner is a really stand up guy. Highly recommend for an all around great cut, I normally don’t leave reviews but I think this might be the best haircut I’ve gotten in Richmond so far!"
-		}
-	];
+	import { testimonials } from "../data/testimonials";
 
 	let currentIndex = $state(0);
 	let interval = $state(null);
@@ -129,6 +98,17 @@
 						<cite class="block text-xl font-bold text-black dark:text-white not-italic">
 							{currentTestimonial.name}
 						</cite>
+						<p class="text-sm text-gray-600 dark:text-gray-400">
+							<time datetime={currentTestimonial.date}>{currentTestimonial.dateLabel}</time>
+							<span aria-hidden="true"> &middot; </span>
+							<a
+								href={currentTestimonial.sourceUrl}
+								target="_blank"
+								rel="noopener noreferrer"
+								class="underline underline-offset-4 hover:text-black dark:hover:text-white"
+								aria-label={`Read ${currentTestimonial.name}'s reviews on Google (opens in a new tab)`}
+							>Google review excerpt</a>
+						</p>
 					</div>
 					{/key}
 			</div>

@@ -1,0 +1,14 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ReviewStylePicker from '../components/ReviewStylePicker.svelte';
+import '../styles/global.css';
+---
+<Layout title="Review Style Options | Richmond Barbershop" description="Compare five compact testimonial styles for Richmond Barbershop.">
+  <Fragment slot="head"><meta name="robots" content="noindex, nofollow" /></Fragment>
+  <main>
+    <ReviewStylePicker client:load />
+  </main>
+</Layout>
+<style>
+  main { background: #fff; color: #18181b; }
+</style>

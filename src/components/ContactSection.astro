@@ -1,0 +1,61 @@
+---
+import { ADDRESS, PHONE_E164, PHONE_DISPLAY, MAPS_URL, INSTAGRAM_URL, FACEBOOK_URL } from '../data/business';
+
+const mapSrc = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d790.7805099320608!2d-77.47802503034775!3d37.55218841147862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b113db68bc08b1%3A0x9ca083c0e9faa6c0!2sRichmond%20Barbershop!5e0!3m2!1sen!2sus!4v1766692323074!5m2!1sen!2sus';
+---
+
+<section id="contact" class="contact-section" aria-labelledby="contact-heading">
+  <div class="contact-inner">
+    <h2 id="contact-heading">Contact Us</h2>
+    <div class="contact-content">
+      <div class="contact-details">
+        <div class="contact-primary">
+          <address>{ADDRESS.streetAddress}<br />{ADDRESS.addressLocality}, {ADDRESS.addressRegion} {ADDRESS.postalCode}</address>
+          <a class="phone" href={`tel:${PHONE_E164}`} data-umami-event="phone-click">{PHONE_DISPLAY}</a>
+        </div>
+        <div class="contact-actions">
+          <a class="directions" href={MAPS_URL} target="_blank" rel="noopener noreferrer" data-umami-event="directions-click">Get Directions
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6" /></svg>
+          </a>
+          <div class="socials">
+            <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" data-umami-event="outbound-link-click" data-umami-event-url={INSTAGRAM_URL}>Instagram</a>
+            <a href={FACEBOOK_URL} target="_blank" rel="noopener noreferrer" data-umami-event="outbound-link-click" data-umami-event-url={FACEBOOK_URL}>Facebook</a>
+          </div>
+        </div>
+      </div>
+      <iframe title="Richmond Barbershop location in Carytown" src={mapSrc} width="100%" height="320" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+
+<style>
+  .contact-section { --contact-ink: #18181b; --contact-muted: #52525b; padding: 48px 24px; color: var(--contact-ink); background: #fff; scroll-margin-top: 88px; }
+  .contact-inner { max-width: 1040px; margin-inline: auto; }
+  h2 { width: 100%; margin: 0 0 32px; border-top: 2px solid var(--contact-ink); padding-top: 24px; font-family: 'Oswald', sans-serif; font-size: clamp(32px, 3.5vw, 44px); font-weight: 500; line-height: 1.15; letter-spacing: -.02em; text-align: left; }
+  .contact-content { display: grid; grid-template-columns: 1fr 1.2fr; align-items: center; gap: 48px; }
+  .contact-details { min-width: 0; }
+  .contact-primary { display: flex; flex-direction: column; align-items: flex-start; gap: 16px; }
+  address { font-style: normal; font-size: clamp(26px, 3vw, 34px); line-height: 1.3; }
+  .phone { font-size: 22px; color: var(--contact-muted); line-height: 1.25; display: inline-flex; align-items: center; min-height: 44px; }
+  a { color: inherit; text-decoration: none; text-underline-offset: 5px; }
+  .phone:hover { text-decoration: underline; }
+  .contact-actions { margin-top: 24px; }
+  .directions { display: inline-flex; align-items: center; justify-content: space-between; gap: 32px; min-height: 48px; padding: 12px 0; border-bottom: 1px solid var(--contact-ink); background: transparent; color: var(--contact-ink); font-size: 18px; }
+  .directions:hover { border-bottom-width: 2px; }
+  svg { width: 22px; height: 22px; flex-shrink: 0; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+  .socials { display: flex; gap: 24px; margin-top: 12px; }
+  .socials a { display: inline-flex; align-items: center; min-height: 44px; font-size: 16px; color: var(--contact-muted); text-decoration: underline; }
+  .socials a:hover { color: var(--contact-ink); text-decoration-thickness: 2px; }
+  iframe { display: block; width: 100%; border: 0; background: #f4f4f5; }
+  a:focus { outline: 2px solid var(--contact-ink); outline-offset: 4px; }
+  ::selection { background: #facc15; color: #18181b; }
+
+  @media (max-width: 767px) {
+    .contact-content { grid-template-columns: 1fr; gap: 28px; }
+    iframe { height: 240px; }
+  }
+  @media (max-width: 640px) {
+    .contact-section { padding: 32px 24px; }
+    h2 { margin-bottom: 24px; }
+  }
+</style>
