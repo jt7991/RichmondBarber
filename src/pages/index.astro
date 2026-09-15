@@ -13,11 +13,7 @@ import ContactSection from "../components/ContactSection.astro";
 import heroImage from "../assets/barbershop_interior.webp";
 import client_1 from "../assets/client_1.webp";
 import client_2 from "../assets/client_2.webp";
-import client_3 from "../assets/client_3.webp";
-import client_4 from "../assets/client_4.webp";
 import client_5 from "../assets/client_5.webp";
-import client_6 from "../assets/client_6.webp";
-import beard_guy from "../assets/beard_guy.webp"
 import toby from "../assets/toby.webp";
 import {
   BOOKING_URL,
@@ -38,11 +34,12 @@ const faqSchema = {
 ---
 
 <Layout
-  title="Richmond Barber in Carytown | Richmond Barbershop"
+  title="Barber in Richmond, VA | Carytown | Richmond Barbershop"
   description="Visit our Carytown barbershop in Richmond, VA for precision men's haircuts, fades, scissor cuts, beard trims, and hot towel shaves. Book your next visit."
   canonical={`${WEBSITE_URL}/`}
 >
   <Fragment slot="head">
+    <link rel="preload" as="image" href={heroImage.src} fetchpriority="high" />
     <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
     <script type="application/ld+json" set:html={JSON.stringify(gallerySchema)}></script>
   </Fragment>
@@ -92,7 +89,6 @@ const faqSchema = {
             src={photo.src}
             alt={photo.alt}
             caption={photo.caption}
-            fullSrc={photo.full.src}
           />
         ))}
         <GalleryImage
@@ -118,31 +114,6 @@ const faqSchema = {
           id="image5"
           src={client_5}
           alt="Modern haircut service at Richmond Barbershop in Virginia"
-        />
-        <GalleryImage
-          index={4}
-          id="image3"
-          src={client_3}
-          alt="Client enjoying a stylish haircut at Richmond Barbershop"
-        />
-        <GalleryImage
-          index={5}
-          id="image4"
-          src={client_4}
-          alt="Professional haircut at Richmond Barbershop in Richmond, VA"
-        />
-        <GalleryImage
-          index={6}
-          id="image6"
-          src={client_6}
-          alt="Expert barber cutting hair at Richmond VA location"
-        />
-        <GalleryImage
-          index={7}
-          id="image8"
-          src={beard_guy}
-          classNames="object-top"
-          alt="A man with a beard who just got a professional beard trim with a straight razor line up in Richmond, Virginia"
         />
       </div>
     </section>

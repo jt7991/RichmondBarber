@@ -30,7 +30,7 @@ const schema = { "@context": "https://schema.org", "@type": "AboutPage", "@id": 
       <div class="grid md:grid-cols-3 gap-8">
         <div><h3 class="text-xl font-bold mb-3">See the work</h3><p class="leading-relaxed">Our gallery shows finished styles, from longer layered shapes to textured cuts, tapers, and beard work.</p><a href="/#gallery" class="inline-block underline mt-4">Explore our haircut gallery</a></div>
         <div><h3 class="text-xl font-bold mb-3">Choose your service</h3><ul class="space-y-2">{SERVICES.map((service) => <li><a href={service.path} class="underline">{service.name}</a></li>)}</ul></div>
-        <div><h3 class="text-xl font-bold mb-3">Plan with confidence</h3><p class="leading-relaxed">Check current prices and available appointments online. Call before booking if you need help choosing a service.</p><a href="/guides/first-visit-richmond-barbershop/" class="inline-block underline mt-4">Plan your first visit</a></div>
+        <div><h3 class="text-xl font-bold mb-3">Plan with confidence</h3><p class="leading-relaxed">Check current prices and available appointments online. Call before booking if you need help choosing a service.</p><a href={BOOKING_URL} class="inline-block underline mt-4">Check appointment availability</a></div>
       </div>
     </section>
     <section class="px-4 pb-16 max-w-5xl mx-auto grid md:grid-cols-2 gap-10">

@@ -1,5 +1,5 @@
 ---
-import { BUSINESS_DESCRIPTION } from '../data/business';
+import { BUSINESS_DESCRIPTION, BOOKING_URL } from '../data/business';
 ---
 
 <section
@@ -10,8 +10,9 @@ import { BUSINESS_DESCRIPTION } from '../data/business';
   aria-labelledby="intro-heading"
 >
   <div class="intro-inner">
-    <h1 id="intro-heading">Looking for the best barbershop in Richmond Virginia?</h1>
-    <p>{BUSINESS_DESCRIPTION} Visit us at 2820 W Cary St, Suite C, and explore our work below.</p>
+    <h1 id="intro-heading">Haircuts &amp; beard trims in Carytown, Richmond</h1>
+    <p>{BUSINESS_DESCRIPTION} Visit us at 2820 W Cary St, Suite C, for your next cut.</p>
+    <p class="intro-links"><a href="/mens-haircut-richmond-va">Explore haircuts</a> &middot; <a href="/beard-trim-richmond-va">Beard trims</a> &middot; <a href={BOOKING_URL}>Book an appointment</a></p>
   </div>
 </section>
 
@@ -20,6 +21,8 @@ import { BUSINESS_DESCRIPTION } from '../data/business';
   .intro-inner { max-width: 1040px; margin-inline: auto; }
   h1 { max-width: 25ch; margin: 0 0 24px; font-family: 'Oswald', sans-serif; font-size: clamp(36px, 4.5vw, 56px); font-weight: 500; line-height: 1.12; letter-spacing: -.025em; text-wrap: balance; }
   p { max-width: 60ch; margin: 0; color: #52525b; font-size: 19px; line-height: 1.65; text-wrap: pretty; }
+  .intro-links { margin-top: 20px; font-size: 17px; }
+  .intro-links a { text-decoration: underline; text-underline-offset: 4px; }
   ::selection { background: #facc15; color: #18181b; }
   @media (max-width: 640px) {
     .intro { padding: 40px 24px 24px; }
