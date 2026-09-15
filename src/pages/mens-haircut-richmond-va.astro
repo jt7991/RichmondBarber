@@ -5,10 +5,18 @@ import VisitDetails from "../components/VisitDetails.astro";
 import { serviceSchema } from "../data/service-schema";
 import "../styles/global.css";
 import client_2 from "../assets/client_2.webp";
+import { Image } from "astro:assets";
+import { galleryPhotos } from "../data/gallery";
 import { BOOKING_URL, BUSINESS_NAME, WEBSITE_URL, SERVICES } from "../data/business";
 
 const service = SERVICES.find((item) => item.path === "/mens-haircut-richmond-va")!;
 const pageUrl = `${WEBSITE_URL}/mens-haircut-richmond-va`;
+const sidePart = galleryPhotos.find((photo) => photo.slug === "classic-side-part")!;
+const curlyTaper = galleryPhotos.find((photo) => photo.slug === "curly-taper")!;
+const examples = [
+  { src: client_2, alt: "Middle part haircut at Richmond Barbershop", caption: "Middle part" },
+  curlyTaper,
+];
 
 const faqItems = [
   {
@@ -100,12 +108,18 @@ const breadcrumbSchema = {
 
     <section class="px-4 py-16">
       <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-center">
-        <img
-          src={client_2.src}
-          alt="Men's haircut service at Richmond Barbershop in Richmond, VA"
+        <a href={BOOKING_URL} aria-label="Book an appointment for a classic side part">
+        <Image
+          src={sidePart.src}
+          alt={sidePart.alt}
+          width={720}
+          widths={[360, 540, 720]}
+          sizes="(min-width: 768px) 492px, calc(100vw - 32px)"
+          format="webp"
           class="w-full h-[420px] object-cover rounded-xl shadow-xl"
           loading="lazy"
         />
+        </a>
         <div class="flex flex-col gap-4 text-left">
           <h2 class="text-3xl font-bold">Men's haircuts done right</h2>
           <p class="text-lg leading-relaxed">
@@ -153,7 +167,7 @@ const breadcrumbSchema = {
         }
       </div>
     </section>
-    <ServiceExamples slugs={["classic-side-part", "curly-taper"]} />
+    <ServiceExamples photos={examples} />
     <VisitDetails />
   </main>
 </Layout>
