@@ -143,6 +143,12 @@ const copyrightYear = new Date().getFullYear();
         <nav aria-label="Barber services" class="flex flex-wrap justify-center gap-x-5 gap-y-2">
           {SERVICES.map((service) => <a class="underline underline-offset-4" href={service.path}>{service.name} in Richmond</a>)}
         </nav>
+        <a
+          href={BOOKING_URL}
+          class="self-center inline-block mt-5 mb-4 rounded-lg bg-black text-white dark:bg-white dark:text-black px-8 py-3 font-bold hover:opacity-80 focus-visible:outline-2 focus-visible:outline-offset-4"
+          data-umami-event="booking-click"
+          data-umami-event-location="footer"
+        >Book an appointment</a>
         <p class="text-xs opacity-70">&copy; {copyrightYear} {BUSINESS_NAME}. All rights reserved.</p>
       </div>
     </footer>
