@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import ServiceExamples from "../components/ServiceExamples.astro";
 import VisitDetails from "../components/VisitDetails.astro";
 import { serviceSchema } from "../data/service-schema";
 import "../styles/global.css";
@@ -62,7 +63,7 @@ const breadcrumbSchema = {
 
 <Layout
   title={`Beard Trim in Richmond, VA | ${BUSINESS_NAME}`}
-  description={`Book a beard trim in Richmond, VA at ${BUSINESS_NAME} in Carytown. Traditional barber service with easy online booking.`}
+  description={`Beard trims in Carytown, Richmond, VA for $${service.price}. Includes beard shaping, a hot towel, and straight-razor line-up. View availability and book online.`}
   canonical={pageUrl}
 >
   <Fragment slot="head">
@@ -152,6 +153,7 @@ const breadcrumbSchema = {
         }
       </div>
     </section>
+    <ServiceExamples slugs={["haircut-shaped-beard"]} />
     <VisitDetails />
   </main>
 </Layout>

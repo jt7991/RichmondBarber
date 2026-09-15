@@ -38,11 +38,12 @@ const faqSchema = {
 ---
 
 <Layout
-  title="Richmond Barber in Carytown | Richmond Barbershop"
+  title="Barber in Richmond, VA | Carytown | Richmond Barbershop"
   description="Visit our Carytown barbershop in Richmond, VA for precision men's haircuts, fades, scissor cuts, beard trims, and hot towel shaves. Book your next visit."
   canonical={`${WEBSITE_URL}/`}
 >
   <Fragment slot="head">
+    <link rel="preload" as="image" href={heroImage.src} fetchpriority="high" />
     <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
     <script type="application/ld+json" set:html={JSON.stringify(gallerySchema)}></script>
   </Fragment>

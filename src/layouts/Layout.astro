@@ -3,7 +3,6 @@ import Navigation from "../components/Navigation.astro";
 import { getImage } from "astro:assets";
 import logoSource from "../assets/richmond-barbershop-social.png";
 import logoVector from "../assets/richmond-barbershop-logo.svg?url";
-import heroImage from "../assets/hero.webp";
 import {
   ADDRESS,
   BOOKING_URL,
@@ -83,12 +82,6 @@ const copyrightYear = new Date().getFullYear();
     <link rel="dns-prefetch" href="//images.unsplash.com" />
     <link rel="dns-prefetch" href="//www.instagram.com" />
     <link rel="dns-prefetch" href="//www.google.com" />
-    <link
-      rel="preload"
-      as="image"
-      href={heroImage.src}
-      crossorigin="anonymous"
-    />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
     <meta name="description" content={description} />
@@ -147,6 +140,9 @@ const copyrightYear = new Date().getFullYear();
           <a class="underline underline-offset-4" href="/about/">About &amp; Visit</a>
           <a class="underline underline-offset-4" href="/guides/">Haircut &amp; Beard Guides</a>
         </p>
+        <nav aria-label="Barber services" class="flex flex-wrap justify-center gap-x-5 gap-y-2">
+          {SERVICES.map((service) => <a class="underline underline-offset-4" href={service.path}>{service.name} in Richmond</a>)}
+        </nav>
         <p class="text-xs opacity-70">&copy; {copyrightYear} {BUSINESS_NAME}. All rights reserved.</p>
       </div>
     </footer>
