@@ -1,6 +1,6 @@
 # Haircut & beard guides
 
-Twenty researched Markdown articles live in `src/content/guides/`. The shared editorial template is `docs/article-template.md`; Astro validates frontmatter with `src/content.config.ts` and renders every article through `src/layouts/GuideLayout.astro`.
+Twenty-one Markdown articles live in `src/content/guides/`. The shared editorial template is `docs/article-template.md`; Astro validates frontmatter with `src/content.config.ts` and renders every article through `src/layouts/GuideLayout.astro`.
 
 ## Visibility
 
