@@ -46,7 +46,7 @@ We encourage you to bring everyday styling questions into your appointment. Show
 
 ## Plan professional maintenance around your style
 
-Book your next [beard trim with us](/beard-trim-richmond-va) when the outline needs refreshing or the shape takes more effort to arrange. A closely defined beard and a longer, softer shape have different maintenance needs, so use the finish you enjoy as your guide.
+Book your next [beard trim with us](/beard-trim-richmond-va/) when the outline needs refreshing or the shape takes more effort to arrange. A closely defined beard and a longer, softer shape have different maintenance needs, so use the finish you enjoy as your guide.
 
 We recommend appointments, and welcome walk-ins when available. If you want your haircut refreshed at the same visit, select both services when booking. Keeping the hair and beard in proportion gives your entire look a considered finish.
 

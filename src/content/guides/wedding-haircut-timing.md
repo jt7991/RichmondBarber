@@ -53,7 +53,7 @@ Your beard and haircut may look their best to you on different schedules. Tell u
 
 If you are changing from a beard to a shave, we recommend trying that appearance well ahead of the wedding. The same goes for an unfamiliar shave routine: give yourself time to see how you like the finish and how your skin responds.
 
-Our [beard trim service](/beard-trim-richmond-va) focuses on the facial hair you want to keep. Our [straight razor shave guide](/guides/hot-towel-straight-razor-shave) introduces the close finish and hot towel service. You can pair a haircut and beard trim during booking; select both services for the visit you have in mind.
+Our [beard trim service](/beard-trim-richmond-va/) focuses on the facial hair you want to keep. Our [straight razor shave guide](/guides/hot-towel-straight-razor-shave/) introduces the close finish and hot towel service. You can pair a haircut and beard trim during booking; select both services for the visit you have in mind.
 
 If you are arranging appointments for several people, call us at (804) 203-0221 to discuss availability before completing the group's itinerary. Confirming each guest's services and time helps everyone plan their day confidently.
 

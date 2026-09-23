@@ -54,7 +54,7 @@ For a change, try: “I like the front in this photo and the softer sides in thi
 
 For a grow-out, try: “I want the front and upper sides to get longer. Please show me any length you recommend removing before you cut it.”
 
-Adapt these examples for your [haircut visit with us in Richmond](/mens-haircut-richmond-va). Tell us when you have a question so we can keep the plan clear. At the finish, use the mirror to see the back and ask us how to style the cut at home. Save a photo if it is a result you want to repeat, and plan your next visit with us to keep the shape and finish maintained.
+Adapt these examples for your [haircut visit with us in Richmond](/mens-haircut-richmond-va/). Tell us when you have a question so we can keep the plan clear. At the finish, use the mirror to see the back and ask us how to style the cut at home. Save a photo if it is a result you want to repeat, and plan your next visit with us to keep the shape and finish maintained.
 
 ## Frequently asked questions
 

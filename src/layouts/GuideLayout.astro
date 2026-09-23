@@ -18,10 +18,10 @@ const date = data.date.toISOString();
 const dateLabel = new Intl.DateTimeFormat('en-US', { dateStyle: 'long', timeZone: 'UTC' }).format(data.date);
 const minutes = Math.max(1, Math.ceil((guide.body ?? '').split(/\s+/).length / 220));
 const services = {
-  haircut: { label: "Men’s haircuts in Richmond", href: '/mens-haircut-richmond-va' },
-  beard: { label: 'Beard trims in Richmond', href: '/beard-trim-richmond-va' },
-  shave: { label: 'Straight razor shaves in Richmond', href: '/straight-razor-shave-richmond-va' },
-  scissor: { label: 'Scissor cuts in Richmond', href: '/scissor-cut-richmond-va' },
+  haircut: { label: "Men’s haircuts in Richmond", href: '/mens-haircut-richmond-va/' },
+  beard: { label: 'Beard trims in Richmond', href: '/beard-trim-richmond-va/' },
+  shave: { label: 'Straight razor shaves in Richmond', href: '/straight-razor-shave-richmond-va/' },
+  scissor: { label: 'Scissor cuts in Richmond', href: '/scissor-cut-richmond-va/' },
 };
 const service = services[data.service];
 const schema = {

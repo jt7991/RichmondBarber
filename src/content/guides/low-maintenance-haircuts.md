@@ -12,14 +12,14 @@ related:
   - pomade-clay-paste
 sources:
   - title: "Our men's haircut services in Richmond"
-    url: "https://richmondbarbershop.com/mens-haircut-richmond-va"
+    url: "https://richmondbarbershop.com/mens-haircut-richmond-va/"
 ---
 
 ## Start with an easier morning and a polished cut
 
 An easy daily routine starts with a considered haircut. We look at length, shape, and the finish you want to wear so your morning styling has a clear direction. Professional maintenance then keeps the blend and outline looking intentional as the hair grows.
 
-Low maintenance does not require giving up a defined style. A short cut can feel effortless to arrange, while a longer shape can work beautifully with natural movement. Bring your preferences to [our Richmond haircut appointment](/mens-haircut-richmond-va), and let us handle the cutting and reshaping that preserve the result.
+Low maintenance does not require giving up a defined style. A short cut can feel effortless to arrange, while a longer shape can work beautifully with natural movement. Bring your preferences to [our Richmond haircut appointment](/mens-haircut-richmond-va/), and let us handle the cutting and reshaping that preserve the result.
 
 Describe your preferred routine to us. If you air-dry or like to use just one styling product, say so. If you enjoy using a dryer for a controlled finish, tell us that too. The goal is a haircut you feel confident recreating each morning, supported by regular professional care.
 
@@ -46,13 +46,13 @@ Reference photos are helpful when they show texture similar to yours and a finis
 
 ## Make your appointment produce a workable routine
 
-At your [haircut visit with us](/mens-haircut-richmond-va), explain your usual styling time, whether you use a dryer or comb, and how often you like to refresh your cut. We can use those details to discuss an upkeep plan that supports the style you choose.
+At your [haircut visit with us](/mens-haircut-richmond-va/), explain your usual styling time, whether you use a dryer or comb, and how often you like to refresh your cut. We can use those details to discuss an upkeep plan that supports the style you choose.
 
 Before leaving, ask us to explain the finish: when to apply product, where to place it, and whether the direction is set while drying. A clear routine helps you get more from the shape between appointments.
 
 After a week or two, note what takes time. If you keep restyling the same section, tell us at your next visit. The useful refinement might be more length there, less bulk elsewhere, or a different direction at the front. We can build on those details to keep the haircut working for you.
 
-For a broader look at appointment planning, see [how often to get a haircut](/guides/haircut-frequency).
+For a broader look at appointment planning, see [how often to get a haircut](/guides/haircut-frequency/).
 
 ## Frequently asked questions
 

@@ -12,7 +12,7 @@ related:
   - growing-out-short-hair
 sources:
   - title: "Our men's haircut services in Richmond"
-    url: "https://richmondbarbershop.com/mens-haircut-richmond-va"
+    url: "https://richmondbarbershop.com/mens-haircut-richmond-va/"
 ---
 
 ## Start with how precise you want the cut to stay
@@ -21,7 +21,7 @@ Two people with the same haircut can reasonably choose different appointment sch
 
 A close cut illustrates the difference between daily ease and professional upkeep. There may be little to arrange in the morning, while the blend and outline still benefit from regular attention in our chair. We approach that maintenance as part of the design: the next visit should support the finish you enjoy wearing.
 
-Think about the feature you want to maintain: sharp contrast, manageable bulk, a clear ear outline, or a longer shape that falls into place. We can use that priority to guide your next appointment. Explore [our men's haircut services](/mens-haircut-richmond-va) to plan your visit.
+Think about the feature you want to maintain: sharp contrast, manageable bulk, a clear ear outline, or a longer shape that falls into place. We can use that priority to guide your next appointment. Explore [our men's haircut services](/mens-haircut-richmond-va/) to plan your visit.
 
 ## Use these intervals as planning estimates
 
@@ -50,7 +50,7 @@ Professional upkeep gives us an opportunity to refine the details that make a ha
 
 If you prefer a softer outline, we can discuss a shape you enjoy at multiple lengths. If you are growing your hair, tell us which areas need to gain length so that each maintenance visit supports that progress.
 
-For travel, interviews, or events, tell us the date and when you personally like your hair best after a familiar cut. Planning a change ahead of time gives you a chance to wear and refine it before the occasion. Book your next [haircut with us in Richmond](/mens-haircut-richmond-va) with that timing in mind.
+For travel, interviews, or events, tell us the date and when you personally like your hair best after a familiar cut. Planning a change ahead of time gives you a chance to wear and refine it before the occasion. Book your next [haircut with us in Richmond](/mens-haircut-richmond-va/) with that timing in mind.
 
 ## Frequently asked questions
 

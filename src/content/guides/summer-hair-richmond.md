@@ -42,7 +42,7 @@ Bring us a photo of your usual hair after an ordinary day, along with a referenc
 
 We encourage you to choose a style with the movement you enjoy. If you love your natural waves, tell us you want to keep them visible. If a more arranged part is your signature, explain how you like to wear it so we can discuss the length and outline around that finish.
 
-Our styling selection includes Prospectors Diamond pomade, Tip Top Clay, Prospectors Coal Mine, Suavecito texture powder, and Prospectors Styling Cream. Tell us the finish you prefer and the products you already enjoy. Prospectors Coal Mine is our best seller, and our [product guide](/guides/pomade-clay-paste) gives you a starting point for the conversation.
+Our styling selection includes Prospectors Diamond pomade, Tip Top Clay, Prospectors Coal Mine, Suavecito texture powder, and Prospectors Styling Cream. Tell us the finish you prefer and the products you already enjoy. Prospectors Coal Mine is our best seller, and our [product guide](/guides/pomade-clay-paste/) gives you a starting point for the conversation.
 
 If hats are part of your daily routine, let us know. We can discuss how you want your hair to sit when the hat comes off and how much arranging you want to do. The same goes for workouts and outdoor plans: those everyday details belong in the haircut brief.
 
@@ -50,7 +50,7 @@ If hats are part of your daily routine, let us know. We can discuss how you want
 
 The [American Academy of Dermatology’s summer hair guidance](https://www.aad.org/public/everyday-care/hair-scalp-care/hair/summer-hair-care) recommends a wide-brimmed hat for sun exposure and considering a swim cap for pools. It also advises rinsing after swimming, using a swimmers’ shampoo to remove chlorine, and conditioning afterward. Those measures address exposure and care; choosing a shorter cut does not replace them.
 
-For a pool-heavy trip, pack the care products you already enjoy using. Book your [haircut with us before traveling](/mens-haircut-richmond-va) and tell us about the trip, your preferred length, and the finish you want while away. A fresh shape and a familiar routine make a useful combination.
+For a pool-heavy trip, pack the care products you already enjoy using. Book your [haircut with us before traveling](/mens-haircut-richmond-va/) and tell us about the trip, your preferred length, and the finish you want while away. A fresh shape and a familiar routine make a useful combination.
 
 ## Frequently asked questions
 

@@ -21,7 +21,7 @@ sources:
 
 Your first visit is a chance for us to understand the look you enjoy and the details that make a haircut feel right to you. Start with the service you want: a haircut, scissor cut, beard trim, or straight razor shave. If you would like a haircut and beard trim together, select both when booking.
 
-Our [men's haircut service](/mens-haircut-richmond-va) is a useful place to start. For a longer shape or a natural finish, you can also explore our scissor cut option on the [service menu](/#services). If you have questions about which appointment to choose, call us at (804) 203-0221.
+Our [men's haircut service](/mens-haircut-richmond-va/) is a useful place to start. For a longer shape or a natural finish, you can also explore our scissor cut option on the [service menu](/#services). If you have questions about which appointment to choose, call us at (804) 203-0221.
 
 We recommend booking ahead and welcome walk-ins when availability allows. Once you reserve a visit, check the service, date, and time in your confirmation so you can arrive looking forward to your appointment.
 

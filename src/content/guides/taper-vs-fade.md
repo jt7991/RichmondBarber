@@ -44,13 +44,13 @@ The top completes the design. A taper can accompany a short crop, a side part, o
 
 For example, “a low taper, leaving enough on top to sweep sideways” is a starting point. Add whether you want hair covering part of your ears and whether the neckline should look softly blended or sharply outlined. If you are growing the top, say that before cutting begins.
 
-For help choosing where the short section should sit, explore [our low, mid, and high fade guide](/guides/low-mid-high-fade).
+For help choosing where the short section should sit, explore [our low, mid, and high fade guide](/guides/low-mid-high-fade/).
 
 ## Choose by the result you want between visits
 
 Consider how you want the cut to look after the first few days. A very close finish creates a specific contrast that changes as hair grows. Keeping more length may suit someone comfortable with a softer outline, but it is not a promise of a fixed number of extra weeks between appointments.
 
-Before your [haircut appointment with us in Richmond](/mens-haircut-richmond-va), save one front-facing reference and one side or back view. Then consider:
+Before your [haircut appointment with us in Richmond](/mens-haircut-richmond-va/), save one front-facing reference and one side or back view. Then consider:
 
 - Whether you want visible hair everywhere or a skin-close area.
 - Whether the blend should stay at the edges or continue around the head.

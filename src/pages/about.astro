@@ -5,7 +5,7 @@ import { Image } from "astro:assets";
 import interior from "../assets/barbershop_interior.webp";
 import { BUSINESS_DESCRIPTION, BUSINESS_NAME, BOOKING_URL, GOOGLE_PROFILE_URL, SERVICES, WEBSITE_URL, BARBERS } from "../data/business";
 import "../styles/global.css";
-const haircut = SERVICES.find((service) => service.path === "/mens-haircut-richmond-va")!;
+const haircut = SERVICES.find((service) => service.path === "/mens-haircut-richmond-va/")!;
 const haircutBookingUrl = `${BOOKING_URL}/UXBCSR3DPEYGVY3OBVTLUFPX`;
 const canonical = `${WEBSITE_URL}/about/`;
 const schema = { "@context": "https://schema.org", "@type": "AboutPage", "@id": `${canonical}#page`, url: canonical, name: `About ${BUSINESS_NAME}`, description: BUSINESS_DESCRIPTION, about: { "@id": `${WEBSITE_URL}/#business` }, mentions: BARBERS.map((barber) => ({ "@type": "Person", "@id": `${canonical}#${barber.id}`, name: barber.name, jobTitle: "Barber", worksFor: { "@id": `${WEBSITE_URL}/#business` } })) };

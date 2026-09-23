@@ -63,7 +63,7 @@ For softer control, we carry **Prospectors Styling Cream**. Its [water-based for
 
 ## Bring the finished look into your daily routine
 
-During your [haircut with us](/mens-haircut-richmond-va), tell us how you usually get ready. Do you enjoy a precise combed style, or would you rather shape the front with your fingers and head out? That answer helps us connect the cut and the product.
+During your [haircut with us](/mens-haircut-richmond-va/), tell us how you usually get ready. Do you enjoy a precise combed style, or would you rather shape the front with your fingers and head out? That answer helps us connect the cut and the product.
 
 Ask us to explain the amount to use, the starting moisture level, and the direction to work it through. Keep washing and styling simple between visits, and let us maintain the cut, blend, and outline at your next appointment. Quality barbering and a product you enjoy using make a strong combination.
 

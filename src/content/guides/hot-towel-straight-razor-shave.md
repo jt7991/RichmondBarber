@@ -23,7 +23,7 @@ A close shave gives your appearance a different character from a beard trim. It 
 
 Our service is $50. You can review our [service menu](/#services) and confirm the current price when booking. If you would like a haircut as well, include both services when arranging your appointment so your visit reflects the complete result you have in mind.
 
-If you prefer to keep your beard, our [beard trim service](/beard-trim-richmond-va) is the place to start. We can discuss the length and outline you want to preserve, while a shave is the choice for a close finish on the areas being shaved.
+If you prefer to keep your beard, our [beard trim service](/beard-trim-richmond-va/) is the place to start. We can discuss the length and outline you want to preserve, while a shave is the choice for a close finish on the areas being shaved.
 
 ## Tell us the finish you are looking for
 
@@ -45,9 +45,9 @@ For your arrival, ask us how to prepare your facial hair rather than shaving it 
 
 A shave can be a finishing touch before an important event or simply a service you choose for yourself. If your visit is connected to a wedding, interview, or photographs, tell us the date when booking so you can plan the appointment around the rest of your day.
 
-For an unfamiliar look or shave routine, we recommend trying it ahead of the occasion. You will have a chance to see the result, notice how your skin feels afterward, and decide when you like the finish best. Our [wedding haircut and beard trim guide](/guides/wedding-haircut-timing) can help you plan that timing.
+For an unfamiliar look or shave routine, we recommend trying it ahead of the occasion. You will have a chance to see the result, notice how your skin feels afterward, and decide when you like the finish best. Our [wedding haircut and beard trim guide](/guides/wedding-haircut-timing/) can help you plan that timing.
 
-At the end of your visit, ask us about caring for your skin after the service and maintaining the appearance you enjoy. For directions and parking before you arrive, see our [first-visit guide](/guides/first-visit-richmond-barbershop).
+At the end of your visit, ask us about caring for your skin after the service and maintaining the appearance you enjoy. For directions and parking before you arrive, see our [first-visit guide](/guides/first-visit-richmond-barbershop/).
 
 ## Frequently asked questions
 

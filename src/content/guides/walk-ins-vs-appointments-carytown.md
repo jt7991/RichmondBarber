@@ -22,7 +22,7 @@ Sometimes a haircut is part of a carefully planned week. Sometimes you are in Ca
 
 We recommend booking if you have a specific window in mind. An appointment gives your visit a place in the day, whether you are fitting it around work or getting ready for an occasion. It also lets you select the services you want before arriving.
 
-Our [men's haircut page](/mens-haircut-richmond-va) introduces the service, and our booking calendar shows current openings. You can reserve a same-day appointment when a suitable time is available; planning ahead does not have to mean planning weeks ahead.
+Our [men's haircut page](/mens-haircut-richmond-va/) introduces the service, and our booking calendar shows current openings. You can reserve a same-day appointment when a suitable time is available; planning ahead does not have to mean planning weeks ahead.
 
 ## Choose the visit that works for you
 
@@ -46,7 +46,7 @@ Once you find a time, complete the reservation so the appointment is confirmed. 
 
 ## Arrive ready to enjoy your visit
 
-You will find us at 2820 W Cary St STE C. Allow time to park and walk over so your appointment begins with the practical details already handled. Our [first-visit guide](/guides/first-visit-richmond-barbershop) covers directions and nearby parking options.
+You will find us at 2820 W Cary St STE C. Allow time to park and walk over so your appointment begins with the practical details already handled. Our [first-visit guide](/guides/first-visit-richmond-barbershop/) covers directions and nearby parking options.
 
 If you are coming before work, travel, or another commitment, consider the whole visit when choosing your time. Include the journey to us and wherever you need to be afterward. That gives you room to enjoy your haircut and check the finished look before heading out.
 

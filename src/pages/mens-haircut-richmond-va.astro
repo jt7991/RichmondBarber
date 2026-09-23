@@ -9,8 +9,8 @@ import { Image } from "astro:assets";
 import { galleryPhotos } from "../data/gallery";
 import { BOOKING_URL, BUSINESS_NAME, WEBSITE_URL, SERVICES } from "../data/business";
 
-const service = SERVICES.find((item) => item.path === "/mens-haircut-richmond-va")!;
-const pageUrl = `${WEBSITE_URL}/mens-haircut-richmond-va`;
+const service = SERVICES.find((item) => item.path === "/mens-haircut-richmond-va/")!;
+const pageUrl = `${WEBSITE_URL}/mens-haircut-richmond-va/`;
 const sidePart = galleryPhotos.find((photo) => photo.slug === "classic-side-part")!;
 const curlyTaper = galleryPhotos.find((photo) => photo.slug === "curly-taper")!;
 const examples = [
@@ -75,7 +75,7 @@ const breadcrumbSchema = {
   canonical={pageUrl}
 >
   <Fragment slot="head">
-    <script type="application/ld+json" set:html={JSON.stringify(serviceSchema("/mens-haircut-richmond-va"))} />
+    <script type="application/ld+json" set:html={JSON.stringify(serviceSchema("/mens-haircut-richmond-va/"))} />
     <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
     <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
   </Fragment>
@@ -130,7 +130,7 @@ const breadcrumbSchema = {
           </p>
           <p class="text-lg leading-relaxed">
             You can also pair your cut with a
-            <a href="/beard-trim-richmond-va" class="underline font-semibold">beard trim in Richmond, VA</a>
+            <a href="/beard-trim-richmond-va/" class="underline font-semibold">beard trim in Richmond, VA</a>
             for a full service appointment.
           </p>
         </div>

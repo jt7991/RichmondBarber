@@ -41,11 +41,11 @@ If you love movement and a little more length, make that part of your brief. We 
 
 Tell us where you want to preserve fullness and show us the direction you prefer for the fringe. We can use a reference photo to discuss those details while adapting the shape to your own hair. Your haircut should feel personal, with deliberate proportions and a clear finish.
 
-We also help you think through the finish you want from styling. Our product selection includes Prospectors Diamond pomade, Tip Top Clay, Prospectors Coal Mine, Suavecito texture powder, and Prospectors Styling Cream. Our [pomade, clay, and paste guide](/guides/pomade-clay-paste) introduces the options so you can bring a clear preference to your appointment.
+We also help you think through the finish you want from styling. Our product selection includes Prospectors Diamond pomade, Tip Top Clay, Prospectors Coal Mine, Suavecito texture powder, and Prospectors Styling Cream. Our [pomade, clay, and paste guide](/guides/pomade-clay-paste/) introduces the options so you can bring a clear preference to your appointment.
 
 ## Build a routine you can repeat
 
-At your [haircut appointment with us](/mens-haircut-richmond-va), tell us whether you prefer a natural finish or a more styled look. Discuss the direction to arrange your hair and the amount of daily effort you enjoy. A simple routine paired with a considered haircut can make getting ready feel straightforward.
+At your [haircut appointment with us](/mens-haircut-richmond-va/), tell us whether you prefer a natural finish or a more styled look. Discuss the direction to arrange your hair and the amount of daily effort you enjoy. A simple routine paired with a considered haircut can make getting ready feel straightforward.
 
 For hair that is thinning or falling out, the AAD advises gentle washing and conditioning, gentle combing, and low heat when using a dryer. Avoid repeatedly pulling the hair tightly into place. These are care measures, not a promise of regrowth. [Read the AAD’s hair-care advice](https://www.aad.org/public/diseases/hair-loss/treatment/tips).
 

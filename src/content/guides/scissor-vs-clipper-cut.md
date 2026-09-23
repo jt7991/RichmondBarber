@@ -43,7 +43,7 @@ If you specifically prefer a tool for comfort or sensory reasons, that is useful
 
 Our haircut service is **$40**, and our scissor cut is **$60**. Choose around the work and finish you want, and check our live booking menu for current pricing. If you are unsure which service fits, contact us so we can help you select the right appointment.
 
-Explore [our men's haircut service](/mens-haircut-richmond-va) or choose a scissor cut from [our service menu](/#services). For longer hair, maintaining a grown-out shape, or a substantial change, tell us your current length and goal when confirming your booking.
+Explore [our men's haircut service](/mens-haircut-richmond-va/) or choose a scissor cut from [our service menu](/#services). For longer hair, maintaining a grown-out shape, or a substantial change, tell us your current length and goal when confirming your booking.
 
 Many haircuts combine techniques. Our consultation gives us the opportunity to establish the design, discuss your preferred finish, and confirm the details that matter to you.
 

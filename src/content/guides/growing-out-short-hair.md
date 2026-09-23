@@ -44,7 +44,7 @@ Explain what you want to keep and ask us what the proposed trim would accomplish
 
 We can discuss where a small refinement would make the current shape easier to wear. Keeping the sides longer supports an all-over grow-out; preserving the front supports a longer sweep. Agreeing on those priorities lets us focus professional attention where it will serve the next stage.
 
-For booking guidance, explore [our scissor cut comparison](/guides/scissor-vs-clipper-cut) and [service menu](/#services). Contact us if you need help choosing the right appointment for your current length and the work you want.
+For booking guidance, explore [our scissor cut comparison](/guides/scissor-vs-clipper-cut/) and [service menu](/#services). Contact us if you need help choosing the right appointment for your current length and the work you want.
 
 ## Update your routine as more length arrives
 

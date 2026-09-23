@@ -23,7 +23,7 @@ We welcome haircut guests **ages 8 and older** at Richmond Barbershop. A fresh h
 
 Our general haircut service is $40. Check our booking menu for the current service selection and price, or call us at (804) 203-0221 if you would like help arranging the appointment. We recommend reserving a time that fits comfortably into your child's day.
 
-If you are bringing siblings or planning a parent-and-child visit, confirm an appointment for each person. That gives each haircut a place in the schedule. You can explore our [haircut service](/mens-haircut-richmond-va) before choosing your visit.
+If you are bringing siblings or planning a parent-and-child visit, confirm an appointment for each person. That gives each haircut a place in the schedule. You can explore our [haircut service](/mens-haircut-richmond-va/) before choosing your visit.
 
 ## Give your child a voice in the look
 
@@ -47,7 +47,7 @@ Before a first visit, we suggest explaining the basic parts of a haircut: sittin
 
 If clipper sounds, a cape, or another part of a haircut has been difficult in the past, call us before booking. Tell us what has helped previously so we can discuss the visit and any practical arrangements with you.
 
-We also recommend leaving some room around the appointment rather than fitting it tightly between other commitments. Allow time to park, walk over, and arrive ready. Our [first-visit guide](/guides/first-visit-richmond-barbershop) covers our Carytown address and nearby parking options.
+We also recommend leaving some room around the appointment rather than fitting it tightly between other commitments. Allow time to park, walk over, and arrive ready. Our [first-visit guide](/guides/first-visit-richmond-barbershop/) covers our Carytown address and nearby parking options.
 
 ## Choose a finish that works beyond the chair
 
@@ -55,7 +55,7 @@ We want the haircut conversation to include your child's everyday routine. Tell 
 
 Before cutting begins, identify any area that should stay longer, such as the fringe or crown. At the end, check the result together and ask us how to arrange the finish at home. We can use that conversation as the starting point for future visits.
 
-A photo of the finished haircut is a helpful reference to keep. When you return, tell us which details your child enjoyed and whether they would like anything adjusted. Our [guide to easy everyday haircuts](/guides/low-maintenance-haircuts) offers more ideas to discuss with us.
+A photo of the finished haircut is a helpful reference to keep. When you return, tell us which details your child enjoyed and whether they would like anything adjusted. Our [guide to easy everyday haircuts](/guides/low-maintenance-haircuts/) offers more ideas to discuss with us.
 
 ## Frequently asked questions
 

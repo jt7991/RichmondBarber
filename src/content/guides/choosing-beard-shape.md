@@ -42,15 +42,15 @@ A beard's shape is more than its bottom edge. A high natural cheek line and a lo
 
 Discuss the neckline with us while your head is in its normal position. The outline should make sense with your face relaxed and your beard arranged as you usually wear it. Explain the level of definition and closeness you enjoy.
 
-For the mustache, decide whether comfort, fullness, or styling is your priority. If hair over the lip bothers you, say so. If you are growing the ends, identify those areas specifically. Our [professional beard trim guide](/guides/professional-beard-trim) includes a consultation checklist for each part.
+For the mustache, decide whether comfort, fullness, or styling is your priority. If hair over the lip bothers you, say so. If you are growing the ends, identify those areas specifically. Our [professional beard trim guide](/guides/professional-beard-trim/) includes a consultation checklist for each part.
 
 ## Keep the finish polished with professional maintenance
 
 A great beard shape should fit the way you like to get ready. Tell us how much combing and arranging you enjoy. We can discuss the difference between a precisely defined outline and a fuller, softer shape, along with the professional upkeep that keeps your preferred finish looking intentional.
 
-Bring your preferred reference to your [beard trim with us](/beard-trim-richmond-va), along with a photo of your current beard if it shows a look you liked. We can talk through what you want today and what you are growing toward. That gives each visit a clear purpose.
+Bring your preferred reference to your [beard trim with us](/beard-trim-richmond-va/), along with a photo of your current beard if it shows a look you liked. We can talk through what you want today and what you are growing toward. That gives each visit a clear purpose.
 
-Take a photo after your trim so you have a personal reference for your next visit. Tell us what you enjoyed most about the shape and how it felt during your daily routine. Our [beard maintenance guide](/guides/beard-maintenance) covers everyday care between appointments.
+Take a photo after your trim so you have a personal reference for your next visit. Tell us what you enjoyed most about the shape and how it felt during your daily routine. Our [beard maintenance guide](/guides/beard-maintenance/) covers everyday care between appointments.
 
 ## Frequently asked questions
 

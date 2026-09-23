@@ -27,7 +27,7 @@ Tell us how you normally style your hair. If you air-dry, that belongs in the co
 
 Show us where you want the fringe to finish when you wear it normally. We can discuss the difference between your hair stretched out and resting in its natural pattern. A clear target for the finished dry length helps us understand what you want to preserve.
 
-Tell us whether you want the ears exposed, softly covered, or framed by more length. At the back, distinguish between a tidy neckline and a shorter overall shape. If you are [growing out a short haircut](/guides/growing-out-short-hair), let us know so we can keep that direction central to your appointment.
+Tell us whether you want the ears exposed, softly covered, or framed by more length. At the back, distinguish between a tidy neckline and a shorter overall shape. If you are [growing out a short haircut](/guides/growing-out-short-hair/), let us know so we can keep that direction central to your appointment.
 
 | Decision | Useful way to describe it |
 | --- | --- |
@@ -42,7 +42,7 @@ We approach the choice of cutting tools through the result you want. A close tap
 
 When you want less bulk, show us where the shape feels too wide or difficult to arrange. We can discuss those areas individually while keeping the fullness you enjoy elsewhere. That detail helps turn a general request for less weight into a more precise vision for your haircut.
 
-Our [scissor-versus-clipper guide](/guides/scissor-vs-clipper-cut) introduces the finish each approach can support. Explore our [haircut services](/mens-haircut-richmond-va) and contact us if you would like help choosing the appointment for your current length and desired change.
+Our [scissor-versus-clipper guide](/guides/scissor-vs-clipper-cut/) introduces the finish each approach can support. Explore our [haircut services](/mens-haircut-richmond-va/) and contact us if you would like help choosing the appointment for your current length and desired change.
 
 ## Keep care separate from styling expectations
 

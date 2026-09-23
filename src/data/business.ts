@@ -49,7 +49,7 @@ export const SERVICE_AREAS = [
 export const SERVICES = [
   {
     name: "Haircut",
-    path: "/mens-haircut-richmond-va",
+    path: "/mens-haircut-richmond-va/",
     price: 40,
     durationMinutes: 40,
     description:
@@ -57,7 +57,7 @@ export const SERVICES = [
   },
   {
     name: "Scissor Cut",
-    path: "/scissor-cut-richmond-va",
+    path: "/scissor-cut-richmond-va/",
     price: 60,
     durationMinutes: 40,
     description:
@@ -65,14 +65,14 @@ export const SERVICES = [
   },
   {
     name: "Beard Trim",
-    path: "/beard-trim-richmond-va",
+    path: "/beard-trim-richmond-va/",
     price: 40,
     durationMinutes: 40,
     description: "Beard shaping with a hot towel and straight-razor line-up.",
   },
   {
     name: "Straight Razor Shave",
-    path: "/straight-razor-shave-richmond-va",
+    path: "/straight-razor-shave-richmond-va/",
     price: 50,
     durationMinutes: 40,
     description:

@@ -7,8 +7,8 @@ import "../styles/global.css";
 import beard_guy from "../assets/beard_guy.webp";
 import { BOOKING_URL, BUSINESS_NAME, WEBSITE_URL, SERVICES } from "../data/business";
 
-const service = SERVICES.find((item) => item.path === "/beard-trim-richmond-va")!;
-const pageUrl = `${WEBSITE_URL}/beard-trim-richmond-va`;
+const service = SERVICES.find((item) => item.path === "/beard-trim-richmond-va/")!;
+const pageUrl = `${WEBSITE_URL}/beard-trim-richmond-va/`;
 
 const faqItems = [
   {
@@ -67,7 +67,7 @@ const breadcrumbSchema = {
   canonical={pageUrl}
 >
   <Fragment slot="head">
-    <script type="application/ld+json" set:html={JSON.stringify(serviceSchema("/beard-trim-richmond-va"))} />
+    <script type="application/ld+json" set:html={JSON.stringify(serviceSchema("/beard-trim-richmond-va/"))} />
     <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
     <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
   </Fragment>
@@ -116,7 +116,7 @@ const breadcrumbSchema = {
           </p>
           <p class="text-lg leading-relaxed">
             Need a full cut too? Explore our
-            <a href="/mens-haircut-richmond-va" class="underline font-semibold">men's haircut in Richmond, VA</a>
+            <a href="/mens-haircut-richmond-va/" class="underline font-semibold">men's haircut in Richmond, VA</a>
             page to plan your appointment.
           </p>
         </div>

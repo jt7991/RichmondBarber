@@ -43,7 +43,7 @@ Height and shortest length are separate decisions. A low skin fade can expose sk
 
 We also need to know how you wear the top. Tell us whether the front falls forward, sweeps sideways, or is styled upward. Discuss whether you want a connected transition or an intentional difference between the top and sides. A high fade does not automatically mean a tall top, and a low fade does not require long hair.
 
-For the terminology behind these choices, explore [our taper versus fade guide](/guides/taper-vs-fade).
+For the terminology behind these choices, explore [our taper versus fade guide](/guides/taper-vs-fade/).
 
 ## Plan for everyday wear and future changes
 
@@ -51,7 +51,7 @@ Tell us how defined you want the fade to stay between visits. Starting length, h
 
 If you are considering growing out the sides, tell us before choosing a high placement. Length removed from the upper sides will need to return before it can become part of a longer shape. If you are trying a new look, we can discuss a lower starting point and refine the height together.
 
-Bring reference images from the side and back to your [haircut appointment with us in Richmond](/mens-haircut-richmond-va). Those angles help us understand the complete look. Identify the shortest area you like, and we can connect that preference to a polished overall design.
+Bring reference images from the side and back to your [haircut appointment with us in Richmond](/mens-haircut-richmond-va/). Those angles help us understand the complete look. Identify the shortest area you like, and we can connect that preference to a polished overall design.
 
 ## Frequently asked questions
 

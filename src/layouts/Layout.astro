@@ -29,7 +29,7 @@ const defaultDescription =
 const {
   title = defaultTitle,
   description = defaultDescription,
-  canonical = Astro.url.href,
+  canonical = new URL(Astro.url.pathname, WEBSITE_URL).href,
   ogType = 'website',
   socialImage = `${WEBSITE_URL}${logoImage.src}`,
   socialImageAlt = 'Richmond Barbershop black lettering and yellow banner logo',

@@ -36,7 +36,7 @@ For us, a great haircut starts with the details that matter to you. The length a
 
 We want you to feel good about your hair when you leave and comfortable wearing it in everyday life. That means your request should include more than a style name. Tell us whether you prefer a crisp finish or softer movement, whether you style with product, and which parts of your last haircut you particularly liked.
 
-A photo of your own hair at a favorite length is a helpful starting point. An inspiration photo works too: point out the details you love so we can talk about the shape you want for your hair. Our [haircut consultation guide](/guides/how-to-ask-for-a-haircut) helps you prepare that conversation.
+A photo of your own hair at a favorite length is a helpful starting point. An inspiration photo works too: point out the details you love so we can talk about the shape you want for your hair. Our [haircut consultation guide](/guides/how-to-ask-for-a-haircut/) helps you prepare that conversation.
 
 ## Choose your service around the finished look
 
@@ -44,7 +44,7 @@ Our haircut service is a starting point for classic cuts and modern styles. Our 
 
 For your beard, tell us whether you want to preserve fullness, refine the outline, or make a more noticeable change. A beard trim and a straight razor shave serve different goals: one shapes the facial hair you keep, while the other offers a close finish on the areas being shaved.
 
-We are happy to help you choose the appropriate service. Call us at (804) 203-0221 with your questions, or explore our [men's haircut service](/mens-haircut-richmond-va) before reserving your appointment.
+We are happy to help you choose the appropriate service. Call us at (804) 203-0221 with your questions, or explore our [men's haircut service](/mens-haircut-richmond-va/) before reserving your appointment.
 
 ## Make your next visit part of feeling your best
 

@@ -14,7 +14,7 @@ sources:
   - title: "American Academy of Dermatology: Healthy beard guidance"
     url: "https://www.aad.org/public/everyday-care/skin-care-secrets/face/healthy-beard"
   - title: "Richmond Barbershop beard trim service"
-    url: "https://richmondbarbershop.com/beard-trim-richmond-va"
+    url: "https://richmondbarbershop.com/beard-trim-richmond-va/"
 ---
 
 ## Tell us what a great beard looks like to you
@@ -38,15 +38,15 @@ We encourage you to think about each part of the beard individually. Keeping len
 
 Tell us how you wear your beard during an ordinary day. If you like a carefully arranged finish, we can discuss that look. If you prefer a simpler routine, make that part of the brief. A polished beard should work with your habits as well as your appearance.
 
-Our [guide to choosing a beard shape](/guides/choosing-beard-shape) helps you explore those options before your appointment.
+Our [guide to choosing a beard shape](/guides/choosing-beard-shape/) helps you explore those options before your appointment.
 
 ## Book your beard trim in Carytown
 
-Our [professional beard trim](/beard-trim-richmond-va) is **$40**. You can book it alongside a haircut for a coordinated haircut and beard appointment, or choose a beard trim on its own when the outline needs attention.
+Our [professional beard trim](/beard-trim-richmond-va/) is **$40**. You can book it alongside a haircut for a coordinated haircut and beard appointment, or choose a beard trim on its own when the outline needs attention.
 
-For a traditional shave experience, we also offer a [hot towel straight razor shave](/guides/hot-towel-straight-razor-shave) as a separate service. Select the services you want in our booking menu so your reservation reflects the visit you have in mind.
+For a traditional shave experience, we also offer a [hot towel straight razor shave](/guides/hot-towel-straight-razor-shave/) as a separate service. Select the services you want in our booking menu so your reservation reflects the visit you have in mind.
 
-We recommend appointments and welcome walk-ins when available. You will find us at 2820 W Cary St, Suite C, in Carytown. If you are visiting us for the first time, our [first-visit guide](/guides/first-visit-richmond-barbershop) covers the practical details.
+We recommend appointments and welcome walk-ins when available. You will find us at 2820 W Cary St, Suite C, in Carytown. If you are visiting us for the first time, our [first-visit guide](/guides/first-visit-richmond-barbershop/) covers the practical details.
 
 ## Enjoy the finish beyond your appointment
 
@@ -54,7 +54,7 @@ Let us know about sensitive areas before your trim and tell us how close you lik
 
 When reviewing the finished look, consider the front and both sides. Notice how the beard connects visually with your haircut and whether the mustache length feels right. This is also a good time to talk about your preferred combing direction and the finish you want to recreate each morning.
 
-For daily care, the [American Academy of Dermatology recommends cleansing the beard and skin, suitable moisturizing, and combing](https://www.aad.org/public/everyday-care/skin-care-secrets/face/healthy-beard). We bring those everyday considerations into our [beard maintenance guide](/guides/beard-maintenance), so you can keep your routine focused between professional trims.
+For daily care, the [American Academy of Dermatology recommends cleansing the beard and skin, suitable moisturizing, and combing](https://www.aad.org/public/everyday-care/skin-care-secrets/face/healthy-beard). We bring those everyday considerations into our [beard maintenance guide](/guides/beard-maintenance/), so you can keep your routine focused between professional trims.
 
 ## Frequently asked questions
 
