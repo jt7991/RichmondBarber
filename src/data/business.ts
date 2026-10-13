@@ -84,16 +84,46 @@ export const SERVICES = [
 // Update this data alongside Square when the menu changes.
 export const SERVICE_DETAILS_VERIFIED = "2026-09-14";
 export const HAIRCUT_BEARD_COMBO = { name: "Haircut and Beard Trim", price: 70, durationMinutes: 40 };
+
+export type FaqGuideLink = {
+  href: string;
+  before: string;
+  label: string;
+  after: string;
+};
+
+export type FaqItem = {
+  question: string;
+  answer: string;
+  guide?: FaqGuideLink;
+};
+
+export function faqPlainAnswer(faq: FaqItem) {
+  if (!faq.guide) return faq.answer;
+  return `${faq.answer}${faq.guide.before}${faq.guide.label}${faq.guide.after}`;
+}
+
+export function faqMarkdownAnswer(faq: FaqItem) {
+  if (!faq.guide) return faq.answer;
+  return `${faq.answer}${faq.guide.before}[${faq.guide.label}](${WEBSITE_URL}${faq.guide.href})${faq.guide.after}`;
+}
+
 export const BARBERS = [
   { name: "Joe", id: "joe", bookingUrl: `${BOOKING_URL}/PUBAN2KEYN7APOI3Q642GIBN` },
   { name: "Sam", id: "sam", bookingUrl: `${BOOKING_URL}/PKLMKZDNZQOUDJBFDN5OEHHR` },
 ];
 
-export const FAQS = [
+export const FAQS: FaqItem[] = [
   {
     question: "Do I need to make an appointment at Richmond Barbershop?",
     answer:
       "Appointments at Richmond Barbershop are highly recommended. Book online through Square. Walk-ins are welcome when available.",
+    guide: {
+      href: "/guides/walk-ins-vs-appointments-carytown/",
+      before: " Our guide to ",
+      label: "walk-ins versus appointments",
+      after: " explains how to choose.",
+    },
   },
   {
     question: "Do you have onsite parking?",
@@ -103,6 +133,12 @@ export const FAQS = [
   {
     question: "What ages are welcome?",
     answer: "We offer haircuts for ages 8+.",
+    guide: {
+      href: "/guides/kids-haircuts-richmond-va/",
+      before: " Our ",
+      label: "kids' haircuts guide",
+      after: " covers what to expect for ages 8 and up.",
+    },
   },
   {
     question: "What is your cancellation policy?",
@@ -121,5 +157,11 @@ export const FAQS = [
   {
     question: "How much do services cost at Richmond Barbershop?",
     answer: `${SERVICES.map((service) => `${service.name}: $${service.price}`).join("; ")}. ${HAIRCUT_BEARD_COMBO.name}: $${HAIRCUT_BEARD_COMBO.price}. All prices are in USD. Check the Square booking menu for current prices and availability.`,
+    guide: {
+      href: "/guides/haircut-cost-richmond-va/",
+      before: " Our guide to ",
+      label: "what a haircut costs in Richmond",
+      after: " walks through these services.",
+    },
   },
 ];

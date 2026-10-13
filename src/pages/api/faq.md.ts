@@ -6,6 +6,7 @@ import {
   FAQS,
   PHONE_DISPLAY,
   WEBSITE_URL,
+  faqMarkdownAnswer,
 } from "../../data/business";
 
 export async function GET() {
@@ -17,7 +18,7 @@ Frequently asked questions about ${BUSINESS_NAME} services, appointments, and po
 
 ${FAQS.map((faq, index) => `### ${index + 1}. ${faq.question}
 
-${faq.answer}
+${faqMarkdownAnswer(faq)}
 
 `).join('')}
 

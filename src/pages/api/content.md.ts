@@ -8,6 +8,7 @@ import {
   PHONE_DISPLAY,
   SERVICE_AREAS,
   WEBSITE_URL,
+  faqMarkdownAnswer,
 } from "../../data/business";
 
 export async function GET() {
@@ -41,7 +42,7 @@ ${FAQS
   .map(
     (faq, index) => `### ${index + 1}. ${faq.question}
 
-${faq.answer}
+${faqMarkdownAnswer(faq)}
 
 `,
   )

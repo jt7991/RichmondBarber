@@ -38,10 +38,42 @@ for (const slug of slugs) {
     }
   }
 }
-for (const page of ['index.html', 'mens-haircut-richmond-va/index.html', 'beard-trim-richmond-va/index.html']) {
+const contextualGuides = {
+  'index.html': [
+    '/guides/taper-vs-fade/',
+    '/guides/how-to-ask-for-a-haircut/',
+    '/guides/choosing-beard-shape/',
+    '/guides/walk-ins-vs-appointments-carytown/',
+    '/guides/kids-haircuts-richmond-va/',
+    '/guides/haircut-cost-richmond-va/',
+  ],
+  'mens-haircut-richmond-va/index.html': [
+    '/guides/taper-vs-fade/',
+    '/guides/low-mid-high-fade/',
+    '/guides/haircut-frequency/',
+    '/guides/how-to-ask-for-a-haircut/',
+  ],
+  'beard-trim-richmond-va/index.html': [
+    '/guides/choosing-beard-shape/',
+    '/guides/beard-maintenance/',
+    '/guides/professional-beard-trim/',
+  ],
+  'scissor-cut-richmond-va/index.html': [
+    '/guides/growing-out-short-hair/',
+    '/guides/scissor-vs-clipper-cut/',
+  ],
+  'straight-razor-shave-richmond-va/index.html': [
+    '/guides/hot-towel-straight-razor-shave/',
+  ],
+};
+for (const [page, guides] of Object.entries(contextualGuides)) {
   const html = read(page);
   const footer = html.match(/<footer\b[^>]*>([\s\S]*?)<\/footer>/)?.[1] ?? '';
+  const body = html.replace(/<footer\b[^>]*>[\s\S]*?<\/footer>/, '');
   assert.ok(footer.includes('href="/guides/"'), `${page}: guide discovery link in footer`);
-  assert.ok(!html.replace(/<footer\b[^>]*>[\s\S]*?<\/footer>/, '').includes('href="/guides'), `${page}: guide links stay in footer`);
+  for (const href of guides) {
+    assert.ok(body.includes(`href="${href}"`), `${page}: contextual guide link ${href}`);
+    assert.ok(existsSync(resolve(root, `.${href}index.html`)), `${page}: guide target ${href}`);
+  }
 }
-console.log('Verified 20 guides: unique metadata, structured data, canonicals, sitemap inclusion, internal links, headings, and footer discovery links.');
+console.log('Verified 20 guides: unique metadata, structured data, canonicals, sitemap inclusion, internal links, headings, footer discovery, and contextual guide links.');
