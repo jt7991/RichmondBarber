@@ -37,6 +37,16 @@ The first two should return 301 with the same HTTPS path plus `/` (no HTTP
 intermediate). The third should return 200. The final two should continue to
 redirect to `https://richmondbarbershop.com/`. Repeat with a query string to
 confirm it is preserved. Verify assets and the sitemap still return 200.
+
+`apache/site.conf` also 301s the legacy sitemap URL with `mod_alias` `RedirectMatch`.
+The Docker image sets `AllowOverride None` and does not load `mod_rewrite`, so
+the same rule in `public/.htaccess` would not run.
+
+```sh
+curl -I https://richmondbarbershop.com/sitemap.xml
+```
+
+`/sitemap.xml` should 301 to `/sitemap-index.xml`.
 An HTTP, slashless request may still have two redirects when the proxy
 upgrades the scheme before Apache adds the slash; combining those requires
 changing the proxy configuration separately.
