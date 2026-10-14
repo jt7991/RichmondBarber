@@ -20,7 +20,6 @@ import {
   FAQS,
   SERVICES,
   WEBSITE_URL,
-  faqPlainAnswer,
 } from "../data/business";
 
 const haircutPrice = SERVICES.find((service) => service.path === "/mens-haircut-richmond-va/")!.price;
@@ -31,7 +30,7 @@ const faqSchema = {
   mainEntity: FAQS.map((faq) => ({
     "@type": "Question",
     name: faq.question,
-    acceptedAnswer: { "@type": "Answer", text: faqPlainAnswer(faq) },
+    acceptedAnswer: { "@type": "Answer", text: faq.answer },
   })),
 };
 ---
@@ -141,11 +140,6 @@ const faqSchema = {
         <a href="/scissor-cut-richmond-va/" class="underline font-semibold">scissor cut</a>, and
         <a href="/straight-razor-shave-richmond-va/" class="underline font-semibold">straight-razor shave</a> services.
         <a href="/about/" class="underline font-semibold">Get to know the shop and plan your visit.</a>
-        Choosing a style? Read our guides on
-        <a href="/guides/taper-vs-fade/" class="underline font-semibold">taper versus fade</a>,
-        <a href="/guides/how-to-ask-for-a-haircut/" class="underline font-semibold">how to ask for a haircut</a>,
-        and
-        <a href="/guides/choosing-beard-shape/" class="underline font-semibold">choosing a beard shape</a>.
       </p>
     </section>
 
@@ -158,16 +152,7 @@ const faqSchema = {
       <h2 class="home-section-title">FAQ</h2>
       <div class="home-faq-list">
         {FAQS.map((faq) => (
-          <Accordion title={faq.question}>
-            {faq.answer}
-            {faq.guide && (
-              <>
-                {faq.guide.before}
-                <a class="underline" href={faq.guide.href}>{faq.guide.label}</a>
-                {faq.guide.after}
-              </>
-            )}
-          </Accordion>
+          <Accordion title={faq.question}>{faq.answer}</Accordion>
         ))}
         <p class="mt-6 text-lg"><a class="underline" href={BOOKING_URL}>Book an appointment on Square</a></p>
       </div>

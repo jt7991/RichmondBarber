@@ -1,4 +1,4 @@
-import { ADDRESS, BUSINESS_NAME, FAQS, WEBSITE_URL, faqPlainAnswer } from "../../data/business";
+import { ADDRESS, BUSINESS_NAME, FAQS, WEBSITE_URL } from "../../data/business";
 
 export async function GET() {
   const mainEntity = FAQS.map((faq) => ({
@@ -6,7 +6,7 @@ export async function GET() {
     name: faq.question,
     acceptedAnswer: {
       "@type": "Answer",
-      text: faqPlainAnswer(faq),
+      text: faq.answer,
     },
   }));
 
