@@ -5,14 +5,26 @@ import {
   BUSINESS_DESCRIPTION,
   BUSINESS_HOURS_NOTE,
   BUSINESS_NAME,
+  FAQS,
   MAPS_URL,
   PHONE_DISPLAY,
   SERVICES,
   WEBSITE_URL,
 } from "../data/business";
 
+const visitFaqQuestions = [
+  "Do I need to make an appointment at Richmond Barbershop?",
+  "What ages are welcome?",
+  "Do you have onsite parking?",
+];
+
 export async function GET() {
   const guides = (await getCollection("guides")).sort((a, b) => a.id.localeCompare(b.id));
+  const visitFaq = visitFaqQuestions.map((question) => {
+    const faq = FAQS.find((item) => item.question === question);
+    if (!faq) throw new Error(`Missing visit FAQ: ${question}`);
+    return faq;
+  });
   const markdown = `# ${BUSINESS_NAME}
 
 > ${BUSINESS_DESCRIPTION}
@@ -32,6 +44,11 @@ ${BUSINESS_HOURS_NOTE}
 ## Services
 
 ${SERVICES.map((service) => `- [${service.name}](${WEBSITE_URL}${service.path}): ${service.description}`).join("\n")}
+
+## Visit FAQ
+
+${visitFaq.map((faq) => `- **${faq.question}** ${faq.answer}`).join("\n")}
+- [Full FAQ](${WEBSITE_URL}/api/faq.md)
 
 ## Haircut and beard guides
 
