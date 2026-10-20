@@ -89,8 +89,6 @@ export const BARBERS = [
   { name: "Sam", id: "sam", bookingUrl: `${BOOKING_URL}/PKLMKZDNZQOUDJBFDN5OEHHR` },
 ];
 
-const haircutService = SERVICES.find((service) => service.name === "Haircut")!;
-
 export const FAQS = [
   {
     question: "Do I need to make an appointment at Richmond Barbershop?",
@@ -123,10 +121,6 @@ export const FAQS = [
   {
     question: "What services do you offer?",
     answer: BUSINESS_DESCRIPTION,
-  },
-  {
-    question: "Do you do fades and tapers?",
-    answer: `Yes. Fades and tapers are done with the $${haircutService.price} Haircut: ${haircutService.description}`,
   },
   {
     question: "How much do services cost at Richmond Barbershop?",
