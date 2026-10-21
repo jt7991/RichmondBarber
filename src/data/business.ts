@@ -115,6 +115,10 @@ export const FAQS = [
       "We proudly serve Carytown, The Fan, Museum District, Scott's Addition, Church Hill, Henrico, Midlothian, and surrounding areas.",
   },
   {
+    question: "Are you near VCU and the Fan?",
+    answer: `Yes. VCU's Monroe Park campus is about 1.6 miles away, roughly a 5-minute drive, and the Fan is about 0.15 miles away, roughly a 3-minute walk. The shop is at ${ADDRESS_SINGLE_LINE}, on West Cary Street in Carytown.`,
+  },
+  {
     question: "What services do you offer?",
     answer: BUSINESS_DESCRIPTION,
   },
