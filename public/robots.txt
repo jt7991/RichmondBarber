@@ -1,7 +1,9 @@
 User-agent: *
-Allow: /
+# Allow /api/faq.md before Disallow /api/. urllib.robotparser uses the first matching rule.
+Allow: /api/faq.md
 Disallow: /api/
 Disallow: /openapi.yaml
+Allow: /
 
 Sitemap: https://richmondbarbershop.com/sitemap-index.xml
 Sitemap: https://richmondbarbershop.com/image-sitemap.xml
