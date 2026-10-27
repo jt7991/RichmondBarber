@@ -16,6 +16,7 @@ const visitFaqQuestions = [
   "Do I need to make an appointment at Richmond Barbershop?",
   "What ages are welcome?",
   "Do you have onsite parking?",
+  "Are you near VCU and the Fan?",
 ];
 
 export async function GET() {
@@ -50,7 +51,7 @@ ${SERVICES.map((service) => `- [${service.name}](${WEBSITE_URL}${service.path}):
 ${visitFaq.map((faq) => `- **${faq.question}** ${faq.answer}`).join("\n")}
 - [Full FAQ](${WEBSITE_URL}/api/faq.md)
 
-## Haircut and beard guides
+## Optional
 
 ${guides.map((guide) => `- [${guide.data.title}](${WEBSITE_URL}/guides/${guide.id}/): ${guide.data.description}`).join("\n")}
 `;
