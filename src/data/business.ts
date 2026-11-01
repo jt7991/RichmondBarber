@@ -50,7 +50,7 @@ export const SERVICES = [
   {
     name: "Haircut",
     path: "/mens-haircut-richmond-va/",
-    price: 40,
+    price: 45,
     durationMinutes: 40,
     description:
       "A haircut using clippers and scissors, finished with a hot towel and straight-razor neck shave. Ages 8 and up.",
@@ -80,7 +80,8 @@ export const SERVICES = [
   },
 ];
 
-// Verified in the public Square booking menu on 2026-09-14.
+// Haircut price set to $45 on 2026-11-01 at the owner's request.
+// Other prices and durations were verified in the public Square booking menu on 2026-09-14.
 // Update this data alongside Square when the menu changes.
 export const SERVICE_DETAILS_VERIFIED = "2026-09-14";
 export const HAIRCUT_BEARD_COMBO = { name: "Haircut and Beard Trim", price: 70, durationMinutes: 40 };

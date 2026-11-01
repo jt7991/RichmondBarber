@@ -21,7 +21,7 @@ sources:
 
 We welcome haircut guests **ages 8 and older** at Richmond Barbershop. A fresh haircut can be a chance for your child to express their style, get ready for a new school term, or feel good about a familiar look.
 
-Our general haircut service is $40. Check our booking menu for the current service selection and price, or call us at (804) 203-0221 if you would like help arranging the appointment. We recommend reserving a time that fits comfortably into your child's day.
+Our general haircut service is $45. Check our booking menu for the current service selection and price, or call us at (804) 203-0221 if you would like help arranging the appointment. We recommend reserving a time that fits comfortably into your child's day.
 
 If you are bringing siblings or planning a parent-and-child visit, confirm an appointment for each person. That gives each haircut a place in the schedule. You can explore our [haircut service](/mens-haircut-richmond-va/) before choosing your visit.
 
@@ -65,7 +65,7 @@ We offer haircuts for ages 8 and up, including children who are eight years old.
 
 ### How much should I plan for my child's haircut?
 
-Our general haircut service is $40. Check the current booking selection and price when reserving, or contact us if you would like help choosing the appointment.
+Our general haircut service is $45. Check the current booking selection and price when reserving, or contact us if you would like help choosing the appointment.
 
 ### Can I bring two children for haircuts together?
 
