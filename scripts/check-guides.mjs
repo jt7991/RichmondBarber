@@ -5,7 +5,7 @@ import { resolve } from 'node:path';
 const root = resolve('dist');
 const read = path => readFileSync(resolve(root, path), 'utf8');
 const slugs = readdirSync(resolve(root, 'guides'), { withFileTypes: true }).filter(entry => entry.isDirectory()).map(entry => entry.name);
-assert.equal(slugs.length, 20, 'Expected 20 generated guides');
+assert.equal(slugs.length, 21, 'Expected 21 generated guides');
 const titles = new Set();
 const descriptions = new Set();
 const sitemap = readdirSync(root).filter(name => /^sitemap.*\.xml$/.test(name)).map(read).join('');
@@ -44,4 +44,4 @@ for (const page of ['index.html', 'mens-haircut-richmond-va/index.html', 'beard-
   assert.ok(footer.includes('href="/guides/"'), `${page}: guide discovery link in footer`);
   assert.ok(!html.replace(/<footer\b[^>]*>[\s\S]*?<\/footer>/, '').includes('href="/guides'), `${page}: guide links stay in footer`);
 }
-console.log('Verified 20 guides: unique metadata, structured data, canonicals, sitemap inclusion, internal links, headings, and footer discovery links.');
+console.log('Verified 21 guides: unique metadata, structured data, canonicals, sitemap inclusion, internal links, headings, and footer discovery links.');
