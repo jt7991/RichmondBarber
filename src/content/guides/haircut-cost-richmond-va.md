@@ -4,7 +4,7 @@ seoTitle: "Haircut Prices in Richmond, VA: Our Services"
 description: "Explore our haircut, scissor cut, beard trim, and straight razor shave prices, and choose a Richmond Barbershop service that helps you look and feel your best."
 date: 2026-09-14
 category: "Planning your visit"
-summary: "Our haircuts are $40, scissor cuts $60, beard trims $40, and straight razor shaves $50. We believe a great barber visit is about thoughtful shape, a confident finish, and hair you enjoy wearing beyond the chair."
+summary: "Our haircuts are $45, scissor cuts $60, beard trims $40, and straight razor shaves $50. We believe a great barber visit is about thoughtful shape, a confident finish, and hair you enjoy wearing beyond the chair."
 service: haircut
 related:
   - scissor-vs-clipper-cut
@@ -23,7 +23,7 @@ We want choosing your next barber service to feel straightforward. Our menu give
 
 | Our service | Price | The result to discuss with us |
 | --- | --- | --- |
-| Haircut | $40 | Your preferred shape, length, and finish |
+| Haircut | $45 | Your preferred shape, length, and finish |
 | Scissor cut | $60 | Detailed shaping with a natural finish |
 | Beard trim | $40 | Balanced length and a well-defined outline |
 | Straight razor shave | $50 | A traditional hot towel shave and close finish |
@@ -58,7 +58,7 @@ We recommend appointments and welcome walk-ins when availability allows. Reserve
 
 ### How much is a haircut at Richmond Barbershop?
 
-Our haircut is $40. You can confirm the current price and available appointment times in our booking menu.
+Our haircut is $45. You can confirm the current price and available appointment times in our booking menu.
 
 ### How much is our scissor cut?
 
