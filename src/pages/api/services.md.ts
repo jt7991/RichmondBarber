@@ -1,6 +1,7 @@
 import { serviceMenuMarkdown } from "../../data/service-menu";
 import {
   BUSINESS_HOURS_NOTE,
+  BUSINESS_HOURS_SUMMARY,
   PHONE_DISPLAY,
 } from "../../data/business";
 
@@ -10,7 +11,7 @@ export async function GET() {
 ## Contact
 
 - Phone: ${PHONE_DISPLAY}
-- Hours: ${BUSINESS_HOURS_NOTE}
+- Hours: ${BUSINESS_HOURS_SUMMARY}. ${BUSINESS_HOURS_NOTE}
 `;
 
   return new Response(markdown, {

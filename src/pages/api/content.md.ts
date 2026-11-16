@@ -2,7 +2,7 @@ import { serviceMenuMarkdown } from "../../data/service-menu";
 import {
   ADDRESS_SINGLE_LINE,
   BOOKING_URL,
-  BUSINESS_HOURS_NOTE,
+  BUSINESS_HOURS_MARKDOWN,
   BUSINESS_NAME,
   FAQS,
   PHONE_DISPLAY,
@@ -30,7 +30,7 @@ ${serviceMenuMarkdown(2)}
 - **Booking**: ${BOOKING_URL}
 
 ### Business Hours
-- ${BUSINESS_HOURS_NOTE}
+${BUSINESS_HOURS_MARKDOWN}
 
 ### Service Areas
 ${SERVICE_AREAS.map((area) => `- ${area}`).join("\n")}

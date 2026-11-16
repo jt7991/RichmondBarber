@@ -1,0 +1,52 @@
+---
+import { BUSINESS_HOURS_NOTE, OPENING_HOURS } from "../data/business";
+
+interface Props {
+  variant?: "list" | "line";
+}
+
+const { variant = "list" } = Astro.props;
+---
+
+{variant === "line" ? (
+  <p class="shop-hours-line">
+    {OPENING_HOURS.map((hours, index) => (
+      <>
+        {index > 0 && ", "}
+        <span>{`${hours.label} ${hours.display}`}</span>
+      </>
+    ))}
+  </p>
+) : (
+  <section class="shop-hours" aria-label="Opening hours">
+    <h3>Hours</h3>
+    <dl>
+      {OPENING_HOURS.map((hours) => (
+        <div>
+          <dt>{hours.label}</dt>
+          <dd>{hours.display}</dd>
+        </div>
+      ))}
+    </dl>
+    <p>{BUSINESS_HOURS_NOTE}</p>
+  </section>
+)}
+
+<style>
+  .shop-hours-line { margin: 0; text-wrap: pretty; }
+  .shop-hours-line span { white-space: nowrap; }
+  .shop-hours { margin-top: 20px; }
+  h3 {
+    margin: 0 0 8px;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    line-height: 1.2;
+    text-transform: uppercase;
+    color: #52525b;
+  }
+  dl { margin: 0; }
+  div { display: grid; grid-template-columns: 6.5rem auto; column-gap: 12px; font-size: 18px; line-height: 1.45; }
+  dt, dd { margin: 0; }
+  p { margin: 10px 0 0; line-height: 1.5; color: #52525b; }
+</style>

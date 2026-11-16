@@ -1,5 +1,6 @@
 ---
-import { ADDRESS_SINGLE_LINE, BOOKING_URL, BUSINESS_HOURS_NOTE, MAPS_URL, PHONE_DISPLAY, PHONE_E164, SERVICES, HAIRCUT_BEARD_COMBO } from "../data/business";
+import ShopHours from "./ShopHours.astro";
+import { ADDRESS_SINGLE_LINE, BOOKING_URL, MAPS_URL, PHONE_DISPLAY, PHONE_E164, SERVICES, HAIRCUT_BEARD_COMBO } from "../data/business";
 ---
 <section class="px-4 py-16 bg-gray-50 text-black" aria-label="Plan your barbershop visit">
   <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-10">
@@ -11,7 +12,7 @@ import { ADDRESS_SINGLE_LINE, BOOKING_URL, BUSINESS_HOURS_NOTE, MAPS_URL, PHONE_
       </address>
       <p class="mt-4 leading-relaxed">Appointments are recommended; walk-ins are welcome when available. Haircuts are available for ages 8 and up.</p>
       <p class="mt-3 leading-relaxed">Street parking and a parking garage directly across the street are available. We do not have onsite parking.</p>
-      <p class="mt-3 leading-relaxed">{BUSINESS_HOURS_NOTE}</p>
+      <ShopHours />
       <div class="flex flex-wrap gap-5 mt-5">
         <a class="underline font-semibold" href={MAPS_URL}>Get directions &amp; current hours</a>
         <a class="underline font-semibold" href="/about/">About the shop</a>

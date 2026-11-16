@@ -4,6 +4,7 @@ import {
   BOOKING_URL,
   BUSINESS_DESCRIPTION,
   BUSINESS_HOURS_NOTE,
+  BUSINESS_HOURS_SUMMARY,
   BUSINESS_NAME,
   FAQS,
   MAPS_URL,
@@ -13,6 +14,7 @@ import {
 } from "../data/business";
 
 const visitFaqQuestions = [
+  "What are your hours?",
   "Do I need to make an appointment at Richmond Barbershop?",
   "What ages are welcome?",
   "Do you have onsite parking?",
@@ -32,6 +34,7 @@ export async function GET() {
 
 Address: ${ADDRESS_SINGLE_LINE}.
 Phone: ${PHONE_DISPLAY}.
+Hours: ${BUSINESS_HOURS_SUMMARY}.
 ${BUSINESS_HOURS_NOTE}
 
 ## Visit and book
