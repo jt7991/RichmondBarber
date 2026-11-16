@@ -1,5 +1,6 @@
 ---
 import Navigation from "../components/Navigation.astro";
+import ShopHours from "../components/ShopHours.astro";
 import { getImage } from "astro:assets";
 import logoSource from "../assets/richmond-barbershop-social.png";
 import logoVector from "../assets/richmond-barbershop-logo.svg?url";
@@ -8,6 +9,7 @@ import {
   BOOKING_URL,
   BUSINESS_HOURS_NOTE,
   BUSINESS_NAME,
+  OPENING_HOURS_SPECIFICATION,
   BUSINESS_DESCRIPTION,
   APPLE_MAPS_URL,
   FACEBOOK_URL,
@@ -55,6 +57,7 @@ const barbershopSchema = {
     ...ADDRESS,
   },
   hasMap: MAPS_URL,
+  openingHoursSpecification: OPENING_HOURS_SPECIFICATION,
   sameAs: [GOOGLE_PROFILE_URL, APPLE_MAPS_URL, INSTAGRAM_URL, FACEBOOK_URL],
   areaServed: SERVICE_AREAS,
   hasOfferCatalog: {
@@ -135,12 +138,15 @@ const copyrightYear = new Date().getFullYear();
             >{ADDRESS.streetAddress}, {ADDRESS.addressLocality}, {ADDRESS.addressRegion} {ADDRESS.postalCode}</a
           >
         </p>
-        <p>
-          {BUSINESS_HOURS_NOTE}
-          <a class="underline" href={MAPS_URL} target="_blank" rel="noopener noreferrer"
-            >View live hours</a
-          >
-        </p>
+        <div class="footer-hours flex flex-col gap-1">
+          <ShopHours variant="line" />
+          <p>
+            {BUSINESS_HOURS_NOTE}
+            <a class="underline whitespace-nowrap" href={MAPS_URL} target="_blank" rel="noopener noreferrer"
+              >View live hours</a
+            >
+          </p>
+        </div>
         <p class="flex flex-wrap justify-center gap-x-5 gap-y-2">
           <a class="underline underline-offset-4" href="/about/">About &amp; Visit</a>
           <a class="underline underline-offset-4" href="/guides/">Haircut &amp; Beard Guides</a>

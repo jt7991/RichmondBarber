@@ -1,7 +1,7 @@
 import {
   ADDRESS_SINGLE_LINE,
   BOOKING_URL,
-  BUSINESS_HOURS_NOTE,
+  BUSINESS_HOURS_MARKDOWN,
   BUSINESS_NAME,
   FAQS,
   PHONE_DISPLAY,
@@ -30,7 +30,7 @@ ${faq.answer}
 
 ## Business Hours
 
-- ${BUSINESS_HOURS_NOTE}
+${BUSINESS_HOURS_MARKDOWN}
 
 For more information or to book an appointment, please visit our website or call us directly.
 `;

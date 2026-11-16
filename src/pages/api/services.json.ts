@@ -1,6 +1,7 @@
 import {
   ADDRESS,
   BUSINESS_NAME,
+  OPENING_HOURS_SPECIFICATION,
   SERVICES,
   WEBSITE_URL,
 } from "../../data/business";
@@ -18,6 +19,7 @@ export async function GET() {
         "@type": "PostalAddress",
         ...ADDRESS,
       },
+      openingHoursSpecification: OPENING_HOURS_SPECIFICATION,
     },
   }));
 

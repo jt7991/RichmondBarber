@@ -34,6 +34,53 @@ export const ADDRESS_SINGLE_LINE =
 export const BUSINESS_HOURS_NOTE =
   "Hours vary by day. Check Google Maps for current hours.";
 
+export const OPENING_HOURS = [
+  {
+    label: "Mon–Thu",
+    days: ["Monday", "Tuesday", "Wednesday", "Thursday"],
+    opens: "10:00",
+    closes: "18:30",
+    display: "10am–6:30pm",
+  },
+  {
+    label: "Fri",
+    days: ["Friday"],
+    opens: "09:00",
+    closes: "17:00",
+    display: "9am–5pm",
+  },
+  {
+    label: "Sat",
+    days: ["Saturday"],
+    opens: "09:00",
+    closes: "17:00",
+    display: "9am–5pm",
+  },
+  {
+    label: "Sun",
+    days: ["Sunday"],
+    opens: "09:00",
+    closes: "14:00",
+    display: "9am–2pm",
+  },
+] as const;
+
+export const BUSINESS_HOURS_SUMMARY = OPENING_HOURS.map(
+  (hours) => `${hours.label} ${hours.display}`,
+).join(", ");
+
+export const BUSINESS_HOURS_MARKDOWN = [
+  ...OPENING_HOURS.map((hours) => `- ${hours.label}: ${hours.display}`),
+  `- ${BUSINESS_HOURS_NOTE}`,
+].join("\n");
+
+export const OPENING_HOURS_SPECIFICATION = OPENING_HOURS.map((hours) => ({
+  "@type": "OpeningHoursSpecification" as const,
+  dayOfWeek: [...hours.days],
+  opens: hours.opens,
+  closes: hours.closes,
+}));
+
 export const SERVICE_AREAS = [
   "Richmond, VA",
   "Carytown",
@@ -95,6 +142,10 @@ export const FAQS = [
     question: "Do I need to make an appointment at Richmond Barbershop?",
     answer:
       "Appointments at Richmond Barbershop are highly recommended. Book online through Square. Walk-ins are welcome when available.",
+  },
+  {
+    question: "What are your hours?",
+    answer: `${BUSINESS_HOURS_SUMMARY}. ${BUSINESS_HOURS_NOTE}`,
   },
   {
     question: "Do you have onsite parking?",

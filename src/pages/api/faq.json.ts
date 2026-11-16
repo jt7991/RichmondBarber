@@ -1,4 +1,4 @@
-import { ADDRESS, BUSINESS_NAME, FAQS, WEBSITE_URL } from "../../data/business";
+import { ADDRESS, BUSINESS_NAME, FAQS, OPENING_HOURS_SPECIFICATION, WEBSITE_URL } from "../../data/business";
 
 export async function GET() {
   const mainEntity = FAQS.map((faq) => ({
@@ -27,6 +27,7 @@ export async function GET() {
             "@type": "PostalAddress",
             ...ADDRESS,
           },
+          openingHoursSpecification: OPENING_HOURS_SPECIFICATION,
         },
       },
       null,
