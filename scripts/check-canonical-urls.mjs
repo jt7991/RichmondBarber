@@ -52,7 +52,7 @@ assert.match(home, /Carytown barber shop/);
 assert.match(home, /Book a barbershop visit in Richmond, VA/);
 const homeSchemas = [...home.matchAll(/<script[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g)].map((match) => JSON.parse(match[1]));
 const salon = homeSchemas.find((schema) => schema['@type'] === 'HairSalon');
-assert.equal(salon.priceRange, '$40–$70');
+assert.equal(salon.priceRange, '$40–$75');
 assert.equal(salon.openingHours, undefined);
 assert.equal(salon.geo, undefined);
 console.log(`Verified ${pages} pages: canonical URLs, social URLs, internal links, structured data, sitemaps, and text menus.`);
