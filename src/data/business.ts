@@ -128,10 +128,11 @@ export const SERVICES = [
 ];
 
 // Haircut price set to $45 on 2026-11-01 at the owner's request.
+// Haircut and Beard Trim combo set to $75 on 2026-11-20 at the owner's request.
 // Other prices and durations were verified in the public Square booking menu on 2026-09-14.
 // Update this data alongside Square when the menu changes.
 export const SERVICE_DETAILS_VERIFIED = "2026-09-14";
-export const HAIRCUT_BEARD_COMBO = { name: "Haircut and Beard Trim", price: 70, durationMinutes: 40 };
+export const HAIRCUT_BEARD_COMBO = { name: "Haircut and Beard Trim", price: 75, durationMinutes: 40 };
 export const BARBERS = [
   { name: "Joe", id: "joe", bookingUrl: `${BOOKING_URL}/PUBAN2KEYN7APOI3Q642GIBN` },
   { name: "Sam", id: "sam", bookingUrl: `${BOOKING_URL}/PKLMKZDNZQOUDJBFDN5OEHHR` },
